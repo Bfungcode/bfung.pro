@@ -1,5 +1,5 @@
 "use client"
-import { GmailIcon, GithubIcon, LinkedInIcon, TwitterIcon, DotsIcon, MenuIcon } from "./media/svg"
+import { GmailIcon, GithubIcon, LinkedInIcon, TwitterIcon, DotsIcon, MenuIcon, ArrowDownRight } from "./media/svg"
 import { useState } from 'react';
 
 export default function Home() {
@@ -44,12 +44,12 @@ export default function Home() {
             </div>
           </div>
           <div className="w-full h-12 border-t-2 border-black  flex flex-row justify-between">
-            <div className="w-30 h-full border-black border-r-2  p-0 flex  ">
+            <div className="w-30 h-full border-white border-2  p-0 flex  ">
               <div className="w-full font-secondary text-white text-5xl text-center items-center h-full flex justify-center pb-4 bg-black">
                 Projects
               </div>
             </div>
-            <div className="w-70 h-full object-fill">
+            <div className="w-70 h-full object-fill border-black border-l-2">
               <img src="/Rectangle10.png" className="w-full h-full" />
             </div>
           </div>
@@ -59,11 +59,13 @@ export default function Home() {
         <div className="w-full h-full">
           <div className="w-full h-30 flex flex-row justify-between">
             <div className="w-30 h-full border-black border-r-2 border-b-2  border-l-2 p-0 flex  ">
-              <div className="w-full font-secondary text-white text-3xl ">
-                test
+              <div className="w-full font-secondary text-white text-3xl bg-black">
+                Test
               </div>
             </div>
-            <div className="w-70 h-full object-fill border-black border-b-2 border-r-2">
+            <div className="w-70 h-full border-black border-b-2 border-r-2 flex flex-row flex-wrap">
+              <div className="w-90"></div>
+              <div className="w-10 flex justify-end items-end pr-2 pb-2"><ArrowDownRight /></div>
             </div>
           </div>
           <div className="w-full h-30 flex flex-row justify-between">
@@ -104,30 +106,46 @@ export default function Home() {
           </div>
           <div className="w-full h-60 flex flex-col flex-wrap ">
             <div className="w-full h-20  border-black border-b-2 flex flex-row justify-between">
-              <div className="w-70 h-full object-fill border-black border-l-2">
+              <div className="w-70 h-full object-fill border-black border-l-2 border-r-2">
                 <img src="/Rectangle10.png" className="w-full h-full" />
               </div>
               <div className="w-30 h-full border-black border-r-2  p-0 flex  ">
-                <div className="w-full font-secondary text-white text-5xl text-center items-center h-full flex justify-center pb-4 bg-black">
+                <div className="w-full font-secondary text-white text-5xl text-center items-center h-full flex justify-center pb-4 bg-black border-white border-2">
                   Contacts
                 </div>
               </div>
             </div>
-            <div className="w-full h-20 border-black border-l-2 border-r-2 border-b-2 flex flex-row">
-              <div className="w-70 h-full border-black border-r-2"></div>
-              <div className="w-30 h-full"></div>
+            <div className="w-full h-20 border-black border- border-l-2 border-r-2 border-b-2 flex flex-row">
+              <div className="w-70 h-full   text-white text-5xl font-secondary bg-black flex justify-center items-center">
+                bfung0011@gmail.com
+              </div>
+              <div className="w-30 h-full text-black font-secondary text-5xl flex flex-row justify-center items-center border-black border-l-2">
+                Gmail
+              </div>
             </div>
-            <div className="w-full h-20 border-black border-l-2 border-r-2 border-b-2 flex flex-row">
-              <div className="w-30 h-full border-black border-r-2"></div>
-              <div className="w-70 h-full"></div>
+            <div className="w-full h-20 border-black border- border-l-2 border-r-2 border-b-2 flex flex-row">
+              <div className="w-30 h-full  border-black border-r-2 text-black text-5xl font-secondary  flex justify-center items-center">
+                LinkedIn
+              </div>
+              <div className="w-70 h-full text-white font-secondary text-5xl flex flex-row justify-center items-center   bg-black ">
+                linkedin.com/in/biefung/
+              </div>
             </div>
-            <div className="w-full h-20 border-black border-l-2 border-r-2 border-b-2 flex flex-row">
-              <div className="w-70 h-full border-black border-r-2"></div>
-              <div className="w-30 h-full"></div>
+            <div className="w-full h-20 border-black border- border-l-2 border-r-2 border-b-2 flex flex-row">
+              <div className="w-70 h-full  text-white text-5xl font-secondary bg-black flex justify-center items-center">
+                github.com/Bfungcode
+              </div>
+              <div className="w-30 h-full text-black font-secondary text-5xl flex flex-row justify-center items-center border-black border-l-2">
+                Github
+              </div>
             </div>
-            <div className="w-full h-20 border-black border-l-2 border-r-2 border-b-2 flex flex-row">
-              <div className="w-30 h-full border-black border-r-2"></div>
-              <div className="w-70 h-full"></div>
+            <div className="w-full h-20 border-black border- border-l-2 border-r-2 border-b-2 flex flex-row">
+              <div className="w-30 h-full  border-black border-r-2 text-black text-5xl font-secondary  flex justify-center items-center">
+                X / Twitter
+              </div>
+              <div className="w-70 h-full text-white font-secondary text-5xl flex flex-row justify-center items-center bg-black ">
+                twitter.com/bei_fg
+              </div>
             </div>
           </div>
           <div className="w-full h-4"></div>
