@@ -4,6 +4,7 @@ import { useState } from 'react';
 
 export default function Home() {
   const [hover1, setHover1] = useState(false);
+  const [turn1, setTurn1] = useState(false);
   const handleMouseEnter = () => {
     setHover1(true);
   };
@@ -11,8 +12,11 @@ export default function Home() {
   const handleMouseLeave = () => {
     setHover1(false);
   };
+  const turnPt1 = () => {
+    setTurn1(!turn1)
+  }
   return (
-    <div className="w-full h-screen">
+    <div className="w-full h-screen ">
       <div className="flex flex-col flex-wrap  w-full h-full pt-5 pl-5 pr-5">
         <div className="w-full h-full border-2 border-black p-0 m-0 ">
           <div className="w-full h-12 border-b-2 border-black flex flex-row justify-between items-center p-0 m-0">
@@ -60,51 +64,82 @@ export default function Home() {
 
       <div className="w-full h-full flex flex-col flex-wrap pl-5 pr-5 ">
         <div className="w-full h-full">
-          <div className="w-full h-30 flex flex-row justify-between flex-wrap">
-            <div className="w-30 h-full border-black border-b-2  border-l-2 bg-white" onMouseMove={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-              {hover1 ? (
-                <div className="relative w-full h-full  flex flex-column flex-wrap">
-                  <img src="/ef1.png" className="w-full h-full object-cover blur-sm "></img>
-                  <div className="absolute w-full h-full flex flex-row flex-wrap p-4 justify-center items-center">
-                    <div className="text-5xl text-white underline font-secondary cursor-pointer"> Easy Features </div>
+          {turn1 ? (
+            <div className="w-full h-80 flex flex-column justify-between flex-wrap  transition-all duration-500 ease-in-out ">
+              <div className="w-full h-30 flex flex-row flex-wrap">
+                <div className="w-30 h-full border-black border-b-2  border-l-2 bg-white   " onMouseMove={handleMouseEnter} onMouseLeave={handleMouseLeave} onClick={turnPt1}>
+                  <div className="w-full h-full  flex flex-column flex-wrap">
+                    <img src="/ef1.png" className="w-full h-full object-cover"></img>
                   </div>
                 </div>
-              ) : (
-                <div className="w-full h-full  flex flex-column flex-wrap">
-                  <img src="/ef1.png" className="w-full h-full object-cover"></img>
-                </div>
-              )}
-            </div>
-            <div className="w-70 h-full border-black border-b-2 border-r-2 border-l-2 flex flex-row flex-wrap bg-black p-6">
-              <div className="relative w-full h-full">
-                <div className="absolute border-t-2 border-l-2 border-white border-solid w-30 h-50 left-0 top-0"></div>
-                <div className="absolute border-r-2 border-b-2 border-white border-solid w-30 h-50 right-0 bottom-0"></div>
-                <div className="absolute inset-0 flex flex-column items-center justify-start h-full w-full text-4xl p-6">
-                  <div className="w-full font-secondary text-white text-6xl p-6  bg-black text-center">
-                    Easy Features
-                    <div className="text-2xl font-secondary">
-                      "EasyFeatures" is a dedicated website designed to assist developers working with React.js. With its extensive collection of JSX templates and CSS code snippets,
+                <div className="w-70 h-full border-black border-b-2 border-r-2 border-l-2 flex flex-row flex-wrap bg-black p-6">
+                  <div className="relative w-full h-full">
+                    <div className="absolute border-t-2 border-l-2 border-white border-solid w-30 h-50 left-0 top-0"></div>
+                    <div className="absolute border-r-2 border-b-2 border-white border-solid w-30 h-50 right-0 bottom-0"></div>
+                    <div className="absolute inset-0 flex flex-column items-center justify-start h-full w-full text-4xl p-6">
+                      <div className="w-full font-secondary text-white text-6xl p-6  bg-black text-center">
+                        Easy Features
+                        <div className="text-2xl font-secondary">
+                          "EasyFeatures" is a dedicated website built with React JS and designed to assist developers working with React.js. With its extensive collection of JSX templates and CSS code snippets,
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
+              <div className="w-full h-70 bg-black">s</div>
             </div>
-          </div>
+          ) : (
+            <div className="w-full h-30 flex flex-row justify-between flex-wrap  transition-all duration-500 ease-in-out ">
+              {hover1 ? (
+                <div className="w-30 h-full border-black border-b-2  border-l-2 bg-white " onMouseMove={handleMouseEnter} onMouseLeave={handleMouseLeave} onClick={turnPt1} >
+                  <div className="relative w-full h-full  flex flex-row flex-wrap justify-center items-center cursor-pointer">
+                    <img src="/ef1.png" className="w-full h-full object-cover blur-sm"></img>
+                    <div className="absolute text-4xl font-secondary text-white underline">More Detail</div>
+                  </div>
+                </div>
+              ) : (
+                <div className="w-30 h-full border-black border-b-2  border-l-2 bg-white " onMouseMove={handleMouseEnter} onMouseLeave={handleMouseLeave} onClick={turnPt1}>
+                  <div className="w-full h-full  flex flex-column flex-wrap">
+                    <img src="/ef1.png" className="w-full h-full object-cover"></img>
+                  </div>
+                </div>
+              )}
+              <div className="w-70 h-full border-black border-b-2 border-r-2 border-l-2 flex flex-row flex-wrap bg-black p-6">
+                <div className="relative w-full h-full">
+                  <div className="absolute border-t-2 border-l-2 border-white border-solid w-30 h-50 left-0 top-0"></div>
+                  <div className="absolute border-r-2 border-b-2 border-white border-solid w-30 h-50 right-0 bottom-0"></div>
+                  <div className="absolute inset-0 flex flex-column items-center justify-start h-full w-full text-4xl p-6">
+                    <div className="w-full font-secondary text-white text-6xl p-6  bg-black text-center">
+                      Easy Features
+                      <div className="text-2xl font-secondary">
+                        "EasyFeatures" is a dedicated website built with React JS and designed to assist developers working with React.js. With its extensive collection of JSX templates and CSS code snippets,
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div >
+          )}
+
           <div className="w-full h-30 flex flex-row justify-between">
-            <div className="w-70 h-full  border-r-2 border-b-2 border-l-2 border-black p-0 flex flex-row flex-wrap">
-              <div className="w-10 flex justify-start items-end pl-2 pb-2"><ArrowDownLeft /></div>
-              <div className="w-90"></div>
-            </div>
-            <div className="w-30 h-full border-black border-b-2  border-l-2 p-4  bg-black">
+            <div className="w-70 h-full  border-r-2 border-b-2 border-l-2 border-black flex flex-row flex-wrap bg-black p-6">
               <div className="relative w-full h-full">
                 <div className="absolute border-t-2 border-l-2 border-white border-solid w-30 h-50 left-0 top-0"></div>
                 <div className="absolute border-r-2 border-b-2 border-white border-solid w-30 h-50 right-0 bottom-0"></div>
                 <div className="absolute inset-0 flex flex-column items-center justify-center  h-full w-full text-4xl p-6">
                   <div className="w-full font-secondary text-white text-6xl p-6  bg-black text-center">
                     CryptoHex
+                    <div className="text-2xl font-secondary">
+                      "Cryptohex" is a Cryptocurrency wallet service web application built with Vue JS
+                    </div>
                   </div>
                 </div>
               </div>
+            </div>
+            <div className="w-30 h-full border-black border-b-2  border-l-2 p-4  bg-white border-r-2">
+              <div className="w-10 flex justify-start items-end pl-2 pb-2"><ArrowDownLeft /></div>
+              <div className="w-90"></div>
             </div>
           </div>
           <div className="w-full h-30 flex flex-row justify-between">

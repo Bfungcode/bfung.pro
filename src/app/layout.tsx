@@ -11,7 +11,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className='h-full w-full m-0 p-0  bg-gray-200 border-black'>
+      <body className='h-full w-full m-0 p-0 border-black bg-no-repeat bg-fixed bg-gradient-to-b from-neutral-100 to-gray-300'>
         {children}
       </body>
     </html >
