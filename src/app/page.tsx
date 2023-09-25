@@ -208,7 +208,7 @@ export default function Home() {
                     <div className="w-full font-secondary text-black text-6xl p-6  bg-white text-center">
                       Easy Features
                       <div className="text-2xl font-secondary">
-                        "EasyFeatures" is a dedicated website built with React JS and designed to assist developers working with React.js. With its extensive collection of JSX templates and CSS code snippets,
+                        a Dedicated website built with React JS and designed to assist developers working with React.js. With its extensive collection of JSX templates and CSS code snippets,
                       </div>
                     </div>
                   </div>
@@ -284,7 +284,7 @@ export default function Home() {
                     <div className="w-full font-secondary text-white text-6xl p-6  bg-black text-center">
                       CryptoHex
                       <div className="text-2xl font-secondary">
-                        "Cryptohex" is a Cryptocurrency wallet service web application built with Vue JS
+                        a Cryptocurrency wallet service web application built with Vue JS
                       </div>
                     </div>
                   </div>
