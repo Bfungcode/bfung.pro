@@ -100,6 +100,7 @@ export default function Home() {
               <div className="p-4 w-full h-full flex  flex-col justify-end">
                 <div className="font-primary text-xl font-bold text-black ">Bie Fung</div>
                 <div className="font-primary text-sm font-bold text-gray-500">Profile</div>
+                <div><img src="/bfung.png" className="w-80 h-full" /></div>
                 <div className="font-primary text-sm font-semibold text-black mt-2 leading-6">
                   <div>Hello, i'm Bie Fung.</div>
                   you can call me Abe or Bei.
