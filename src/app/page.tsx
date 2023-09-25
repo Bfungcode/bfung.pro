@@ -1,19 +1,80 @@
 "use client"
 import { GmailIcon, GitIcon, LinkedInIcon, Xicon, DotsIcon, MenuIcon, ArrowDownRight, ArrowDownLeft } from "./media/svg"
 import { useState } from 'react';
+import Slider from 'react-slick';
+import { baseUrl } from './config.js'
+
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+const SliderSettings = {
+  dots: true,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 1,
+  slidesToScroll: 1
+};
 
 export default function Home() {
   const [hover1, setHover1] = useState(false);
   const [turn1, setTurn1] = useState(false);
-  const handleMouseEnter = () => {
+  const [hover2, setHover2] = useState(false);
+  const [turn2, setTurn2] = useState(false);
+  const [hover3, setHover3] = useState(false);
+  const [turn3, setTurn3] = useState(false);
+  const [hover4, setHover4] = useState(false);
+  const [turn4, setTurn4] = useState(false);
+  const [hover5, setHover5] = useState(false);
+  const [turn5, setTurn5] = useState(false);
+  const handleMouseEnter1 = () => {
     setHover1(true);
   };
 
-  const handleMouseLeave = () => {
+  const handleMouseLeave1 = () => {
     setHover1(false);
   };
   const turnPt1 = () => {
     setTurn1(!turn1)
+  }
+  const handleMouseEnter2 = () => {
+    setHover2(true);
+  };
+
+  const handleMouseLeave2 = () => {
+    setHover2(false);
+  };
+  const turnPt2 = () => {
+    setTurn2(!turn2)
+  }
+  const handleMouseEnter3 = () => {
+    setHover3(true);
+  };
+
+  const handleMouseLeave3 = () => {
+    setHover3(false);
+  };
+  const turnPt3 = () => {
+    setTurn3(!turn3)
+  }
+  const handleMouseEnter4 = () => {
+    setHover4(true);
+  };
+
+  const handleMouseLeave4 = () => {
+    setHover4(false);
+  };
+  const turnPt4 = () => {
+    setTurn4(!turn4)
+  }
+  const handleMouseEnter5 = () => {
+    setHover5(true);
+  };
+
+  const handleMouseLeave5 = () => {
+    setHover5(false);
+  };
+  const turnPt5 = () => {
+    setTurn5(!turn5)
   }
   return (
     <div className="w-full h-screen ">
@@ -51,7 +112,7 @@ export default function Home() {
           </div>
           <div className="w-full h-12 border-t-2 border-black  flex flex-row justify-between">
             <div className="w-30 h-full   p-0 flex  ">
-              <div className="w-full font-secondary text-white text-5xl text-center items-center h-full flex justify-center pb-4 bg-black">
+              <div className="w-full font-secondary text-white text-5xl text-center items-center h-full flex justify-center pb-4 bg-black border-white border-2">
                 Projects
               </div>
             </div>
@@ -65,14 +126,9 @@ export default function Home() {
       <div className="w-full h-full flex flex-col flex-wrap pl-5 pr-5 ">
         <div className="w-full h-full">
           {turn1 ? (
-            <div className="w-full h-80 flex flex-column justify-between flex-wrap  transition-all duration-500 ease-in-out ">
-              <div className="w-full h-30 flex flex-row flex-wrap">
-                <div className="w-30 h-full border-black border-b-2  border-l-2 bg-white   " onMouseMove={handleMouseEnter} onMouseLeave={handleMouseLeave} onClick={turnPt1}>
-                  <div className="w-full h-full  flex flex-column flex-wrap">
-                    <img src="/ef1.png" className="w-full h-full object-cover"></img>
-                  </div>
-                </div>
-                <div className="w-70 h-full border-black border-b-2 border-r-2 border-l-2 flex flex-row flex-wrap bg-black p-6">
+            <div className="w-full h-80 flex flex-column justify-between flex-wrap  transition-all duration-500 scale-up-ver-top ">
+              <div className="w-full h-30 flex flex-row flex-wrap transition-all duration-500 -translate-x-0">
+                <div className="w-full h-full border-black border-b-2 border-r-2 border-l-2 flex flex-row flex-wrap bg-black p-5">
                   <div className="relative w-full h-full">
                     <div className="absolute border-t-2 border-l-2 border-white border-solid w-30 h-50 left-0 top-0"></div>
                     <div className="absolute border-r-2 border-b-2 border-white border-solid w-30 h-50 right-0 bottom-0"></div>
@@ -87,19 +143,43 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="w-full h-70 bg-black">s</div>
+              <div className="w-full h-70 bg-black p-4 flex flex-row flex-wrap justify-between">
+                <div className="w-50 h-full bg-white">
+                  ABout
+                </div>
+                <div className="w-40 h-full mr-8 mt-16">
+                  <Slider {...SliderSettings}>
+                    <div>
+                      <img src={baseUrl + "ft1.png"} />
+                    </div>
+                    <div>
+                      <img src={baseUrl + "ft2.png"} />
+                    </div>
+                    <div>
+                      <img src={baseUrl + "ft3.png"} />
+                    </div>
+                    <div>
+                      <img src={baseUrl + "ft4.png"} />
+                    </div>
+                  </Slider>
+                  <div className="flex flex-row flex-wrap justify-end gap-2 items-center cursor-pointer mt-4" onClick={turnPt1}>
+                    <div className="font-secondary text-3xl font-bold text-white text-center">Close</div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mt-2"><path d="M4 14h6v6M3 21l6.1-6.1M20 10h-6V4M21 3l-6.1 6.1" /></svg>
+                  </div>
+                </div>
+              </div>
             </div>
           ) : (
-            <div className="w-full h-30 flex flex-row justify-between flex-wrap  transition-all duration-500 ease-in-out ">
+            <div className="w-full h-30 flex flex-row justify-between flex-wrap  transition-all duration-500 -translate-y-0 ">
               {hover1 ? (
-                <div className="w-30 h-full border-black border-b-2  border-l-2 bg-white " onMouseMove={handleMouseEnter} onMouseLeave={handleMouseLeave} onClick={turnPt1} >
+                <div className="w-30 h-full border-black border-b-2  border-l-2 bg-white " onMouseMove={handleMouseEnter1} onMouseLeave={handleMouseLeave1} onClick={turnPt1} >
                   <div className="relative w-full h-full  flex flex-row flex-wrap justify-center items-center cursor-pointer">
                     <img src="/ef1.png" className="w-full h-full object-cover blur-sm"></img>
                     <div className="absolute text-4xl font-secondary text-white underline">More Detail</div>
                   </div>
                 </div>
               ) : (
-                <div className="w-30 h-full border-black border-b-2  border-l-2 bg-white " onMouseMove={handleMouseEnter} onMouseLeave={handleMouseLeave} onClick={turnPt1}>
+                <div className="w-30 h-full border-black border-b-2  border-l-2 bg-white " onMouseMove={handleMouseEnter1} onMouseLeave={handleMouseLeave1} onClick={turnPt1}>
                   <div className="w-full h-full  flex flex-column flex-wrap">
                     <img src="/ef1.png" className="w-full h-full object-cover"></img>
                   </div>
@@ -121,78 +201,310 @@ export default function Home() {
               </div>
             </div >
           )}
-
-          <div className="w-full h-30 flex flex-row justify-between">
-            <div className="w-70 h-full  border-r-2 border-b-2 border-l-2 border-black flex flex-row flex-wrap bg-black p-6">
-              <div className="relative w-full h-full">
-                <div className="absolute border-t-2 border-l-2 border-white border-solid w-30 h-50 left-0 top-0"></div>
-                <div className="absolute border-r-2 border-b-2 border-white border-solid w-30 h-50 right-0 bottom-0"></div>
-                <div className="absolute inset-0 flex flex-column items-center justify-center  h-full w-full text-4xl p-6">
-                  <div className="w-full font-secondary text-white text-6xl p-6  bg-black text-center">
-                    CryptoHex
-                    <div className="text-2xl font-secondary">
-                      "Cryptohex" is a Cryptocurrency wallet service web application built with Vue JS
+          {turn2 ? (
+            <div className="w-full h-80 flex flex-column justify-between flex-wrap  transition-all duration-500 scale-up-ver-top ">
+              <div className="w-full h-30 flex flex-row flex-wrap transition-all duration-500 -translate-x-0">
+                <div className="w-full h-full border-black border-b-2 border-r-2 border-l-2 flex flex-row flex-wrap bg-black p-5">
+                  <div className="relative w-full h-full">
+                    <div className="absolute border-t-2 border-l-2 border-white border-solid w-30 h-50 left-0 top-0"></div>
+                    <div className="absolute border-r-2 border-b-2 border-white border-solid w-30 h-50 right-0 bottom-0"></div>
+                    <div className="absolute inset-0 flex flex-column items-center justify-start h-full w-full text-4xl p-6">
+                      <div className="w-full font-secondary text-white text-6xl p-6  bg-black text-center">
+                        CryptoHex
+                        <div className="text-2xl font-secondary">
+                          "Cryptohex" is a Cryptocurrency wallet service web application built with Vue JS
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
+              <div className="w-full h-70 bg-black p-4 flex flex-row flex-wrap justify-between">
+                <div className="w-40 h-full mr-8 mt-16">
+                  <Slider {...SliderSettings}>
+                    <div>
+                      <img src={baseUrl + "ft1.png"} />
+                    </div>
+                    <div>
+                      <img src={baseUrl + "ft2.png"} />
+                    </div>
+                    <div>
+                      <img src={baseUrl + "ft3.png"} />
+                    </div>
+                    <div>
+                      <img src={baseUrl + "ft4.png"} />
+                    </div>
+                  </Slider>
+                  <div className="flex flex-row flex-wrap justify-start gap-2 items-center cursor-pointer mt-4" onClick={turnPt2}>
+                    <div className="font-secondary text-3xl font-bold text-white text-center">Close</div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mt-1"><path d="M4 14h6v6M3 21l6.1-6.1M20 10h-6V4M21 3l-6.1 6.1" /></svg>
+                  </div>
+                </div>
+                <div className="w-50 h-full bg-white">
+                  ABout
+                </div>
+              </div>
             </div>
-            <div className="w-30 h-full border-black border-b-2  border-l-2 p-4  bg-white border-r-2">
-              <div className="w-10 flex justify-start items-end pl-2 pb-2"><ArrowDownLeft /></div>
-              <div className="w-90"></div>
-            </div>
-          </div>
-          <div className="w-full h-30 flex flex-row justify-between">
-            <div className="w-30 h-full border-black border-b-2  border-l-2 p-4  bg-black">
-              <div className="relative w-full h-full">
-                <div className="absolute border-t-2 border-l-2 border-white border-solid w-30 h-50 left-0 top-0"></div>
-                <div className="absolute border-r-2 border-b-2 border-white border-solid w-30 h-50 right-0 bottom-0"></div>
-                <div className="absolute inset-0 flex flex-column items-center justify-center  h-full w-full text-4xl p-6">
-                  <div className="w-full font-secondary text-white text-6xl p-6  bg-black text-center">
-                    Cashier
+          ) : (
+            <div className="w-full h-30 flex flex-row justify-between flex-wrap  transition-all duration-500 -translate-y-0 ">
+              <div className="w-70 h-full border-black border-b-2 border-r-2 border-l-2 flex flex-row flex-wrap bg-black p-6">
+                <div className="relative w-full h-full">
+                  <div className="absolute border-t-2 border-l-2 border-white border-solid w-30 h-50 left-0 top-0"></div>
+                  <div className="absolute border-r-2 border-b-2 border-white border-solid w-30 h-50 right-0 bottom-0"></div>
+                  <div className="absolute inset-0 flex flex-column items-center justify-start h-full w-full text-4xl p-6">
+                    <div className="w-full font-secondary text-white text-6xl p-6  bg-black text-center">
+                      CryptoHex
+                      <div className="text-2xl font-secondary">
+                        "Cryptohex" is a Cryptocurrency wallet service web application built with Vue JS
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {hover2 ? (
+                <div className="w-30 h-full border-black border-b-2  border-l-2 bg-white border-r-2" onMouseMove={handleMouseEnter2} onMouseLeave={handleMouseLeave2} onClick={turnPt2} >
+                  <div className="relative w-full h-full  flex flex-row flex-wrap justify-center items-center cursor-pointer">
+                    <img src="/ef1.png" className="w-full h-full object-cover blur-sm"></img>
+                    <div className="absolute text-4xl font-secondary text-white underline">More Detail</div>
+                  </div>
+                </div>
+              ) : (
+                <div className="w-30 h-full border-black border-b-2  border-l-2 bg-white border-r-2" onMouseMove={handleMouseEnter2} onMouseLeave={handleMouseLeave2} onClick={turnPt2}>
+                  <div className="w-full h-full  flex flex-column flex-wrap">
+                    <img src="/ef1.png" className="w-full h-full object-cover"></img>
+                  </div>
+                </div>
+              )}
+            </div >
+          )}
+          {turn3 ? (
+            <div className="w-full h-80 flex flex-column justify-between flex-wrap  transition-all duration-500 scale-up-ver-top ">
+              <div className="w-full h-30 flex flex-row flex-wrap transition-all duration-500 -translate-x-0">
+                <div className="w-full h-full border-black border-b-2 border-r-2 border-l-2 flex flex-row flex-wrap bg-black p-5">
+                  <div className="relative w-full h-full">
+                    <div className="absolute border-t-2 border-l-2 border-white border-solid w-30 h-50 left-0 top-0"></div>
+                    <div className="absolute border-r-2 border-b-2 border-white border-solid w-30 h-50 right-0 bottom-0"></div>
+                    <div className="absolute inset-0 flex flex-column items-center justify-start h-full w-full text-4xl p-6">
+                      <div className="w-full font-secondary text-white text-6xl p-6  bg-black text-center">
+                        Cashier
+                        <div className="text-2xl font-secondary">
+                          ..............
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="w-full h-70 bg-black p-4 flex flex-row flex-wrap justify-between">
+                <div className="w-50 h-full bg-white">
+                  ABout
+                </div>
+                <div className="w-40 h-full mr-8 mt-16">
+                  <Slider {...SliderSettings}>
+                    <div>
+                      <img src={baseUrl + "ft1.png"} />
+                    </div>
+                    <div>
+                      <img src={baseUrl + "ft2.png"} />
+                    </div>
+                    <div>
+                      <img src={baseUrl + "ft3.png"} />
+                    </div>
+                    <div>
+                      <img src={baseUrl + "ft4.png"} />
+                    </div>
+                  </Slider>
+                  <div className="flex flex-row flex-wrap justify-end gap-2 items-center cursor-pointer mt-4" onClick={turnPt3}>
+                    <div className="font-secondary text-3xl font-bold text-white text-center">Close</div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mt-2"><path d="M4 14h6v6M3 21l6.1-6.1M20 10h-6V4M21 3l-6.1 6.1" /></svg>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="w-70 h-full border-black border-b-2 border-r-2 border-l-2 flex flex-row flex-wrap">
-              <div className="w-90"></div>
-              <div className="w-10 flex justify-end items-end pr-2 pb-2"><ArrowDownRight /></div>
+          ) : (
+            <div className="w-full h-30 flex flex-row justify-between flex-wrap  transition-all duration-500 -translate-y-0 ">
+              {hover3 ? (
+                <div className="w-30 h-full border-black border-b-2  border-l-2 bg-white " onMouseMove={handleMouseEnter3} onMouseLeave={handleMouseLeave3} onClick={turnPt3} >
+                  <div className="relative w-full h-full  flex flex-row flex-wrap justify-center items-center cursor-pointer">
+                    <img src="/ef1.png" className="w-full h-full object-cover blur-sm"></img>
+                    <div className="absolute text-4xl font-secondary text-white underline">More Detail</div>
+                  </div>
+                </div>
+              ) : (
+                <div className="w-30 h-full border-black border-b-2  border-l-2 bg-white " onMouseMove={handleMouseEnter3} onMouseLeave={handleMouseLeave3} onClick={turnPt3}>
+                  <div className="w-full h-full  flex flex-column flex-wrap">
+                    <img src="/ef1.png" className="w-full h-full object-cover"></img>
+                  </div>
+                </div>
+              )}
+              <div className="w-70 h-full border-black border-b-2 border-r-2 border-l-2 flex flex-row flex-wrap bg-black p-6">
+                <div className="relative w-full h-full">
+                  <div className="absolute border-t-2 border-l-2 border-white border-solid w-30 h-50 left-0 top-0"></div>
+                  <div className="absolute border-r-2 border-b-2 border-white border-solid w-30 h-50 right-0 bottom-0"></div>
+                  <div className="absolute inset-0 flex flex-column items-center justify-start h-full w-full text-4xl p-6">
+                    <div className="w-full font-secondary text-white text-6xl p-6  bg-black text-center">
+                      Cashier
+                      <div className="text-2xl font-secondary">
+                        ...........
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div >
+          )}
+          {turn4 ? (
+            <div className="w-full h-80 flex flex-column justify-between flex-wrap  transition-all duration-500 scale-up-ver-top ">
+              <div className="w-full h-30 flex flex-row flex-wrap transition-all duration-500 -translate-x-0">
+                <div className="w-full h-full border-black border-b-2 border-r-2 border-l-2 flex flex-row flex-wrap bg-black p-5">
+                  <div className="relative w-full h-full">
+                    <div className="absolute border-t-2 border-l-2 border-white border-solid w-30 h-50 left-0 top-0"></div>
+                    <div className="absolute border-r-2 border-b-2 border-white border-solid w-30 h-50 right-0 bottom-0"></div>
+                    <div className="absolute inset-0 flex flex-column items-center justify-start h-full w-full text-4xl p-6">
+                      <div className="w-full font-secondary text-white text-6xl p-6  bg-black text-center">
+                        E-Comm
+                        <div className="text-2xl font-secondary">
+                          ..........
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="w-full h-70 bg-black p-4 flex flex-row flex-wrap justify-between">
+                <div className="w-40 h-full mr-8 mt-16">
+                  <Slider {...SliderSettings}>
+                    <div>
+                      <img src={baseUrl + "ft1.png"} />
+                    </div>
+                    <div>
+                      <img src={baseUrl + "ft2.png"} />
+                    </div>
+                    <div>
+                      <img src={baseUrl + "ft3.png"} />
+                    </div>
+                    <div>
+                      <img src={baseUrl + "ft4.png"} />
+                    </div>
+                  </Slider>
+                  <div className="flex flex-row flex-wrap justify-start gap-2 items-center cursor-pointer mt-4" onClick={turnPt4}>
+                    <div className="font-secondary text-3xl font-bold text-white text-center">Close</div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mt-1"><path d="M4 14h6v6M3 21l6.1-6.1M20 10h-6V4M21 3l-6.1 6.1" /></svg>
+                  </div>
+                </div>
+                <div className="w-50 h-full bg-white">
+                  ABout
+                </div>
+              </div>
             </div>
-          </div>
-          <div className="w-full h-30 flex flex-row justify-between">
-            <div className="w-70 h-full  border-r-2 border-b-2 border-l-2 border-black p-0 flex flex-row flex-wrap">
-              <div className="w-10 flex justify-start items-end pl-2 pb-2"><ArrowDownLeft /></div>
-              <div className="w-90"></div>
-            </div>
-            <div className="w-30 h-full border-black border-b-2  border-l-2 p-4  bg-black">
-              <div className="relative w-full h-full">
-                <div className="absolute border-t-2 border-l-2 border-white border-solid w-30 h-50 left-0 top-0"></div>
-                <div className="absolute border-r-2 border-b-2 border-white border-solid w-30 h-50 right-0 bottom-0"></div>
-                <div className="absolute inset-0 flex flex-column items-center justify-center  h-full w-full text-4xl p-6">
-                  <div className="w-full font-secondary text-white text-6xl p-6  bg-black text-center">
-                    E-Comm
+          ) : (
+            <div className="w-full h-30 flex flex-row justify-between flex-wrap  transition-all duration-500 -translate-y-0 ">
+              <div className="w-70 h-full border-black border-b-2 border-r-2 border-l-2 flex flex-row flex-wrap bg-black p-6">
+                <div className="relative w-full h-full">
+                  <div className="absolute border-t-2 border-l-2 border-white border-solid w-30 h-50 left-0 top-0"></div>
+                  <div className="absolute border-r-2 border-b-2 border-white border-solid w-30 h-50 right-0 bottom-0"></div>
+                  <div className="absolute inset-0 flex flex-column items-center justify-start h-full w-full text-4xl p-6">
+                    <div className="w-full font-secondary text-white text-6xl p-6  bg-black text-center">
+                      E-Comm
+                      <div className="text-2xl font-secondary">
+                        .................
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {hover4 ? (
+                <div className="w-30 h-full border-black border-b-2  border-l-2 bg-white border-r-2" onMouseMove={handleMouseEnter4} onMouseLeave={handleMouseLeave4} onClick={turnPt4} >
+                  <div className="relative w-full h-full  flex flex-row flex-wrap justify-center items-center cursor-pointer">
+                    <img src="/ef1.png" className="w-full h-full object-cover blur-sm"></img>
+                    <div className="absolute text-4xl font-secondary text-white underline">More Detail</div>
+                  </div>
+                </div>
+              ) : (
+                <div className="w-30 h-full border-black border-b-2  border-l-2 bg-white border-r-2" onMouseMove={handleMouseEnter4} onMouseLeave={handleMouseLeave4} onClick={turnPt4}>
+                  <div className="w-full h-full  flex flex-column flex-wrap">
+                    <img src="/ef1.png" className="w-full h-full object-cover"></img>
+                  </div>
+                </div>
+              )}
+            </div >
+          )}
+          {turn5 ? (
+            <div className="w-full h-80 flex flex-column justify-between flex-wrap  transition-all duration-500 scale-up-ver-top ">
+              <div className="w-full h-30 flex flex-row flex-wrap transition-all duration-500 -translate-x-0">
+                <div className="w-full h-full border-black border-b-2 border-r-2 border-l-2 flex flex-row flex-wrap bg-black p-5">
+                  <div className="relative w-full h-full">
+                    <div className="absolute border-t-2 border-l-2 border-white border-solid w-30 h-50 left-0 top-0"></div>
+                    <div className="absolute border-r-2 border-b-2 border-white border-solid w-30 h-50 right-0 bottom-0"></div>
+                    <div className="absolute inset-0 flex flex-column items-center justify-start h-full w-full text-4xl p-6">
+                      <div className="w-full font-secondary text-white text-6xl p-6  bg-black text-center">
+                        Cartal
+                        <div className="text-2xl font-secondary">
+                          .............
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="w-full h-70 bg-black p-4 flex flex-row flex-wrap justify-between">
+                <div className="w-50 h-full bg-white">
+                  ABout
+                </div>
+                <div className="w-40 h-full mr-8 mt-16">
+                  <Slider {...SliderSettings}>
+                    <div>
+                      <img src={baseUrl + "ft1.png"} />
+                    </div>
+                    <div>
+                      <img src={baseUrl + "ft2.png"} />
+                    </div>
+                    <div>
+                      <img src={baseUrl + "ft3.png"} />
+                    </div>
+                    <div>
+                      <img src={baseUrl + "ft4.png"} />
+                    </div>
+                  </Slider>
+                  <div className="flex flex-row flex-wrap justify-end gap-2 items-center cursor-pointer mt-4" onClick={turnPt5}>
+                    <div className="font-secondary text-3xl font-bold text-white text-center">Close</div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mt-2"><path d="M4 14h6v6M3 21l6.1-6.1M20 10h-6V4M21 3l-6.1 6.1" /></svg>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div className="w-full h-30 flex flex-row justify-between">
-            <div className="w-30 h-full border-black border-b-2  border-l-2 p-4  bg-black">
-              <div className="relative w-full h-full">
-                <div className="absolute border-t-2 border-l-2 border-white border-solid w-30 h-50 left-0 top-0"></div>
-                <div className="absolute border-r-2 border-b-2 border-white border-solid w-30 h-50 right-0 bottom-0"></div>
-                <div className="absolute inset-0 flex flex-column items-center justify-center  h-full w-full text-4xl p-6">
-                  <div className="w-full font-secondary text-white text-6xl p-6  bg-black text-center">
-                    Cartal
+          ) : (
+            <div className="w-full h-30 flex flex-row justify-between flex-wrap  transition-all duration-500 -translate-y-0 ">
+              {hover5 ? (
+                <div className="w-30 h-full border-black border-b-2  border-l-2 bg-white " onMouseMove={handleMouseEnter5} onMouseLeave={handleMouseLeave5} onClick={turnPt5} >
+                  <div className="relative w-full h-full  flex flex-row flex-wrap justify-center items-center cursor-pointer">
+                    <img src="/ef1.png" className="w-full h-full object-cover blur-sm"></img>
+                    <div className="absolute text-4xl font-secondary text-white underline">More Detail</div>
+                  </div>
+                </div>
+              ) : (
+                <div className="w-30 h-full border-black border-b-2  border-l-2 bg-white " onMouseMove={handleMouseEnter5} onMouseLeave={handleMouseLeave5} onClick={turnPt5}>
+                  <div className="w-full h-full  flex flex-column flex-wrap">
+                    <img src="/ef1.png" className="w-full h-full object-cover"></img>
+                  </div>
+                </div>
+              )}
+              <div className="w-70 h-full border-black border-b-2 border-r-2 border-l-2 flex flex-row flex-wrap bg-black p-6">
+                <div className="relative w-full h-full">
+                  <div className="absolute border-t-2 border-l-2 border-white border-solid w-30 h-50 left-0 top-0"></div>
+                  <div className="absolute border-r-2 border-b-2 border-white border-solid w-30 h-50 right-0 bottom-0"></div>
+                  <div className="absolute inset-0 flex flex-column items-center justify-start h-full w-full text-4xl p-6">
+                    <div className="w-full font-secondary text-white text-6xl p-6  bg-black text-center">
+                      Cartal
+                      <div className="text-2xl font-secondary">
+                        .....................
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="w-70 h-full border-black border-b-2 border-r-2 border-l-2 flex flex-row flex-wrap">
-              <div className="w-90"></div>
-              <div className="w-10 flex justify-end items-end pr-2 pb-2"><ArrowDownRight /></div>
-            </div>
-          </div>
+            </div >
+          )}
 
           <div className="w-full h-60 flex flex-col flex-wrap ">
             <div className="w-full h-20  border-black border-b-2 flex flex-row justify-between">
@@ -200,7 +512,7 @@ export default function Home() {
                 <img src="/Rectangle10.png" className="w-full h-full object-cover" />
               </div>
               <div className="w-30 h-full border-black border-r-2  p-0 flex  ">
-                <div className="w-full font-secondary text-white text-5xl text-center items-center h-full flex justify-center pb-4 bg-black ">
+                <div className="w-full font-secondary text-white text-5xl text-center items-center h-full flex justify-center pb-4 bg-black border-white border-2">
                   Contacts
                 </div>
               </div>
