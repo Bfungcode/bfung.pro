@@ -7,12 +7,13 @@ import { baseUrl1, baseUrl2, baseUrl3, baseUrl4, baseUrl5 } from './config.js'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+
 const SliderSettings = {
   dots: true,
   infinite: true,
   speed: 500,
   slidesToShow: 1,
-  slidesToScroll: 1
+  slidesToScroll: 1,
 };
 
 export default function Home() {
@@ -128,49 +129,63 @@ export default function Home() {
           {turn1 ? (
             <div className="w-full h-80 flex flex-column justify-between flex-wrap  transition-all duration-500 scale-up-ver-top ">
               <div className="w-full h-30 flex flex-row flex-wrap transition-all duration-500 -translate-x-0">
-                <div className="w-full h-full border-black border-b-2 border-r-2 border-l-2 flex flex-row flex-wrap bg-black p-5">
+                <div className="w-full h-full border-black border-r-2 border-l-2 flex flex-row flex-wrap bg-white p-5">
                   <div className="relative w-full h-full">
-                    <div className="absolute border-t-2 border-l-2 border-white border-solid w-30 h-50 left-0 top-0"></div>
-                    <div className="absolute border-r-2 border-b-2 border-white border-solid w-30 h-50 right-0 bottom-0"></div>
+                    <div className="absolute border-t-2 border-l-2 border-black border-solid w-30 h-50 left-0 top-0"></div>
+                    <div className="absolute border-r-2 border-b-2 border-black border-solid w-30 h-50 right-0 bottom-0"></div>
                     <div className="absolute inset-0 flex flex-column items-center justify-start h-full w-full text-4xl p-6">
-                      <div className="w-full font-secondary text-white text-6xl p-6  bg-black text-center">
+                      <div className="w-full font-secondary text-black text-6xl p-6  white text-center">
                         Easy Features
-                        <div className="text-2xl font-secondary">
-                          "EasyFeatures" is a dedicated website built with React JS and designed to assist developers working with React.js. With its extensive collection of JSX templates and CSS code snippets,
-                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="w-full h-70 bg-black p-4 flex flex-row flex-wrap justify-between">
-                <div className="w-50 h-full bg-white">
-                  ABout
+              <div className="w-full h-70 bg-white p-4 flex flex-row flex-wrap justify-between border-black border-l-2 border-r-2 border-b-2">
+                <div className="w-[55%]  p-6 font-secondary">
+                  <div className="w-full h-full text-3xl  text-black font-secondary">
+                    "EasyFeatures" is a dedicated website built with React JS and designed to assist developers working with React.js. With its extensive collection of JSX templates and CSS code snippets.
+                    <div className="text-3xl text-black font-secondary mt-4">
+                      Tech Stack :
+                      <div className="text-3xl text-black font-secondary">- Javascript</div>
+                      <div className="text-3xl text-black font-secondary">- React JS</div>
+                      <div className="text-3xl text-black font-secondary">- Git</div>
+                      <div className="text-3xl text-black font-secondary">- Netlify</div>
+
+                      <div className="text-3xl text-black font-secondary flex gap-6 flex-row mt-4">
+                        Website :
+                        <div className="text-3xl text-black font-secondary font-light underline">easyfeatures.netlify.app</div>
+                      </div>
+                      <div className="text-3xl text-black font-secondary flex gap-6 flex-row mt-4">
+                        Github :
+                        <div className="text-3xl text-black font-secondary font-light underline">github.com/Bfungcode/EasyFeatures</div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div className="w-40 h-full mr-8 mt-16">
+                <div className="w-40 h-full mr-8 mt-8 ">
                   <Slider {...SliderSettings}>
                     <div>
                       <img src={baseUrl1 + "ft1.png"} />
                     </div>
                     <div>
-                      <img src={baseUrl2 + "ft2.png"} />
+                      <img src={baseUrl1 + "ft2.png"} />
                     </div>
                     <div>
-                      <img src={baseUrl3 + "ft3.png"} />
+                      <img src={baseUrl1 + "ft3.png"} />
                     </div>
                     <div>
-                      <img src={baseUrl4 + "ft4.png"} />
+                      <img src={baseUrl1 + "ft4.png"} />
                     </div>
                   </Slider>
                   <div className="flex flex-row flex-wrap justify-end gap-2 items-center cursor-pointer mt-4" onClick={turnPt1}>
-                    <div className="font-secondary text-3xl font-bold text-white text-center">Close</div>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mt-2"><path d="M4 14h6v6M3 21l6.1-6.1M20 10h-6V4M21 3l-6.1 6.1" /></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel"><path d="M19 12H6M12 5l-7 7 7 7" /></svg>
                   </div>
                 </div>
               </div>
             </div>
           ) : (
-            <div className="w-full h-30 flex flex-row justify-between flex-wrap  transition-all duration-500 -translate-y-0 ">
+            <div className="w-full h-30 flex flex-row justify-between flex-wrap  transition-all duration-500 -translate-x-0 ">
               {hover1 ? (
                 <div className="w-30 h-full border-black border-b-2  border-l-2 bg-white " onMouseMove={handleMouseEnter1} onMouseLeave={handleMouseLeave1} onClick={turnPt1} >
                   <div className="relative w-full h-full  flex flex-row flex-wrap justify-center items-center cursor-pointer">
@@ -185,12 +200,12 @@ export default function Home() {
                   </div>
                 </div>
               )}
-              <div className="w-70 h-full border-black border-b-2 border-r-2 border-l-2 flex flex-row flex-wrap bg-black p-6">
+              <div className="w-70 h-full border-black border-b-2 border-r-2 border-l-2 flex flex-row flex-wrap bg-white p-6">
                 <div className="relative w-full h-full">
-                  <div className="absolute border-t-2 border-l-2 border-white border-solid w-30 h-50 left-0 top-0"></div>
-                  <div className="absolute border-r-2 border-b-2 border-white border-solid w-30 h-50 right-0 bottom-0"></div>
+                  <div className="absolute border-t-2 border-l-2 border-black border-solid w-30 h-50 left-0 top-0"></div>
+                  <div className="absolute border-r-2 border-b-2 border-black border-solid w-30 h-50 right-0 bottom-0"></div>
                   <div className="absolute inset-0 flex flex-column items-center justify-start h-full w-full text-4xl p-6">
-                    <div className="w-full font-secondary text-white text-6xl p-6  bg-black text-center">
+                    <div className="w-full font-secondary text-black text-6xl p-6  bg-white text-center">
                       Easy Features
                       <div className="text-2xl font-secondary">
                         "EasyFeatures" is a dedicated website built with React JS and designed to assist developers working with React.js. With its extensive collection of JSX templates and CSS code snippets,
@@ -211,16 +226,13 @@ export default function Home() {
                     <div className="absolute inset-0 flex flex-column items-center justify-start h-full w-full text-4xl p-6">
                       <div className="w-full font-secondary text-white text-6xl p-6  bg-black text-center">
                         CryptoHex
-                        <div className="text-2xl font-secondary">
-                          "Cryptohex" is a Cryptocurrency wallet service web application built with Vue JS
-                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
               <div className="w-full h-70 bg-black p-4 flex flex-row flex-wrap justify-between">
-                <div className="w-40 h-full mr-8 mt-16">
+                <div className="w-40 h-full mt-8 ml-8">
                   <Slider {...SliderSettings}>
                     <div>
                       <img src={baseUrl2 + "ft1.png"} />
@@ -236,17 +248,34 @@ export default function Home() {
                     </div>
                   </Slider>
                   <div className="flex flex-row flex-wrap justify-start gap-2 items-center cursor-pointer mt-4" onClick={turnPt2}>
-                    <div className="font-secondary text-3xl font-bold text-white text-center">Close</div>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mt-1"><path d="M4 14h6v6M3 21l6.1-6.1M20 10h-6V4M21 3l-6.1 6.1" /></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel"><path d="M19 12H6M12 5l-7 7 7 7" /></svg>
                   </div>
                 </div>
-                <div className="w-50 h-full bg-white">
-                  ABout
+                <div className="w-[55%] h-full p-8">
+                  <div className="w-full h-full text-3xl  text-white font-secondary text-end">
+                    "Cryptohex" is a Cryptocurrency wallet service web application built with Vue JS
+                    <div className="text-3xl text-white font-secondary mt-4">
+                      Tech Stack :
+                      <div className="text-3xl text-white font-secondary">- Javascript</div>
+                      <div className="text-3xl text-white font-secondary">- Vue JS</div>
+                      <div className="text-3xl text-white font-secondary">- Git</div>
+                      <div className="text-3xl text-white font-secondary">- Netlify</div>
+
+                      <div className="text-3xl text-white font-secondary flex gap-6 flex-row mt-4 justify-end">
+                        Website :
+                        <div className="text-3xl text-white font-secondary font-light underline">cryptohex.netlify.app</div>
+                      </div>
+                      <div className="text-3xl text-white font-secondary flex gap-6 flex-row mt-4 justify-end">
+                        Github :
+                        <div className="text-3xl text-white font-secondary font-light underline">github.com/Bfungcode/CryptoHex</div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           ) : (
-            <div className="w-full h-30 flex flex-row justify-between flex-wrap  transition-all duration-500 -translate-y-0 ">
+            <div className="w-full h-30 flex flex-row justify-between flex-wrap  transition-all duration-500 -translate-x-0 ">
               <div className="w-70 h-full border-black border-b-2 border-r-2 border-l-2 flex flex-row flex-wrap bg-black p-6">
                 <div className="relative w-full h-full">
                   <div className="absolute border-t-2 border-l-2 border-white border-solid w-30 h-50 left-0 top-0"></div>
@@ -280,26 +309,43 @@ export default function Home() {
           {turn3 ? (
             <div className="w-full h-80 flex flex-column justify-between flex-wrap  transition-all duration-500 scale-up-ver-top ">
               <div className="w-full h-30 flex flex-row flex-wrap transition-all duration-500 -translate-x-0">
-                <div className="w-full h-full border-black border-b-2 border-r-2 border-l-2 flex flex-row flex-wrap bg-black p-5">
+                <div className="w-full h-full border-black border-r-2 border-l-2 flex flex-row flex-wrap bg-white p-5">
                   <div className="relative w-full h-full">
-                    <div className="absolute border-t-2 border-l-2 border-white border-solid w-30 h-50 left-0 top-0"></div>
-                    <div className="absolute border-r-2 border-b-2 border-white border-solid w-30 h-50 right-0 bottom-0"></div>
+                    <div className="absolute border-t-2 border-l-2 border-black border-solid w-30 h-50 left-0 top-0"></div>
+                    <div className="absolute border-r-2 border-b-2 border-black border-solid w-30 h-50 right-0 bottom-0"></div>
                     <div className="absolute inset-0 flex flex-column items-center justify-start h-full w-full text-4xl p-6">
-                      <div className="w-full font-secondary text-white text-6xl p-6  bg-black text-center">
+                      <div className="w-full font-secondary text-black text-6xl p-6  bg-white text-center">
                         Cashier
-                        <div className="text-2xl font-secondary">
-                          ..............
-                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="w-full h-70 bg-black p-4 flex flex-row flex-wrap justify-between">
-                <div className="w-50 h-full bg-white">
-                  ABout
+              <div className="w-full h-70 bg-white p-4 flex flex-row flex-wrap justify-between border-black border-r-2 border-l-2 border-b-2">
+                <div className="w-[55%] h-full bg-white p-4">
+                  <div className="w-full h-full text-3xl  text-black font-secondary">
+                    Cashier: A user-friendly portfolio project with an interactive food menu webpage that allows you to assemble your order on the right side while keeping track of your total payment.
+                    <div className="text-3xl text-black font-secondary mt-1">
+                      Tech Stack :
+                      <div className="text-3xl text-black font-secondary">- Javascript</div>
+                      <div className="text-3xl text-black font-secondary">- React JS</div>
+                      <div className="text-3xl text-black font-secondary">- Tailwind CSS</div>
+                      <div className="text-3xl text-black font-secondary">- Firebase</div>
+                      <div className="text-3xl text-black font-secondary">- Git</div>
+                      <div className="text-3xl text-black font-secondary">- Vercel</div>
+
+                      <div className="text-3xl text-black font-secondary flex gap-6 flex-row mt-1">
+                        Website :
+                        <div className="text-3xl text-black font-secondary font-light underline">cashier-webapp.vercel.app</div>
+                      </div>
+                      <div className="text-3xl text-black font-secondary flex gap-6 flex-row mt-1">
+                        Github :
+                        <div className="text-3xl text-black font-secondary font-light underline">github.com/Bfungcode/Cashier_WebApp</div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div className="w-40 h-full mr-8 mt-16">
+                <div className="w-40 h-full mr-8 mt-8">
                   <Slider {...SliderSettings}>
                     <div>
                       <img src={baseUrl3 + "ft1.png"} />
@@ -310,13 +356,9 @@ export default function Home() {
                     <div>
                       <img src={baseUrl3 + "ft3.png"} />
                     </div>
-                    <div>
-                      <img src={baseUrl3 + "ft4.png"} />
-                    </div>
                   </Slider>
                   <div className="flex flex-row flex-wrap justify-end gap-2 items-center cursor-pointer mt-4" onClick={turnPt3}>
-                    <div className="font-secondary text-3xl font-bold text-white text-center">Close</div>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mt-2"><path d="M4 14h6v6M3 21l6.1-6.1M20 10h-6V4M21 3l-6.1 6.1" /></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel"><path d="M19 12H6M12 5l-7 7 7 7" /></svg>
                   </div>
                 </div>
               </div>
@@ -337,15 +379,15 @@ export default function Home() {
                   </div>
                 </div>
               )}
-              <div className="w-70 h-full border-black border-b-2 border-r-2 border-l-2 flex flex-row flex-wrap bg-black p-6">
+              <div className="w-70 h-full border-black border-b-2 border-r-2 border-l-2 flex flex-row flex-wrap bg-white p-6">
                 <div className="relative w-full h-full">
-                  <div className="absolute border-t-2 border-l-2 border-white border-solid w-30 h-50 left-0 top-0"></div>
-                  <div className="absolute border-r-2 border-b-2 border-white border-solid w-30 h-50 right-0 bottom-0"></div>
+                  <div className="absolute border-t-2 border-l-2 border-black border-solid w-30 h-50 left-0 top-0"></div>
+                  <div className="absolute border-r-2 border-b-2 border-black border-solid w-30 h-50 right-0 bottom-0"></div>
                   <div className="absolute inset-0 flex flex-column items-center justify-start h-full w-full text-4xl p-6">
-                    <div className="w-full font-secondary text-white text-6xl p-6  bg-black text-center">
+                    <div className="w-full font-secondary text-black text-6xl p-6  bg-white text-center">
                       Cashier
                       <div className="text-2xl font-secondary">
-                        ...........
+                        a User-friendly portfolio project with an interactive food menu webpage that allows you to assemble your order on the right side while keeping track of your total payment.
                       </div>
                     </div>
                   </div>
@@ -363,16 +405,13 @@ export default function Home() {
                     <div className="absolute inset-0 flex flex-column items-center justify-start h-full w-full text-4xl p-6">
                       <div className="w-full font-secondary text-white text-6xl p-6  bg-black text-center">
                         E-Comm
-                        <div className="text-2xl font-secondary">
-                          ..........
-                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
               <div className="w-full h-70 bg-black p-4 flex flex-row flex-wrap justify-between">
-                <div className="w-40 h-full mr-8 mt-16">
+                <div className="w-40 h-full ml-8 mt-8">
                   <Slider {...SliderSettings}>
                     <div>
                       <img src={baseUrl4 + "ft1.png"} />
@@ -388,12 +427,29 @@ export default function Home() {
                     </div>
                   </Slider>
                   <div className="flex flex-row flex-wrap justify-start gap-2 items-center cursor-pointer mt-4" onClick={turnPt4}>
-                    <div className="font-secondary text-3xl font-bold text-white text-center">Close</div>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mt-1"><path d="M4 14h6v6M3 21l6.1-6.1M20 10h-6V4M21 3l-6.1 6.1" /></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel"><path d="M19 12H6M12 5l-7 7 7 7" /></svg>
                   </div>
                 </div>
-                <div className="w-50 h-full bg-white">
-                  ABout
+                <div className="w-[55%] h-full p-8">
+                  <div className="w-full h-full text-3xl  text-white font-secondary text-end">
+                    "E-Comm" a minimalist e-commerce interface featuring stylish shirts and clothing options for both genders, allowing easy navigation to the next item.
+                    <div className="text-3xl text-white font-secondary mt-2">
+                      Tech Stack :
+                      <div className="text-3xl text-white font-secondary">- JavaScript</div>
+                      <div className="text-3xl text-white font-secondary">- Vue JS</div>
+                      <div className="text-3xl text-white font-secondary">- Git</div>
+                      <div className="text-3xl text-white font-secondary">- Netlify</div>
+
+                      <div className="text-3xl text-white font-secondary flex gap-6 flex-row mt-2 justify-end">
+                        Website :
+                        <div className="text-3xl text-white font-secondary font-light underline">onecommercepage.netlify.app</div>
+                      </div>
+                      <div className="text-3xl text-white font-secondary flex gap-6 flex-row mt-2 justify-end">
+                        Github :
+                        <div className="text-3xl text-white font-secondary font-light underline">github.com/Bfungcode/Ecommerce_Catalog</div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -407,7 +463,7 @@ export default function Home() {
                     <div className="w-full font-secondary text-white text-6xl p-6  bg-black text-center">
                       E-Comm
                       <div className="text-2xl font-secondary">
-                        .................
+                        a Minimalist e-commerce interface featuring stylish shirts and clothing options for both genders, allowing easy navigation to the next item.
                       </div>
                     </div>
                   </div>
@@ -432,26 +488,43 @@ export default function Home() {
           {turn5 ? (
             <div className="w-full h-80 flex flex-column justify-between flex-wrap  transition-all duration-500 scale-up-ver-top ">
               <div className="w-full h-30 flex flex-row flex-wrap transition-all duration-500 -translate-x-0">
-                <div className="w-full h-full border-black border-b-2 border-r-2 border-l-2 flex flex-row flex-wrap bg-black p-5">
+                <div className="w-full h-full border-black border-r-2 border-l-2 flex flex-row flex-wrap bg-white p-5">
                   <div className="relative w-full h-full">
-                    <div className="absolute border-t-2 border-l-2 border-white border-solid w-30 h-50 left-0 top-0"></div>
-                    <div className="absolute border-r-2 border-b-2 border-white border-solid w-30 h-50 right-0 bottom-0"></div>
+                    <div className="absolute border-t-2 border-l-2 border-black border-solid w-30 h-50 left-0 top-0"></div>
+                    <div className="absolute border-r-2 border-b-2 border-black border-solid w-30 h-50 right-0 bottom-0"></div>
                     <div className="absolute inset-0 flex flex-column items-center justify-start h-full w-full text-4xl p-6">
-                      <div className="w-full font-secondary text-white text-6xl p-6  bg-black text-center">
+                      <div className="w-full font-secondary text-black text-6xl p-6  bg-white text-center">
                         Cartal
-                        <div className="text-2xl font-secondary">
-                          .............
-                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="w-full h-70 bg-black p-4 flex flex-row flex-wrap justify-between">
-                <div className="w-50 h-full bg-white">
-                  ABout
+              <div className="w-full h-70 bg-white p-4 flex flex-row flex-wrap justify-between border-black border-r-2 border-l-2 border-b-2">
+                <div className="w-[55%] h-full bg-white p-4">
+                  <div className="w-full h-full text-3xl  text-black font-secondary">
+                    "Cartal" a Car Rental Web Application for the customer side to do transaction, built by using React JS. (Bootcamp Final Project)
+                    <div className="text-3xl text-black font-secondary mt-4">
+                      Tech Stack :
+                      <div className="text-3xl text-black font-secondary">- JavaScript</div>
+                      <div className="text-3xl text-black font-secondary">- React JS</div>
+                      <div className="text-3xl text-black font-secondary">- React Redux</div>
+                      <div className="text-3xl text-black font-secondary">- Git</div>
+                      <div className="text-3xl text-black font-secondary">- Netlify</div>
+
+                      <div className="text-3xl text-black font-secondary flex gap-6 flex-row mt-4">
+                        Website :
+                        <div className="text-3xl text-black font-secondary font-light underline">User : cartal.netlify.app </div>
+                        <div className="text-3xl text-black font-secondary font-light underline">Admin : admin-cartal.netlify.app</div>
+                      </div>
+                      <div className="text-3xl text-black font-secondary flex gap-6 flex-row mt-4">
+                        Github :
+                        <div className="text-3xl text-black font-secondary font-light underline">github.com/Bfungcode/BinarCarRents_Main</div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div className="w-40 h-full mr-8 mt-16">
+                <div className="w-40 h-full mr-8 mt-8">
                   <Slider {...SliderSettings}>
                     <div>
                       <img src={baseUrl5 + "ft1.png"} />
@@ -467,8 +540,7 @@ export default function Home() {
                     </div>
                   </Slider>
                   <div className="flex flex-row flex-wrap justify-end gap-2 items-center cursor-pointer mt-4" onClick={turnPt5}>
-                    <div className="font-secondary text-3xl font-bold text-white text-center">Close</div>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mt-2"><path d="M4 14h6v6M3 21l6.1-6.1M20 10h-6V4M21 3l-6.1 6.1" /></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel"><path d="M19 12H6M12 5l-7 7 7 7" /></svg>
                   </div>
                 </div>
               </div>
@@ -489,15 +561,15 @@ export default function Home() {
                   </div>
                 </div>
               )}
-              <div className="w-70 h-full border-black border-b-2 border-r-2 border-l-2 flex flex-row flex-wrap bg-black p-6">
+              <div className="w-70 h-full border-black border-b-2 border-r-2 border-l-2 flex flex-row flex-wrap bg-white p-6">
                 <div className="relative w-full h-full">
-                  <div className="absolute border-t-2 border-l-2 border-white border-solid w-30 h-50 left-0 top-0"></div>
-                  <div className="absolute border-r-2 border-b-2 border-white border-solid w-30 h-50 right-0 bottom-0"></div>
+                  <div className="absolute border-t-2 border-l-2 border-black border-solid w-30 h-50 left-0 top-0"></div>
+                  <div className="absolute border-r-2 border-b-2 border-black border-solid w-30 h-50 right-0 bottom-0"></div>
                   <div className="absolute inset-0 flex flex-column items-center justify-start h-full w-full text-4xl p-6">
-                    <div className="w-full font-secondary text-white text-6xl p-6  bg-black text-center">
+                    <div className="w-full font-secondary text-black text-6xl p-6  bg-white text-center">
                       Cartal
                       <div className="text-2xl font-secondary">
-                        .....................
+                        a Car Rental Web Application for the customer side to do transaction, built by using React JS. (Bootcamp Final Project)
                       </div>
                     </div>
                   </div>
