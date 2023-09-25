@@ -2,7 +2,7 @@
 import { GmailIcon, GitIcon, LinkedInIcon, Xicon, DotsIcon, MenuIcon, ArrowDownRight, ArrowDownLeft } from "./media/svg"
 import { useState } from 'react';
 import Slider from 'react-slick';
-import { baseUrl } from './config.js'
+import { baseUrl1, baseUrl2, baseUrl3, baseUrl4, baseUrl5 } from './config.js'
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -150,16 +150,16 @@ export default function Home() {
                 <div className="w-40 h-full mr-8 mt-16">
                   <Slider {...SliderSettings}>
                     <div>
-                      <img src={baseUrl + "ft1.png"} />
+                      <img src={baseUrl1 + "ft1.png"} />
                     </div>
                     <div>
-                      <img src={baseUrl + "ft2.png"} />
+                      <img src={baseUrl2 + "ft2.png"} />
                     </div>
                     <div>
-                      <img src={baseUrl + "ft3.png"} />
+                      <img src={baseUrl3 + "ft3.png"} />
                     </div>
                     <div>
-                      <img src={baseUrl + "ft4.png"} />
+                      <img src={baseUrl4 + "ft4.png"} />
                     </div>
                   </Slider>
                   <div className="flex flex-row flex-wrap justify-end gap-2 items-center cursor-pointer mt-4" onClick={turnPt1}>
@@ -223,16 +223,16 @@ export default function Home() {
                 <div className="w-40 h-full mr-8 mt-16">
                   <Slider {...SliderSettings}>
                     <div>
-                      <img src={baseUrl + "ft1.png"} />
+                      <img src={baseUrl2 + "ft1.png"} />
                     </div>
                     <div>
-                      <img src={baseUrl + "ft2.png"} />
+                      <img src={baseUrl2 + "ft2.png"} />
                     </div>
                     <div>
-                      <img src={baseUrl + "ft3.png"} />
+                      <img src={baseUrl2 + "ft3.png"} />
                     </div>
                     <div>
-                      <img src={baseUrl + "ft4.png"} />
+                      <img src={baseUrl2 + "ft4.png"} />
                     </div>
                   </Slider>
                   <div className="flex flex-row flex-wrap justify-start gap-2 items-center cursor-pointer mt-4" onClick={turnPt2}>
@@ -264,14 +264,14 @@ export default function Home() {
               {hover2 ? (
                 <div className="w-30 h-full border-black border-b-2  border-l-2 bg-white border-r-2" onMouseMove={handleMouseEnter2} onMouseLeave={handleMouseLeave2} onClick={turnPt2} >
                   <div className="relative w-full h-full  flex flex-row flex-wrap justify-center items-center cursor-pointer">
-                    <img src="/ef1.png" className="w-full h-full object-cover blur-sm"></img>
+                    <img src="/pt2/ft1.png" className="w-full h-full object-cover blur-sm"></img>
                     <div className="absolute text-4xl font-secondary text-white underline">More Detail</div>
                   </div>
                 </div>
               ) : (
                 <div className="w-30 h-full border-black border-b-2  border-l-2 bg-white border-r-2" onMouseMove={handleMouseEnter2} onMouseLeave={handleMouseLeave2} onClick={turnPt2}>
                   <div className="w-full h-full  flex flex-column flex-wrap">
-                    <img src="/ef1.png" className="w-full h-full object-cover"></img>
+                    <img src="/pt2/ft1.png" className="w-full h-full object-cover"></img>
                   </div>
                 </div>
               )}
@@ -302,16 +302,16 @@ export default function Home() {
                 <div className="w-40 h-full mr-8 mt-16">
                   <Slider {...SliderSettings}>
                     <div>
-                      <img src={baseUrl + "ft1.png"} />
+                      <img src={baseUrl3 + "ft1.png"} />
                     </div>
                     <div>
-                      <img src={baseUrl + "ft2.png"} />
+                      <img src={baseUrl3 + "ft2.png"} />
                     </div>
                     <div>
-                      <img src={baseUrl + "ft3.png"} />
+                      <img src={baseUrl3 + "ft3.png"} />
                     </div>
                     <div>
-                      <img src={baseUrl + "ft4.png"} />
+                      <img src={baseUrl3 + "ft4.png"} />
                     </div>
                   </Slider>
                   <div className="flex flex-row flex-wrap justify-end gap-2 items-center cursor-pointer mt-4" onClick={turnPt3}>
@@ -326,14 +326,14 @@ export default function Home() {
               {hover3 ? (
                 <div className="w-30 h-full border-black border-b-2  border-l-2 bg-white " onMouseMove={handleMouseEnter3} onMouseLeave={handleMouseLeave3} onClick={turnPt3} >
                   <div className="relative w-full h-full  flex flex-row flex-wrap justify-center items-center cursor-pointer">
-                    <img src="/ef1.png" className="w-full h-full object-cover blur-sm"></img>
+                    <img src="/pt3/ft1.png" className="w-full h-full object-cover blur-sm"></img>
                     <div className="absolute text-4xl font-secondary text-white underline">More Detail</div>
                   </div>
                 </div>
               ) : (
                 <div className="w-30 h-full border-black border-b-2  border-l-2 bg-white " onMouseMove={handleMouseEnter3} onMouseLeave={handleMouseLeave3} onClick={turnPt3}>
                   <div className="w-full h-full  flex flex-column flex-wrap">
-                    <img src="/ef1.png" className="w-full h-full object-cover"></img>
+                    <img src="/pt3/ft1.png" className="w-full h-full object-cover"></img>
                   </div>
                 </div>
               )}
@@ -375,16 +375,16 @@ export default function Home() {
                 <div className="w-40 h-full mr-8 mt-16">
                   <Slider {...SliderSettings}>
                     <div>
-                      <img src={baseUrl + "ft1.png"} />
+                      <img src={baseUrl4 + "ft1.png"} />
                     </div>
                     <div>
-                      <img src={baseUrl + "ft2.png"} />
+                      <img src={baseUrl4 + "ft2.png"} />
                     </div>
                     <div>
-                      <img src={baseUrl + "ft3.png"} />
+                      <img src={baseUrl4 + "ft3.png"} />
                     </div>
                     <div>
-                      <img src={baseUrl + "ft4.png"} />
+                      <img src={baseUrl4 + "ft4.png"} />
                     </div>
                   </Slider>
                   <div className="flex flex-row flex-wrap justify-start gap-2 items-center cursor-pointer mt-4" onClick={turnPt4}>
@@ -416,14 +416,14 @@ export default function Home() {
               {hover4 ? (
                 <div className="w-30 h-full border-black border-b-2  border-l-2 bg-white border-r-2" onMouseMove={handleMouseEnter4} onMouseLeave={handleMouseLeave4} onClick={turnPt4} >
                   <div className="relative w-full h-full  flex flex-row flex-wrap justify-center items-center cursor-pointer">
-                    <img src="/ef1.png" className="w-full h-full object-cover blur-sm"></img>
+                    <img src="/pt4/ft1.png" className="w-full h-full object-cover blur-sm"></img>
                     <div className="absolute text-4xl font-secondary text-white underline">More Detail</div>
                   </div>
                 </div>
               ) : (
                 <div className="w-30 h-full border-black border-b-2  border-l-2 bg-white border-r-2" onMouseMove={handleMouseEnter4} onMouseLeave={handleMouseLeave4} onClick={turnPt4}>
                   <div className="w-full h-full  flex flex-column flex-wrap">
-                    <img src="/ef1.png" className="w-full h-full object-cover"></img>
+                    <img src="/pt4/ft1.png" className="w-full h-full object-cover"></img>
                   </div>
                 </div>
               )}
@@ -454,16 +454,16 @@ export default function Home() {
                 <div className="w-40 h-full mr-8 mt-16">
                   <Slider {...SliderSettings}>
                     <div>
-                      <img src={baseUrl + "ft1.png"} />
+                      <img src={baseUrl5 + "ft1.png"} />
                     </div>
                     <div>
-                      <img src={baseUrl + "ft2.png"} />
+                      <img src={baseUrl5 + "ft2.png"} />
                     </div>
                     <div>
-                      <img src={baseUrl + "ft3.png"} />
+                      <img src={baseUrl5 + "ft3.png"} />
                     </div>
                     <div>
-                      <img src={baseUrl + "ft4.png"} />
+                      <img src={baseUrl5 + "ft4.png"} />
                     </div>
                   </Slider>
                   <div className="flex flex-row flex-wrap justify-end gap-2 items-center cursor-pointer mt-4" onClick={turnPt5}>
@@ -478,14 +478,14 @@ export default function Home() {
               {hover5 ? (
                 <div className="w-30 h-full border-black border-b-2  border-l-2 bg-white " onMouseMove={handleMouseEnter5} onMouseLeave={handleMouseLeave5} onClick={turnPt5} >
                   <div className="relative w-full h-full  flex flex-row flex-wrap justify-center items-center cursor-pointer">
-                    <img src="/ef1.png" className="w-full h-full object-cover blur-sm"></img>
+                    <img src="/pt5/ft1.png" className="w-full h-full object-cover blur-sm"></img>
                     <div className="absolute text-4xl font-secondary text-white underline">More Detail</div>
                   </div>
                 </div>
               ) : (
                 <div className="w-30 h-full border-black border-b-2  border-l-2 bg-white " onMouseMove={handleMouseEnter5} onMouseLeave={handleMouseLeave5} onClick={turnPt5}>
                   <div className="w-full h-full  flex flex-column flex-wrap">
-                    <img src="/ef1.png" className="w-full h-full object-cover"></img>
+                    <img src="/pt5/ft1.png" className="w-full h-full object-cover"></img>
                   </div>
                 </div>
               )}
