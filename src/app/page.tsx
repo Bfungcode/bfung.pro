@@ -82,26 +82,25 @@ export default function Home() {
       <div className="flex flex-col flex-wrap  w-full h-full pt-5 pl-5 pr-5">
         <div className="w-full h-full border-2 border-black p-0 m-0 ">
           <div className="w-full h-12 border-b-2 border-black flex flex-row justify-between items-center p-0 m-0">
-            <div className="w-13 h-full border-black border-r-2 p-0 m-0">
+            <div className="w-[13%] h-full border-black border-r-2 p-0 m-0">
               <img src="/Rectangle4.png" className="h-full w-full relative right object-none"></img>
             </div>
-            <div className="font-secondary text-7xl flex text-center items-center mb-5 flex-row justify-around w-80 h-full">
+            <div className="font-secondary text-7xl flex text-center items-center flex-row justify-around w-[82%] h-full font-medium bg-white transition-colors ease-linear duration-1000 pb-3 hover:bg-black hover:text-white cursor-pointer">
               <div>Bie Fung</div>
               <div>-</div>
               <div>Front End Developer</div>
             </div>
-            <div className="w-6 h-full border-l-2 border-black p-2 m-0 flex flex-col items-center">
+            <div className="w-5 h-full border-l-2 border-black p-2 m-0 flex flex-col items-center">
               <div className="mb-2 font-primary text-sm font-bold text-gray-500 text-center">Works</div>
               <div className="mb-2 cursor-pointer"><DotsIcon /></div>
             </div>
           </div>
           <div className="w-full h-76 flex flex-row">
             <div className="w-13 h-full border-r-2 border-black flex flex-col">
-              <div className="p-4 w-full h-full flex  flex-col justify-end">
-                <div className="font-primary text-xl font-bold text-black ">Bie Fung</div>
+              <div className="p-4 w-full h-full flex  flex-col justify-end transition-colors ease-linear duration-1000 text-black font-primary font-semibold hover:bg-black hover:text-white ">
+                <div className="font-primary text-xl font-bold ">Bie Fung</div>
                 <div className="font-primary text-sm font-bold text-gray-500">Profile</div>
-                <div><img src="/bfung.png" className="w-80 h-full" /></div>
-                <div className="font-primary text-sm font-semibold text-black mt-2 leading-6">
+                <div className="font-primary text-sm font-semibold mt-2 leading-6">
                   <div>Hello, i'm Bie Fung.</div>
                   you can call me Abe or Bei.
                   <div>I’m a Front End Developer</div>
@@ -113,8 +112,8 @@ export default function Home() {
             </div>
           </div>
           <div className="w-full h-12 border-t-2 border-black  flex flex-row justify-between">
-            <div className="w-30 h-full   p-0 flex  ">
-              <div className="w-full font-secondary text-white text-5xl text-center items-center h-full flex justify-center pb-4 bg-black border-white border-2">
+            <div className="w-30 h-full p-0 flex text-white transition-colors duration-1000 ease-linear bg-black hover:bg-white hover:text-black">
+              <div className="w-full font-secondary text-5xl text-center items-center h-full flex justify-center pb-4 border-white border-2">
                 Projects
               </div>
             </div>
@@ -128,8 +127,73 @@ export default function Home() {
       <div className="w-full h-full flex flex-col flex-wrap pl-5 pr-5 ">
         <div className="w-full h-full">
           {turn1 ? (
-            <div className="w-full h-80 flex flex-column justify-between flex-wrap  transition-all duration-500 scale-up-ver-top ">
-              <div className="w-full h-30 flex flex-row flex-wrap transition-all duration-500 -translate-x-0">
+            <div className="w-full h-full flex flex-row justify-between flex-wrap  transition-all duration-500 scale-up-ver-top border-black border-l-2 border-r-2 border-b-2">
+              <div className="w-20 h-full flex flex-column flex-wrap p-6">
+                <div className="w-full h-60 flex flex-column flex-wrap">
+                  <div className="h-[15%] w-full text-4xl font-primary font-bold text-black ">Easy Features</div>
+                  <div className="h-55 w-full flex flex-column flex-wrap gap-14">
+                    <div className="w-full text-xl font-primary font-bold text-black">
+                      Year Accomplished
+                      <div className="text-base text-gray-500">2022</div>
+                    </div>
+                    <div className="w-full text-xl font-primary font-bold text-black">
+                      Role/Position
+                      <div className="text-base text-gray-500">Front End Developer</div>
+                    </div>
+                    <div className="w-full text-xl font-primary font-bold text-black">
+                      Publication Link
+                      <div className="text-base text-gray-500">easyfeatures.netlify.app</div>
+                    </div>
+                    <div className="w-full text-xl font-primary font-bold text-black">
+                      Repository
+                      <div className="text-base text-gray-500">github.com/Bfungcode/EasyFeatures</div>
+                    </div>
+                    <div className="w-full text-xl font-primary font-bold text-black">
+                      Stacks
+                      <div className="text-base text-gray-500">JavaScript</div>
+                      <div className="text-base text-gray-500">React JS</div>
+                      <div className="text-base text-gray-500">CSS</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="w-80 h-full flex-column flex-wrap p-6">
+                <div className="w-full h-5 text-xl font-primary font-bold text-black pt-2">
+                  Project Description
+                </div>
+                <div className="w-full h-[95%] ">
+                  <div className="w-full h-30">
+                    <div className="text-xl text-gray-500">A personal website portfolio that i made for contributing to React JS Front End Developer community.
+                      Creating features using a React JS and vanilla JavaScript or pure without any framework can quite be a problem and waste a lot of times. Let say the feature is a simple slide, in the vanila javascript we easily put the DOM method immediately in the script but as React JS developer we have to implement that using the react way by using the React Hooks, etc. Because in React JS rendering a component and DOM behaves differently, for example React DOM escapes any values embedded in JSX before rendering them. So it's can be a problem for a simple features although it's the same logic function that works on purely javascript website.</div>
+                    <div className="text-2xl text-gray-500 font-semibold">I developed and designed React JS templates of feature that widely used by people or basic features a
+                      website needed, which we can just straight up copy and paste the JSX and style it how we want without
+                      worrying the underhood. </div>
+                  </div>
+                  <div className="w-full h-70 flex flex-row flex-wrap">
+                    <div className="h-full w-40  p-2 flex flex-column flex-wrap gap-2">
+                      <div className="w-full h-40">
+                        <img src="/ef1.png" className="w-full h-full object-cover" />
+                      </div>
+                      <div className="w-full h-60 ">
+                        <img src="/ef2.png" className="w-full h-full object-cover" />
+                      </div>
+                    </div>
+                    <div className="h-full w-40  p-2 flex flex-column flex-wrap gap-2">
+                      <div className="w-full h-60">
+                        <img src="/ef3.png" className="w-full h-full object-cover" />
+                      </div>
+                      <div className="w-full h-40 bg-gray-400">
+                        <img src="/ef4.png" className="w-full h-full object-cover" />
+                      </div>
+                    </div>
+                    <div className="h-full w-20 p-1 mt-1 flex flex-column flex-wrap gap-2">
+                      <img src="/ef5.png" className="w-full h-full object-cover" />
+                    </div>
+                    <div></div>
+                  </div>
+                </div>
+              </div>
+              {/* <div className="w-full h-0 flex flex-row flex-wrap transition-all duration-500 -translate-x-0">
                 <div className="w-full h-full border-black border-r-2 border-l-2 flex flex-row flex-wrap bg-white p-5">
                   <div className="relative w-full h-full">
                     <div className="absolute border-t-2 border-l-2 border-black border-solid w-30 h-50 left-0 top-0"></div>
@@ -183,7 +247,7 @@ export default function Home() {
                     <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel"><path d="M19 12H6M12 5l-7 7 7 7" /></svg>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           ) : (
             <div className="w-full h-30 flex flex-row justify-between flex-wrap  transition-all duration-500 -translate-x-0 ">
