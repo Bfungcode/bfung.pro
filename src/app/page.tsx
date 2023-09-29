@@ -154,6 +154,9 @@ export default function Home() {
                       <div className="text-base text-gray-500">React JS</div>
                       <div className="text-base text-gray-500">CSS</div>
                     </div>
+                    <div className="flex flex-row flex-wrap justify-end gap-2 items-center cursor-pointer mt-4" onClick={turnPt1}>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel"><path d="M19 12H6M12 5l-7 7 7 7" /></svg>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -193,61 +196,6 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              {/* <div className="w-full h-0 flex flex-row flex-wrap transition-all duration-500 -translate-x-0">
-                <div className="w-full h-full border-black border-r-2 border-l-2 flex flex-row flex-wrap bg-white p-5">
-                  <div className="relative w-full h-full">
-                    <div className="absolute border-t-2 border-l-2 border-black border-solid w-30 h-50 left-0 top-0"></div>
-                    <div className="absolute border-r-2 border-b-2 border-black border-solid w-30 h-50 right-0 bottom-0"></div>
-                    <div className="absolute inset-0 flex flex-column items-center justify-start h-full w-full text-4xl p-6">
-                      <div className="w-full font-secondary text-black text-6xl p-6  white text-center">
-                        Easy Features
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="w-full h-70 bg-white p-4 flex flex-row flex-wrap justify-between border-black border-l-2 border-r-2 border-b-2">
-                <div className="w-[55%]  p-6 font-secondary">
-                  <div className="w-full h-full text-3xl  text-black font-secondary">
-                    "EasyFeatures" is a dedicated website built with React JS and designed to assist developers working with React.js. With its extensive collection of JSX templates and CSS code snippets.
-                    <div className="text-3xl text-black font-secondary mt-4">
-                      Tech Stack :
-                      <div className="text-3xl text-black font-secondary">- Javascript</div>
-                      <div className="text-3xl text-black font-secondary">- React JS</div>
-                      <div className="text-3xl text-black font-secondary">- Git</div>
-                      <div className="text-3xl text-black font-secondary">- Netlify</div>
-
-                      <div className="text-3xl text-black font-secondary flex gap-6 flex-row mt-4">
-                        Website :
-                        <div className="text-3xl text-black font-secondary font-light underline">easyfeatures.netlify.app</div>
-                      </div>
-                      <div className="text-3xl text-black font-secondary flex gap-6 flex-row mt-4">
-                        Github :
-                        <div className="text-3xl text-black font-secondary font-light underline">github.com/Bfungcode/EasyFeatures</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="w-40 h-full mr-8 mt-8 ">
-                  <Slider {...SliderSettings}>
-                    <div>
-                      <img src={baseUrl1 + "ft1.png"} />
-                    </div>
-                    <div>
-                      <img src={baseUrl1 + "ft2.png"} />
-                    </div>
-                    <div>
-                      <img src={baseUrl1 + "ft3.png"} />
-                    </div>
-                    <div>
-                      <img src={baseUrl1 + "ft4.png"} />
-                    </div>
-                  </Slider>
-                  <div className="flex flex-row flex-wrap justify-end gap-2 items-center cursor-pointer mt-4" onClick={turnPt1}>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel"><path d="M19 12H6M12 5l-7 7 7 7" /></svg>
-                  </div>
-                </div>
-              </div> */}
             </div>
           ) : (
             <div className="w-full h-30 flex flex-row justify-between flex-wrap  transition-all duration-500 -translate-x-0 ">
@@ -282,59 +230,98 @@ export default function Home() {
             </div >
           )}
           {turn2 ? (
-            <div className="w-full h-80 flex flex-column justify-between flex-wrap  transition-all duration-500 scale-up-ver-top ">
-              <div className="w-full h-30 flex flex-row flex-wrap transition-all duration-500 -translate-x-0">
-                <div className="w-full h-full border-black border-b-2 border-r-2 border-l-2 flex flex-row flex-wrap bg-black p-5">
-                  <div className="relative w-full h-full">
-                    <div className="absolute border-t-2 border-l-2 border-white border-solid w-30 h-50 left-0 top-0"></div>
-                    <div className="absolute border-r-2 border-b-2 border-white border-solid w-30 h-50 right-0 bottom-0"></div>
-                    <div className="absolute inset-0 flex flex-column items-center justify-start h-full w-full text-4xl p-6">
-                      <div className="w-full font-secondary text-white text-6xl p-6  bg-black text-center">
-                        CryptoHex
-                      </div>
+            <div className="w-full h-full flex flex-row justify-between flex-wrap  transition-all duration-500 scale-up-ver-top border-black border-l-2 border-r-2 border-b-2 bg-black text-white">
+              <div className="w-20 h-full flex flex-column flex-wrap p-6">
+                <div className="w-full h-60 flex flex-column flex-wrap">
+                  <div className="h-[15%] w-full text-4xl font-primary font-bold">CryptoHex</div>
+                  <div className="h-55 w-full flex flex-column flex-wrap gap-14">
+                    <div className="w-full text-xl font-primary font-bold">
+                      Year Accomplished
+                      <div className="text-base text-gray-300">2023</div>
+                    </div>
+                    <div className="w-full text-xl font-primary font-bold ">
+                      Role/Position
+                      <div className="text-base text-gray-300">Front End Developer</div>
+                      <div className="text-base text-gray-300">UI/UX Designer</div>
+                    </div>
+                    <div className="w-full text-xl font-primary font-bold ">
+                      Publication Link
+                      <div className="text-base text-gray-300 mb-1">https://cryptohex.netlify.app</div>
+                      <div className="text-xs text-gray-300">figma.com/file/W2rEOrg7oMiEmjiK9gMrsS/CryptoHex?type=design&node-id=0%3A1&t=nLIRzq0rHhINvH3k-1</div>
+                    </div>
+                    <div className="w-full text-xl font-primary font-bold ">
+                      Repository
+                      <div className="text-base text-gray-300">github.com/Bfungcode/CryptoHex</div>
+                    </div>
+                    <div className="w-full text-xl font-primary font-bold ">
+                      Stacks
+                      <div className="text-base text-gray-300">JavaScript</div>
+                      <div className="text-base text-gray-300">Vue JS</div>
+                      <div className="text-base text-gray-300">CSS</div>
+                    </div>
+                    <div className="flex flex-row flex-wrap justify-end gap-2 items-center cursor-pointer mt-4" onClick={turnPt2}>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel"><path d="M19 12H6M12 5l-7 7 7 7" /></svg>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="w-full h-70 bg-black p-4 flex flex-row flex-wrap justify-between">
-                <div className="w-40 h-full mt-8 ml-8">
-                  <Slider {...SliderSettings}>
-                    <div>
-                      <img src={baseUrl2 + "ft1.png"} />
-                    </div>
-                    <div>
-                      <img src={baseUrl2 + "ft2.png"} />
-                    </div>
-                    <div>
-                      <img src={baseUrl2 + "ft3.png"} />
-                    </div>
-                    <div>
-                      <img src={baseUrl2 + "ft4.png"} />
-                    </div>
-                  </Slider>
-                  <div className="flex flex-row flex-wrap justify-start gap-2 items-center cursor-pointer mt-4" onClick={turnPt2}>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel"><path d="M19 12H6M12 5l-7 7 7 7" /></svg>
-                  </div>
+              <div className="w-80 h-full flex-column flex-wrap p-6">
+                <div className="w-full h-5 text-xl font-primary font-bold pt-2">
+                  Project Description
                 </div>
-                <div className="w-[55%] h-full p-8">
-                  <div className="w-full h-full text-3xl  text-white font-secondary text-end">
-                    "Cryptohex" is a Cryptocurrency wallet service web application built with Vue JS
-                    <div className="text-3xl text-white font-secondary mt-4">
-                      Tech Stack :
-                      <div className="text-3xl text-white font-secondary">- Javascript</div>
-                      <div className="text-3xl text-white font-secondary">- Vue JS</div>
-                      <div className="text-3xl text-white font-secondary">- Git</div>
-                      <div className="text-3xl text-white font-secondary">- Netlify</div>
-
-                      <div className="text-3xl text-white font-secondary flex gap-6 flex-row mt-4 justify-end">
-                        Website :
-                        <div className="text-3xl text-white font-secondary font-light underline">cryptohex.netlify.app</div>
-                      </div>
-                      <div className="text-3xl text-white font-secondary flex gap-6 flex-row mt-4 justify-end">
-                        Github :
-                        <div className="text-3xl text-white font-secondary font-light underline">github.com/Bfungcode/CryptoHex</div>
+                <div className="w-full h-[95%] ">
+                  <div className="w-full h-30 flex flex-row flex-wrap">
+                    <div className="text-lg text-gray-200 w-[35%]">
+                      Applied for a job in Front End Developer role that has 5 steps recruitment process.
+                      The client has two cases, the first one is to create a web design using Figma by the given description by the client. The second case is connected with the first case which is to make a website based on the design i made in the first case.
+                    </div>
+                    <div className="text-lg text-gray-200 w-[65%]">
+                      As the first case were given, that time i never use Figma before or do any web design before. So i proceed to negotiate a 3 days deals to learn Web Design and Figma.
+                      By my Front End Engineer experience i confidently began the second case, i were given the acceptance criteria which have an option to choose the framework to use between Vue JS Svelte JS, Next JS and React JS. with a condition framework other than React JS will be given adding points, so i decided to go for framework beside React JS although it's where i most experienced, i switch it with Vue JS which by the previous internship i learned by only one month.
+                      <div className="text-lg text-gray-100 font-bold">
+                        Gladfully i proceed through the fifth step and for the final step is doing interview with the User and HR as final interview. Unfortunately after the final step i were rejected as it said i'm not fit with their company culture.
                       </div>
                     </div>
+                  </div>
+                  <div className="w-full h-70 flex flex-row flex-wrap gap-3">
+                    <div className="h-full w-60 p-2 flex flex-row flex-wrap">
+                      <div className="w-50 h-full flex flex-column flex-wrap justify-center ">
+                        <div className="text-lg text-gray-100 font-bold h-[5%]">Homepage</div>
+                        <img src="/ch1.png" className="w-full object-cover h-[95%]" />
+                      </div>
+                      <div className="w-50 h-full flex flex-column flex-wrap justify-center">
+                        <div className="text-lg text-gray-100 font-bold h-[5%]">Homepage 2</div>
+                        <img src="/ch2.png" className="w-full object-cover h-[95%]" /></div>
+                    </div>
+                    <div className="w-30 h-80 p-2 flex flex-column flex-wrap">
+                      <div className="w-full h-45 flex flex-column flex-wrap justify-center">
+                        <div className="text-lg text-gray-100 font-bold h-[10%]">Login Page</div>
+                        <img src="/ch3.png" className="w-full h-[95%] object-contain" />
+                      </div>
+                      <div className="w-full h-45 flex flex-column flex-wrap justify-center">
+                        <div className="text-lg text-gray-100 font-bold h-[10%]">Register Page</div>
+                        <img src="/ch4.png" className="w-full h-[95%] object-contain" />
+                      </div>
+                    </div>
+                    {/* <div className="h-full w-40  p-2 flex flex-column flex-wrap gap-2">
+                      <div className="w-full h-40">
+                        <img src="/ef1.png" className="w-full h-full object-cover" />
+                      </div>
+                      <div className="w-full h-60 ">
+                        <img src="/ef2.png" className="w-full h-full object-cover" />
+                      </div>
+                    </div>
+                    <div className="h-full w-40  p-2 flex flex-column flex-wrap gap-2">
+                      <div className="w-full h-60">
+                        <img src="/ef3.png" className="w-full h-full object-cover" />
+                      </div>
+                      <div className="w-full h-40 bg-gray-400">
+                        <img src="/ef4.png" className="w-full h-full object-cover" />
+                      </div>
+                    </div>
+                    <div className="h-full w-20 p-1 mt-1 flex flex-column flex-wrap gap-2">
+                      <img src="/ef5.png" className="w-full h-full object-cover" />
+                    </div> */}
                   </div>
                 </div>
               </div>
