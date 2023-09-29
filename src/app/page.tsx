@@ -538,61 +538,81 @@ export default function Home() {
             </div >
           )}
           {turn5 ? (
-            <div className="w-full h-80 flex flex-column justify-between flex-wrap  transition-all duration-500 scale-up-ver-top ">
-              <div className="w-full h-30 flex flex-row flex-wrap transition-all duration-500 -translate-x-0">
-                <div className="w-full h-full border-black border-r-2 border-l-2 flex flex-row flex-wrap bg-white p-5">
-                  <div className="relative w-full h-full">
-                    <div className="absolute border-t-2 border-l-2 border-black border-solid w-30 h-50 left-0 top-0"></div>
-                    <div className="absolute border-r-2 border-b-2 border-black border-solid w-30 h-50 right-0 bottom-0"></div>
-                    <div className="absolute inset-0 flex flex-column items-center justify-start h-full w-full text-4xl p-6">
-                      <div className="w-full font-secondary text-black text-6xl p-6  bg-white text-center">
-                        Cartal
-                      </div>
+            <div className="w-full h-full flex flex-row justify-between flex-wrap  transition-all duration-500 scale-up-ver-top border-black border-l-2 border-r-2 border-b-2">
+              <div className="w-20 h-full flex flex-column flex-wrap p-6">
+                <div className="w-full h-60 flex flex-column flex-wrap">
+                  <div className="h-[15%] w-full text-4xl font-primary font-bold text-black ">Binar Car Rental</div>
+                  <div className="h-55 w-full flex flex-column flex-wrap gap-14">
+                    <div className="w-full text-xl font-primary font-bold text-black">
+                      Year Accomplished
+                      <div className="text-base text-gray-500">2022</div>
+                    </div>
+                    <div className="w-full text-xl font-primary font-bold text-black">
+                      Role/Position
+                      <div className="text-base text-gray-500">Project Leader</div>
+                      <div className="text-base text-gray-500">Front End Engineer</div>
+                    </div>
+                    <div className="w-full text-xl font-primary font-bold text-black">
+                      Publication Link
+                      <div className="text-base text-gray-500">cartal.netlify.app</div>
+                    </div>
+                    <div className="w-full text-xl font-primary font-bold text-black">
+                      Repository
+                      <div className="text-base text-gray-500">github.com/Bfungcode/BinarCarRents</div>
+                    </div>
+                    <div className="w-full text-xl font-primary font-bold text-black">
+                      Stacks
+                      <div className="text-base text-gray-500">JavaScript</div>
+                      <div className="text-base text-gray-500">React JS</div>
+                      <div className="text-base text-gray-500">React Redux</div>
+                      <div className="text-base text-gray-500">CSS</div>
+                    </div>
+                    <div className="flex flex-row flex-wrap justify-end gap-2 items-center cursor-pointer mt-4" onClick={turnPt1}>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel"><path d="M19 12H6M12 5l-7 7 7 7" /></svg>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="w-full h-70 bg-white p-4 flex flex-row flex-wrap justify-between border-black border-r-2 border-l-2 border-b-2">
-                <div className="w-[55%] h-full bg-white p-4">
-                  <div className="w-full h-full text-3xl  text-black font-secondary">
-                    "Cartal" a Car Rental Web Application for the customer side to do transaction, built by using React JS. (Bootcamp Final Project)
-                    <div className="text-3xl text-black font-secondary mt-4">
-                      Tech Stack :
-                      <div className="text-3xl text-black font-secondary">- JavaScript</div>
-                      <div className="text-3xl text-black font-secondary">- React JS</div>
-                      <div className="text-3xl text-black font-secondary">- React Redux</div>
-                      <div className="text-3xl text-black font-secondary">- Git</div>
-                      <div className="text-3xl text-black font-secondary">- Netlify</div>
+              <div className="w-80 h-full flex-column flex-wrap p-6">
+                <div className="w-full h-5 text-xl font-primary font-bold text-black pt-2">
+                  Project Description
+                </div>
+                <div className="w-full h-[95%] ">
+                  <div className="w-full h-30 flex flex-row flex-wrap">
+                    <div className="text-base text-gray-500 w-65">During bootcamp, for the final project we were tasked to develop a web application with React JS Framework that facilitated transactions between customers and suppliers in car rental industry.
+                      We were divided into two teams of 5-member. I offered myself and assigned for the role of the Project Leader for the team. As the youngest member, it was important to establish mutual respect and seen as an equal colleague. To address this, i approached each member personally to share my thoughts and my desire to them.
 
-                      <div className="text-3xl text-black font-secondary flex gap-6 flex-row mt-4">
-                        Website :
-                        <div className="text-3xl text-black font-secondary font-light underline">User : cartal.netlify.app </div>
-                        <div className="text-3xl text-black font-secondary font-light underline">Admin : admin-cartal.netlify.app</div>
-                      </div>
-                      <div className="text-3xl text-black font-secondary flex gap-6 flex-row mt-4">
-                        Github :
-                        <div className="text-3xl text-black font-secondary font-light underline">github.com/Bfungcode/BinarCarRents_Main</div>
+                      My responsibilities as the project leader is ensuring efficient task allocation and collaboration within the team. For that, i implemented Agile and Scrum method for the development process and provided a flow chart for allocating the task to each member. I divided my team into two group, one for handling the customer side of website and one for the admin side to update the data(CRUD). I'm also in charge of implementing Redux middleware for managing the API data and responsible for the website's responsiveness and slicing the homepage based by the design provided by the UI/UX team. </div>
+                    <div className="text-base text-gray-500 w-[34%]">Throughout the project, I actively led the team, ensuring that everyone understood their roles and responsibilities.
+                      I scheduled a regular team meetings for catching up and checking for our progress and discussing any challenges or problem we have and solving it together at the moment.
+                      I'm in charge for both group the customer side and the admin side where any change would be approved through me by using Github pull request.
+                      <div className="text-base text-gray-500 font-bold">
+                        We successfully completed the project on time and passed all the requirements.
+                        Our exceptional performance was recognized, as we achieved an outstanding score of 97 out of 100.
                       </div>
                     </div>
                   </div>
-                </div>
-                <div className="w-40 h-full mr-8 mt-8">
-                  <Slider {...SliderSettings}>
-                    <div>
-                      <img src={baseUrl5 + "ft1.png"} />
+                  <div className="w-full h-70 flex flex-row flex-wrap">
+                    <div className="h-full w-40  p-2 flex flex-column flex-wrap gap-2">
+                      <div className="w-full h-40">
+                        <img src="/ef1.png" className="w-full h-full object-cover" />
+                      </div>
+                      <div className="w-full h-60 ">
+                        <img src="/ef2.png" className="w-full h-full object-cover" />
+                      </div>
                     </div>
-                    <div>
-                      <img src={baseUrl5 + "ft2.png"} />
+                    <div className="h-full w-40  p-2 flex flex-column flex-wrap gap-2">
+                      <div className="w-full h-60">
+                        <img src="/ef3.png" className="w-full h-full object-cover" />
+                      </div>
+                      <div className="w-full h-40 bg-gray-400">
+                        <img src="/ef4.png" className="w-full h-full object-cover" />
+                      </div>
                     </div>
-                    <div>
-                      <img src={baseUrl5 + "ft3.png"} />
+                    <div className="h-full w-20 p-1 mt-1 flex flex-column flex-wrap gap-2">
+                      <img src="/ef5.png" className="w-full h-full object-cover" />
                     </div>
-                    <div>
-                      <img src={baseUrl5 + "ft4.png"} />
-                    </div>
-                  </Slider>
-                  <div className="flex flex-row flex-wrap justify-end gap-2 items-center cursor-pointer mt-4" onClick={turnPt5}>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel"><path d="M19 12H6M12 5l-7 7 7 7" /></svg>
+                    <div></div>
                   </div>
                 </div>
               </div>
