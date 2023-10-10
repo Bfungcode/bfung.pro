@@ -592,27 +592,36 @@ export default function Home() {
                       </div>
                     </div>
                   </div>
-                  <div className="w-full h-70 flex flex-row flex-wrap">
-                    <div className="h-full w-40  p-2 flex flex-column flex-wrap gap-2">
-                      <div className="w-full h-40">
-                        <img src="/ef1.png" className="w-full h-full object-cover" />
-                      </div>
-                      <div className="w-full h-60 ">
-                        <img src="/ef2.png" className="w-full h-full object-cover" />
+                  <div className="w-full h-70 flex flex-row flex-wrap bg-gray-200 p-2">
+                    <div className="h-full w-30 text-center">
+                      <div className="text-lg text-black font-bold h-[5%]">Homepage</div>
+                      <div className="w-full p-2 h-[97%] flex flex-column gap-2 flex-wrap">
+                        <img src="/ct1.png" className="w-full h-full object-fill" />
                       </div>
                     </div>
-                    <div className="h-full w-40  p-2 flex flex-column flex-wrap gap-2">
-                      <div className="w-full h-60">
-                        <img src="/ef3.png" className="w-full h-full object-cover" />
-                      </div>
-                      <div className="w-full h-40 bg-gray-400">
-                        <img src="/ef4.png" className="w-full h-full object-cover" />
+                    <div className="h-full w-[35%]  p-2 flex flex-column flex-wrap gap-2">
+                      <div className="w-full h-full flex flex-column flex-wrap">
+                        <div className="w-full h-[45%] flex flex-column flex-wrap justify-center">
+                          <div className="text-lg text-black font-bold h-[12%]">Car Page</div>
+                          <img src="/ct2.png" className="w-full h-full object-fill" /></div>
+                        <div className="w-full h-[45%] flex flex-column flex-wrap justify-center">
+                          <div className="text-lg text-black font-bold h-[15%] flex flex-column flex-wrap">Payment Page</div>
+                          <img src="/ct4.png" className="w-full h-full object-fill" />
+                        </div>
                       </div>
                     </div>
-                    <div className="h-full w-20 p-1 mt-1 flex flex-column flex-wrap gap-2">
-                      <img src="/ef5.png" className="w-full h-full object-cover" />
+                    <div className="h-full w-[35%] p-2 flex flex-column flex-wrap gap-2">
+                      <div className="w-full h-full flex flex-column flex-wrap">
+                        <div className="w-full h-[45%] flex flex-column flex-wrap justify-center">
+                          <div className="text-lg text-black font-bold h-[12%]">Admin Dashboard</div>
+                          <img src="/ct3.png" className="w-full h-full object-fill" /></div>
+                        <div className="w-full h-[45%] flex flex-column flex-wrap justify-center">
+                          <div className="text-lg text-black font-bold h-[15%] flex flex-column flex-wrap">Cars Update</div>
+                          <img src="/ct5.png" className="w-full h-full object-fill" />
+                        </div>
+                      </div>
                     </div>
-                    <div></div>
+
                   </div>
                 </div>
               </div>
@@ -681,7 +690,6 @@ export default function Home() {
             <div className="w-full h-20 border-black border- border-l-2 border-r-2 border-b-2 flex flex-row">
               <div className="w-70 h-full  text-white text-5xl font-secondary bg-black flex justify-center items-center flex-col gap-2">
                 github.com/Bfungcode
-
               </div>
               <div className="w-30 h-full text-black font-secondary text-5xl flex flex-row justify-center items-center border-black border-l-2">
                 Github
@@ -690,11 +698,9 @@ export default function Home() {
             <div className="w-full h-20 border-black border- border-l-2 border-r-2 border-b-2 flex flex-row">
               <div className="w-30 h-full  border-black border-r-2 text-black text-5xl font-secondary  flex justify-center items-center">
                 X / Twitter
-
               </div>
               <div className="w-70 h-full text-white font-secondary text-5xl flex flex-col justify-center items-center bg-black gap-2">
                 twitter.com/bei_fg
-
               </div>
             </div>
           </div>
