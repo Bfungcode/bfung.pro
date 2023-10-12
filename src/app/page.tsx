@@ -126,11 +126,11 @@ export default function Home() {
 
       <div className="w-full h-full flex flex-col flex-wrap pl-5 pr-5 ">
         <div className="w-full h-full">
-          {turn1 ? (
+          {turn5 ? (
             <div className="w-full h-full flex flex-row justify-between flex-wrap  transition-all duration-500 scale-up-ver-top border-black border-l-2 border-r-2 border-b-2">
               <div className="w-20 h-full flex flex-column flex-wrap p-6">
                 <div className="w-full h-60 flex flex-column flex-wrap">
-                  <div className="h-[15%] w-full text-4xl font-primary font-bold text-black ">Easy Features</div>
+                  <div className="h-[15%] w-full text-4xl font-primary font-bold text-black ">Binar Car Rental</div>
                   <div className="h-55 w-full flex flex-column flex-wrap gap-14">
                     <div className="w-full text-xl font-primary font-bold text-black">
                       Year Accomplished
@@ -138,20 +138,22 @@ export default function Home() {
                     </div>
                     <div className="w-full text-xl font-primary font-bold text-black">
                       Role/Position
-                      <div className="text-base text-gray-500">Front End Developer</div>
+                      <div className="text-base text-gray-500">Project Leader</div>
+                      <div className="text-base text-gray-500">Front End Engineer</div>
                     </div>
                     <div className="w-full text-xl font-primary font-bold text-black">
                       Publication Link
-                      <div className="text-base text-gray-500">easyfeatures.netlify.app</div>
+                      <div className="text-base text-gray-500">cartal.netlify.app</div>
                     </div>
                     <div className="w-full text-xl font-primary font-bold text-black">
                       Repository
-                      <div className="text-base text-gray-500">github.com/Bfungcode/EasyFeatures</div>
+                      <div className="text-base text-gray-500">github.com/Bfungcode/BinarCarRents</div>
                     </div>
                     <div className="w-full text-xl font-primary font-bold text-black">
                       Stacks
                       <div className="text-base text-gray-500">JavaScript</div>
                       <div className="text-base text-gray-500">React JS</div>
+                      <div className="text-base text-gray-500">React Redux</div>
                       <div className="text-base text-gray-500">CSS</div>
                     </div>
                     <div className="flex flex-row flex-wrap justify-end gap-2 items-center cursor-pointer mt-4" onClick={turnPt1}>
@@ -165,51 +167,67 @@ export default function Home() {
                   Project Description
                 </div>
                 <div className="w-full h-[95%] ">
-                  <div className="w-full h-30">
-                    <div className="text-xl text-gray-500">A personal website portfolio that i made for contributing to React JS Front End Developer community.
-                      Creating features using a React JS and vanilla JavaScript or pure without any framework can quite be a problem and waste a lot of times. Let say the feature is a simple slide, in the vanila javascript we easily put the DOM method immediately in the script but as React JS developer we have to implement that using the react way by using the React Hooks, etc. Because in React JS rendering a component and DOM behaves differently, for example React DOM escapes any values embedded in JSX before rendering them. So it's can be a problem for a simple features although it's the same logic function that works on purely javascript website.</div>
-                    <div className="text-2xl text-gray-500 font-semibold">I developed and designed React JS templates of feature that widely used by people or basic features a
-                      website needed, which we can just straight up copy and paste the JSX and style it how we want without
-                      worrying the underhood. </div>
+                  <div className="w-full h-30 flex flex-row flex-wrap">
+                    <div className="text-base text-gray-500 w-65">During bootcamp, for the final project we were tasked to develop a web application with React JS Framework that facilitated transactions between customers and suppliers in car rental industry.
+                      We were divided into two teams of 5-member. I offered myself and assigned for the role of the Project Leader for the team. As the youngest member, it was important to establish mutual respect and seen as an equal colleague. To address this, i approached each member personally to share my thoughts and my desire to them.
+
+                      My responsibilities as the project leader is ensuring efficient task allocation and collaboration within the team. For that, i implemented Agile and Scrum method for the development process and provided a flow chart for allocating the task to each member. I divided my team into two group, one for handling the customer side of website and one for the admin side to update the data(CRUD). I'm also in charge of implementing Redux middleware for managing the API data and responsible for the website's responsiveness and slicing the homepage based by the design provided by the UI/UX team. </div>
+                    <div className="text-base text-gray-500 w-[34%]">Throughout the project, I actively led the team, ensuring that everyone understood their roles and responsibilities.
+                      I scheduled a regular team meetings for catching up and checking for our progress and discussing any challenges or problem we have and solving it together at the moment.
+                      I'm in charge for both group the customer side and the admin side where any change would be approved through me by using Github pull request.
+                      <div className="text-base text-gray-500 font-bold">
+                        We successfully completed the project on time and passed all the requirements.
+                        Our exceptional performance was recognized, as we achieved an outstanding score of 97 out of 100.
+                      </div>
+                    </div>
                   </div>
-                  <div className="w-full h-70 flex flex-row flex-wrap">
-                    <div className="h-full w-40  p-2 flex flex-column flex-wrap gap-2">
-                      <div className="w-full h-40">
-                        <img src="/ef1.png" className="w-full h-full object-cover" />
-                      </div>
-                      <div className="w-full h-60 ">
-                        <img src="/ef2.png" className="w-full h-full object-cover" />
+                  <div className="w-full h-70 flex flex-row flex-wrap bg-gray-200 p-2">
+                    <div className="h-full w-30 text-center">
+                      <div className="text-lg text-black font-bold h-[5%]">Homepage</div>
+                      <div className="w-full p-2 h-[97%] flex flex-column gap-2 flex-wrap">
+                        <img src="/ct1.png" className="w-full h-full object-fill" />
                       </div>
                     </div>
-                    <div className="h-full w-40  p-2 flex flex-column flex-wrap gap-2">
-                      <div className="w-full h-60">
-                        <img src="/ef3.png" className="w-full h-full object-cover" />
-                      </div>
-                      <div className="w-full h-40 bg-gray-400">
-                        <img src="/ef4.png" className="w-full h-full object-cover" />
+                    <div className="h-full w-[35%]  p-2 flex flex-column flex-wrap gap-2">
+                      <div className="w-full h-full flex flex-column flex-wrap">
+                        <div className="w-full h-[45%] flex flex-column flex-wrap justify-center">
+                          <div className="text-lgz1 text-black font-bold h-[12%]">Car Page</div>
+                          <img src="/ct2.png" className="w-full h-full object-fill" /></div>
+                        <div className="w-full h-[45%] flex flex-column flex-wrap justify-center">
+                          <div className="text-lg text-black font-bold h-[15%] flex flex-column flex-wrap">Payment Page</div>
+                          <img src="/ct4.png" className="w-full h-full object-fill" />
+                        </div>
                       </div>
                     </div>
-                    <div className="h-full w-20 p-1 mt-1 flex flex-column flex-wrap gap-2">
-                      <img src="/ef5.png" className="w-full h-full object-cover" />
+                    <div className="h-full w-[35%] p-2 flex flex-column flex-wrap gap-2">
+                      <div className="w-full h-full flex flex-column flex-wrap">
+                        <div className="w-full h-[45%] flex flex-column flex-wrap justify-center">
+                          <div className="text-lg text-black font-bold h-[12%]">Admin Dashboard</div>
+                          <img src="/ct3.png" className="w-full h-full object-fill" /></div>
+                        <div className="w-full h-[45%] flex flex-column flex-wrap justify-center">
+                          <div className="text-lg text-black font-bold h-[15%] flex flex-column flex-wrap">Cars Update</div>
+                          <img src="/ct5.png" className="w-full h-full object-fill" />
+                        </div>
+                      </div>
                     </div>
-                    <div></div>
+
                   </div>
                 </div>
               </div>
             </div>
           ) : (
-            <div className="w-full h-30 flex flex-row justify-between flex-wrap  transition-all duration-500 -translate-x-0 ">
-              {hover1 ? (
-                <div className="w-30 h-full border-black border-b-2  border-l-2 bg-white " onMouseMove={handleMouseEnter1} onMouseLeave={handleMouseLeave1} onClick={turnPt1} >
+            <div className="w-full h-30 flex flex-row justify-between flex-wrap  transition-all duration-500 -translate-y-0 ">
+              {hover5 ? (
+                <div className="w-30 h-full border-black border-b-2  border-l-2 bg-white " onMouseMove={handleMouseEnter5} onMouseLeave={handleMouseLeave5} onClick={turnPt5} >
                   <div className="relative w-full h-full  flex flex-row flex-wrap justify-center items-center cursor-pointer">
-                    <img src="/ef1.png" className="w-full h-full object-cover blur-sm"></img>
+                    <img src="/pt5/ft1.png" className="w-full h-full object-cover blur-sm"></img>
                     <div className="absolute text-4xl font-secondary text-white underline">More Detail</div>
                   </div>
                 </div>
               ) : (
-                <div className="w-30 h-full border-black border-b-2  border-l-2 bg-white " onMouseMove={handleMouseEnter1} onMouseLeave={handleMouseLeave1} onClick={turnPt1}>
+                <div className="w-30 h-full border-black border-b-2  border-l-2 bg-white " onMouseMove={handleMouseEnter5} onMouseLeave={handleMouseLeave5} onClick={turnPt5}>
                   <div className="w-full h-full  flex flex-column flex-wrap">
-                    <img src="/ef1.png" className="w-full h-full object-cover"></img>
+                    <img src="/pt5/ft1.png" className="w-full h-full object-cover"></img>
                   </div>
                 </div>
               )}
@@ -219,9 +237,9 @@ export default function Home() {
                   <div className="absolute border-r-2 border-b-2 border-black border-solid w-30 h-50 right-0 bottom-0"></div>
                   <div className="absolute inset-0 flex flex-column items-center justify-start h-full w-full text-4xl p-6">
                     <div className="w-full font-secondary text-black text-6xl p-6  bg-white text-center">
-                      Easy Features
+                      Cartal
                       <div className="text-2xl font-secondary">
-                        a Dedicated website built with React JS and designed to assist developers working with React.js. With its extensive collection of JSX templates and CSS code snippets,
+                        a Car Rental Web Application for the customer side to do transaction, built by using React JS. (Bootcamp Final Project)
                       </div>
                     </div>
                   </div>
@@ -229,6 +247,7 @@ export default function Home() {
               </div>
             </div >
           )}
+
           {turn2 ? (
             <div className="w-full h-full flex flex-row justify-between flex-wrap  transition-all duration-500 scale-up-ver-top border-black border-l-2 border-r-2 border-b-2 bg-black text-white">
               <div className="w-20 h-full flex flex-column flex-wrap p-6">
@@ -303,25 +322,6 @@ export default function Home() {
                         <img src="/ch4.png" className="w-full h-[95%] object-contain" />
                       </div>
                     </div>
-                    {/* <div className="h-full w-40  p-2 flex flex-column flex-wrap gap-2">
-                      <div className="w-full h-40">
-                        <img src="/ef1.png" className="w-full h-full object-cover" />
-                      </div>
-                      <div className="w-full h-60 ">
-                        <img src="/ef2.png" className="w-full h-full object-cover" />
-                      </div>
-                    </div>
-                    <div className="h-full w-40  p-2 flex flex-column flex-wrap gap-2">
-                      <div className="w-full h-60">
-                        <img src="/ef3.png" className="w-full h-full object-cover" />
-                      </div>
-                      <div className="w-full h-40 bg-gray-400">
-                        <img src="/ef4.png" className="w-full h-full object-cover" />
-                      </div>
-                    </div>
-                    <div className="h-full w-20 p-1 mt-1 flex flex-column flex-wrap gap-2">
-                      <img src="/ef5.png" className="w-full h-full object-cover" />
-                    </div> */}
                   </div>
                 </div>
               </div>
@@ -359,58 +359,88 @@ export default function Home() {
             </div >
           )}
           {turn3 ? (
-            <div className="w-full h-80 flex flex-column justify-between flex-wrap  transition-all duration-500 scale-up-ver-top ">
-              <div className="w-full h-30 flex flex-row flex-wrap transition-all duration-500 -translate-x-0">
-                <div className="w-full h-full border-black border-r-2 border-l-2 flex flex-row flex-wrap bg-white p-5">
-                  <div className="relative w-full h-full">
-                    <div className="absolute border-t-2 border-l-2 border-black border-solid w-30 h-50 left-0 top-0"></div>
-                    <div className="absolute border-r-2 border-b-2 border-black border-solid w-30 h-50 right-0 bottom-0"></div>
-                    <div className="absolute inset-0 flex flex-column items-center justify-start h-full w-full text-4xl p-6">
-                      <div className="w-full font-secondary text-black text-6xl p-6  bg-white text-center">
-                        Cashier
-                      </div>
+            <div className="w-full h-full flex flex-row justify-between flex-wrap  transition-all duration-500 scale-up-ver-top border-black border-l-2 border-r-2 border-b-2">
+              <div className="w-20 h-full flex flex-column flex-wrap p-6">
+                <div className="w-full h-60 flex flex-column flex-wrap">
+                  <div className="h-[15%] w-full text-4xl font-primary font-bold text-black ">Cashier</div>
+                  <div className="h-55 w-full flex flex-column flex-wrap gap-14">
+                    <div className="w-full text-xl font-primary font-bold text-black">
+                      Year Accomplished
+                      <div className="text-base text-gray-500">2023</div>
+                    </div>
+                    <div className="w-full text-xl font-primary font-bold text-black">
+                      Role/Position
+                      <div className="text-base text-gray-500">Front End Developer</div>
+                    </div>
+                    <div className="w-full text-xl font-primary font-bold text-black">
+                      Publication Link
+                      <div className="text-base text-gray-500">cashier-webapp.vercel.app</div>
+                    </div>
+                    <div className="w-full text-xl font-primary font-bold text-black">
+                      Repository
+                      <div className="text-base text-gray-500">github.com/Bfungcode/Cashier_WebApp</div>
+                    </div>
+                    <div className="w-full text-xl font-primary font-bold text-black">
+                      Stacks
+                      <div className="text-base text-gray-500">JavaScript</div>
+                      <div className="text-base text-gray-500">React JS</div>
+                      <div className="text-base text-gray-500">Tailwind CSS</div>
+                    </div>
+                    <div className="flex flex-row flex-wrap justify-end gap-2 items-center cursor-pointer mt-4" onClick={turnPt3}>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel"><path d="M19 12H6M12 5l-7 7 7 7" /></svg>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="w-full h-70 bg-white p-4 flex flex-row flex-wrap justify-between border-black border-r-2 border-l-2 border-b-2">
-                <div className="w-[55%] h-full bg-white p-4">
-                  <div className="w-full h-full text-3xl  text-black font-secondary">
-                    Cashier: A user-friendly portfolio project with an interactive food menu webpage that allows you to assemble your order on the right side while keeping track of your total payment.
-                    <div className="text-3xl text-black font-secondary mt-1">
-                      Tech Stack :
-                      <div className="text-3xl text-black font-secondary">- Javascript</div>
-                      <div className="text-3xl text-black font-secondary">- React JS</div>
-                      <div className="text-3xl text-black font-secondary">- Tailwind CSS</div>
-                      <div className="text-3xl text-black font-secondary">- Firebase</div>
-                      <div className="text-3xl text-black font-secondary">- Git</div>
-                      <div className="text-3xl text-black font-secondary">- Vercel</div>
-
-                      <div className="text-3xl text-black font-secondary flex gap-6 flex-row mt-1">
-                        Website :
-                        <div className="text-3xl text-black font-secondary font-light underline">cashier-webapp.vercel.app</div>
-                      </div>
-                      <div className="text-3xl text-black font-secondary flex gap-6 flex-row mt-1">
-                        Github :
-                        <div className="text-3xl text-black font-secondary font-light underline">github.com/Bfungcode/Cashier_WebApp</div>
+              <div className="w-80 h-full flex-column flex-wrap p-6">
+                <div className="w-full h-5 text-xl font-primary font-bold text-black pt-2">
+                  Project Description
+                </div>
+                <div className="w-full h-[95%] ">
+                  <div className="w-full h-[35%]">
+                    <div className="text-xl text-gray-500 font-semibold">
+                      I've created a handy project called "Cashier" to assist front desk workers in efficiently managing orders and processing payments. With "Cashier," you can effortlessly handle customer orders and keep track of payments. with Features:
+                      <div className="w-full flex flex-row flex-wrap">
+                        <div className="w-full flex flex-row flex-wrap">
+                          <div className="w-full h-10">
+                            <div className="text-lg text-gray-500 font-semibold">
+                              <div className="text-black inline-block">Interactive Menu: </div> Our menu system is user-friendly, allowing you to add items to orders with a simple click. You can stack items for multiple quantities and remove them just as easily.
+                            </div>
+                          </div>
+                          <div className="w-full h-10">
+                            <div className="text-lg text-gray-500 font-semibold">
+                              <div className="text-black inline-block">Order Summary: </div> "Cashier" keeps a running tally of the selected items, quantities, and their individual prices. This makes it a breeze to review and make any necessary adjustments to the order.
+                            </div>
+                          </div>
+                          <div className="w-full h-10">
+                            <div className="text-lg text-gray-500 font-semibold">
+                              <div className="text-black inline-block">Payment Proccessing: </div> When it's time to settle the bill, our system calculates the total cost based on the items in the order. There's a convenient input field where you can enter the customer's payment amount.
+                            </div>
+                          </div>
+                          <div className="w-full h-10">
+                            <div className="text-lg text-gray-500 font-semibold">
+                              <div className="text-black inline-block">Payment Notifications: </div> If the customer provides more money than the total, our system displays a toast notification showing the change to be returned. However, if the payment is insufficient, you'll receive a notification indicating that the payment has failed.
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div className="w-40 h-full mr-8 mt-8">
-                  <Slider {...SliderSettings}>
-                    <div>
-                      <img src={baseUrl3 + "ft1.png"} />
+                  <div className="w-full h-[65%] flex flex-row flex-wrap p-2 bg-gray-200">
+                    <div className="w-full h-full flex flex-row flex-wrap p-5 justify-center gap-5">
+                      <div className="w-50 h-full flex flex-column flex-wrap">
+                        <img src="/cs1.png" className="w-full h-70 object-fill " />
+                      </div>
+                      <div className="w-[15%] h-full">
+                        <img src="/cs2.png" className="w-full h-full object-cover" />
+                      </div>
+                      <div className="w-[15%] h-full">
+                        <img src="/cs3.png" className="w-full h-full object-cover" />
+                      </div>
+                      <div className="w-[15%] h-full">
+                        <img src="/cs4.png" className="w-full h-full object-cover" />
+                      </div>
                     </div>
-                    <div>
-                      <img src={baseUrl3 + "ft2.png"} />
-                    </div>
-                    <div>
-                      <img src={baseUrl3 + "ft3.png"} />
-                    </div>
-                  </Slider>
-                  <div className="flex flex-row flex-wrap justify-end gap-2 items-center cursor-pointer mt-4" onClick={turnPt3}>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel"><path d="M19 12H6M12 5l-7 7 7 7" /></svg>
                   </div>
                 </div>
               </div>
@@ -447,218 +477,110 @@ export default function Home() {
               </div>
             </div >
           )}
-          {turn4 ? (
-            <div className="w-full h-80 flex flex-column justify-between flex-wrap  transition-all duration-500 scale-up-ver-top ">
-              <div className="w-full h-30 flex flex-row flex-wrap transition-all duration-500 -translate-x-0">
-                <div className="w-full h-full border-black border-b-2 border-r-2 border-l-2 flex flex-row flex-wrap bg-black p-5">
-                  <div className="relative w-full h-full">
-                    <div className="absolute border-t-2 border-l-2 border-white border-solid w-30 h-50 left-0 top-0"></div>
-                    <div className="absolute border-r-2 border-b-2 border-white border-solid w-30 h-50 right-0 bottom-0"></div>
-                    <div className="absolute inset-0 flex flex-column items-center justify-start h-full w-full text-4xl p-6">
-                      <div className="w-full font-secondary text-white text-6xl p-6  bg-black text-center">
-                        E-Comm
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="w-full h-70 bg-black p-4 flex flex-row flex-wrap justify-between">
-                <div className="w-40 h-full ml-8 mt-8">
-                  <Slider {...SliderSettings}>
-                    <div>
-                      <img src={baseUrl4 + "ft1.png"} />
-                    </div>
-                    <div>
-                      <img src={baseUrl4 + "ft2.png"} />
-                    </div>
-                    <div>
-                      <img src={baseUrl4 + "ft3.png"} />
-                    </div>
-                    <div>
-                      <img src={baseUrl4 + "ft4.png"} />
-                    </div>
-                  </Slider>
-                  <div className="flex flex-row flex-wrap justify-start gap-2 items-center cursor-pointer mt-4" onClick={turnPt4}>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel"><path d="M19 12H6M12 5l-7 7 7 7" /></svg>
-                  </div>
-                </div>
-                <div className="w-[55%] h-full p-8">
-                  <div className="w-full h-full text-3xl  text-white font-secondary text-end">
-                    "E-Comm" a minimalist e-commerce interface featuring stylish shirts and clothing options for both genders, allowing easy navigation to the next item.
-                    <div className="text-3xl text-white font-secondary mt-2">
-                      Tech Stack :
-                      <div className="text-3xl text-white font-secondary">- JavaScript</div>
-                      <div className="text-3xl text-white font-secondary">- Vue JS</div>
-                      <div className="text-3xl text-white font-secondary">- Git</div>
-                      <div className="text-3xl text-white font-secondary">- Netlify</div>
-
-                      <div className="text-3xl text-white font-secondary flex gap-6 flex-row mt-2 justify-end">
-                        Website :
-                        <div className="text-3xl text-white font-secondary font-light underline">onecommercepage.netlify.app</div>
-                      </div>
-                      <div className="text-3xl text-white font-secondary flex gap-6 flex-row mt-2 justify-end">
-                        Github :
-                        <div className="text-3xl text-white font-secondary font-light underline">github.com/Bfungcode/Ecommerce_Catalog</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          ) : (
-            <div className="w-full h-30 flex flex-row justify-between flex-wrap  transition-all duration-500 -translate-y-0 ">
-              <div className="w-70 h-full border-black border-b-2 border-r-2 border-l-2 flex flex-row flex-wrap bg-black p-6">
-                <div className="relative w-full h-full">
-                  <div className="absolute border-t-2 border-l-2 border-white border-solid w-30 h-50 left-0 top-0"></div>
-                  <div className="absolute border-r-2 border-b-2 border-white border-solid w-30 h-50 right-0 bottom-0"></div>
-                  <div className="absolute inset-0 flex flex-column items-center justify-start h-full w-full text-4xl p-6">
-                    <div className="w-full font-secondary text-white text-6xl p-6  bg-black text-center">
-                      E-Comm
-                      <div className="text-2xl font-secondary">
-                        a Minimalist e-commerce interface featuring stylish shirts and clothing options for both genders, allowing easy navigation to the next item.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              {hover4 ? (
-                <div className="w-30 h-full border-black border-b-2  border-l-2 bg-white border-r-2" onMouseMove={handleMouseEnter4} onMouseLeave={handleMouseLeave4} onClick={turnPt4} >
-                  <div className="relative w-full h-full  flex flex-row flex-wrap justify-center items-center cursor-pointer">
-                    <img src="/pt4/ft1.png" className="w-full h-full object-cover blur-sm"></img>
-                    <div className="absolute text-4xl font-secondary text-white underline">More Detail</div>
-                  </div>
-                </div>
-              ) : (
-                <div className="w-30 h-full border-black border-b-2  border-l-2 bg-white border-r-2" onMouseMove={handleMouseEnter4} onMouseLeave={handleMouseLeave4} onClick={turnPt4}>
-                  <div className="w-full h-full  flex flex-column flex-wrap">
-                    <img src="/pt4/ft1.png" className="w-full h-full object-cover"></img>
-                  </div>
-                </div>
-              )}
-            </div >
-          )}
-          {turn5 ? (
-            <div className="w-full h-full flex flex-row justify-between flex-wrap  transition-all duration-500 scale-up-ver-top border-black border-l-2 border-r-2 border-b-2">
+          {turn1 ? (
+            <div className="w-full h-full flex flex-row justify-between flex-wrap  transition-all duration-500 scale-up-ver-top border-black border-l-2 border-r-2 border-b-2 bg-black text-white">
               <div className="w-20 h-full flex flex-column flex-wrap p-6">
                 <div className="w-full h-60 flex flex-column flex-wrap">
-                  <div className="h-[15%] w-full text-4xl font-primary font-bold text-black ">Binar Car Rental</div>
+                  <div className="h-[15%] w-full text-4xl font-primary font-bold ">Easy Features</div>
                   <div className="h-55 w-full flex flex-column flex-wrap gap-14">
-                    <div className="w-full text-xl font-primary font-bold text-black">
+                    <div className="w-full text-xl font-primary font-bold ">
                       Year Accomplished
-                      <div className="text-base text-gray-500">2022</div>
+                      <div className="text-base text-gray-300">2022</div>
                     </div>
-                    <div className="w-full text-xl font-primary font-bold text-black">
+                    <div className="w-full text-xl font-primary font-bold">
                       Role/Position
-                      <div className="text-base text-gray-500">Project Leader</div>
-                      <div className="text-base text-gray-500">Front End Engineer</div>
+                      <div className="text-base text-gray-300">Front End Developer</div>
                     </div>
-                    <div className="w-full text-xl font-primary font-bold text-black">
+                    <div className="w-full text-xl font-primary font-bold">
                       Publication Link
-                      <div className="text-base text-gray-500">cartal.netlify.app</div>
+                      <div className="text-base text-gray-300">easyfeatures.netlify.app</div>
                     </div>
-                    <div className="w-full text-xl font-primary font-bold text-black">
+                    <div className="w-full text-xl font-primary font-bold ">
                       Repository
-                      <div className="text-base text-gray-500">github.com/Bfungcode/BinarCarRents</div>
+                      <div className="text-base text-gray-300">github.com/Bfungcode/EasyFeatures</div>
                     </div>
-                    <div className="w-full text-xl font-primary font-bold text-black">
+                    <div className="w-full text-xl font-primary font-bold ">
                       Stacks
-                      <div className="text-base text-gray-500">JavaScript</div>
-                      <div className="text-base text-gray-500">React JS</div>
-                      <div className="text-base text-gray-500">React Redux</div>
-                      <div className="text-base text-gray-500">CSS</div>
+                      <div className="text-base text-gray-300">JavaScript</div>
+                      <div className="text-base text-gray-300">React JS</div>
+                      <div className="text-base text-gray-300">CSS</div>
                     </div>
                     <div className="flex flex-row flex-wrap justify-end gap-2 items-center cursor-pointer mt-4" onClick={turnPt1}>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel"><path d="M19 12H6M12 5l-7 7 7 7" /></svg>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel"><path d="M19 12H6M12 5l-7 7 7 7" /></svg>
                     </div>
                   </div>
                 </div>
               </div>
               <div className="w-80 h-full flex-column flex-wrap p-6">
-                <div className="w-full h-5 text-xl font-primary font-bold text-black pt-2">
+                <div className="w-full h-5 text-xl font-primary font-bold pt-2">
                   Project Description
                 </div>
                 <div className="w-full h-[95%] ">
-                  <div className="w-full h-30 flex flex-row flex-wrap">
-                    <div className="text-base text-gray-500 w-65">During bootcamp, for the final project we were tasked to develop a web application with React JS Framework that facilitated transactions between customers and suppliers in car rental industry.
-                      We were divided into two teams of 5-member. I offered myself and assigned for the role of the Project Leader for the team. As the youngest member, it was important to establish mutual respect and seen as an equal colleague. To address this, i approached each member personally to share my thoughts and my desire to them.
-
-                      My responsibilities as the project leader is ensuring efficient task allocation and collaboration within the team. For that, i implemented Agile and Scrum method for the development process and provided a flow chart for allocating the task to each member. I divided my team into two group, one for handling the customer side of website and one for the admin side to update the data(CRUD). I'm also in charge of implementing Redux middleware for managing the API data and responsible for the website's responsiveness and slicing the homepage based by the design provided by the UI/UX team. </div>
-                    <div className="text-base text-gray-500 w-[34%]">Throughout the project, I actively led the team, ensuring that everyone understood their roles and responsibilities.
-                      I scheduled a regular team meetings for catching up and checking for our progress and discussing any challenges or problem we have and solving it together at the moment.
-                      I'm in charge for both group the customer side and the admin side where any change would be approved through me by using Github pull request.
-                      <div className="text-base text-gray-500 font-bold">
-                        We successfully completed the project on time and passed all the requirements.
-                        Our exceptional performance was recognized, as we achieved an outstanding score of 97 out of 100.
-                      </div>
-                    </div>
+                  <div className="w-full h-30">
+                    <div className="text-xl text-gray-200">A personal website portfolio that i made for contributing to React JS Front End Developer community.
+                      Creating features using a React JS and vanilla JavaScript or pure without any framework can quite be a problem and waste a lot of times. Let say the feature is a simple slide, in the vanila javascript we easily put the DOM method immediately in the script but as React JS developer we have to implement that using the react way by using the React Hooks, etc. Because in React JS rendering a component and DOM behaves differently, for example React DOM escapes any values embedded in JSX before rendering them. So it's can be a problem for a simple features although it's the same logic function that works on purely javascript website.</div>
+                    <div className="text-2xl text-gray-200 font-semibold">I developed and designed React JS templates of feature that widely used by people or basic features a
+                      website needed, which we can just straight up copy and paste the JSX and style it how we want without
+                      worrying the underhood. </div>
                   </div>
-                  <div className="w-full h-70 flex flex-row flex-wrap bg-gray-200 p-2">
-                    <div className="h-full w-30 text-center">
-                      <div className="text-lg text-black font-bold h-[5%]">Homepage</div>
-                      <div className="w-full p-2 h-[97%] flex flex-column gap-2 flex-wrap">
-                        <img src="/ct1.png" className="w-full h-full object-fill" />
+                  <div className="w-full h-70 flex flex-row flex-wrap">
+                    <div className="h-full w-40  p-2 flex flex-column flex-wrap gap-2">
+                      <div className="w-full h-40">
+                        <img src="/ef1.png" className="w-full h-full object-cover" />
+                      </div>
+                      <div className="w-full h-60 ">
+                        <img src="/ef2.png" className="w-full h-full object-cover" />
                       </div>
                     </div>
-                    <div className="h-full w-[35%]  p-2 flex flex-column flex-wrap gap-2">
-                      <div className="w-full h-full flex flex-column flex-wrap">
-                        <div className="w-full h-[45%] flex flex-column flex-wrap justify-center">
-                          <div className="text-lg text-black font-bold h-[12%]">Car Page</div>
-                          <img src="/ct2.png" className="w-full h-full object-fill" /></div>
-                        <div className="w-full h-[45%] flex flex-column flex-wrap justify-center">
-                          <div className="text-lg text-black font-bold h-[15%] flex flex-column flex-wrap">Payment Page</div>
-                          <img src="/ct4.png" className="w-full h-full object-fill" />
-                        </div>
+                    <div className="h-full w-40  p-2 flex flex-column flex-wrap gap-2">
+                      <div className="w-full h-60">
+                        <img src="/ef3.png" className="w-full h-full object-cover" />
+                      </div>
+                      <div className="w-full h-40 bg-gray-400">
+                        <img src="/ef4.png" className="w-full h-full object-cover" />
                       </div>
                     </div>
-                    <div className="h-full w-[35%] p-2 flex flex-column flex-wrap gap-2">
-                      <div className="w-full h-full flex flex-column flex-wrap">
-                        <div className="w-full h-[45%] flex flex-column flex-wrap justify-center">
-                          <div className="text-lg text-black font-bold h-[12%]">Admin Dashboard</div>
-                          <img src="/ct3.png" className="w-full h-full object-fill" /></div>
-                        <div className="w-full h-[45%] flex flex-column flex-wrap justify-center">
-                          <div className="text-lg text-black font-bold h-[15%] flex flex-column flex-wrap">Cars Update</div>
-                          <img src="/ct5.png" className="w-full h-full object-fill" />
-                        </div>
-                      </div>
+                    <div className="h-full w-20 p-1 mt-1 flex flex-column flex-wrap gap-2">
+                      <img src="/ef5.png" className="w-full h-full object-cover" />
                     </div>
-
+                    <div></div>
                   </div>
                 </div>
               </div>
             </div>
           ) : (
-            <div className="w-full h-30 flex flex-row justify-between flex-wrap  transition-all duration-500 -translate-y-0 ">
-              {hover5 ? (
-                <div className="w-30 h-full border-black border-b-2  border-l-2 bg-white " onMouseMove={handleMouseEnter5} onMouseLeave={handleMouseLeave5} onClick={turnPt5} >
-                  <div className="relative w-full h-full  flex flex-row flex-wrap justify-center items-center cursor-pointer">
-                    <img src="/pt5/ft1.png" className="w-full h-full object-cover blur-sm"></img>
-                    <div className="absolute text-4xl font-secondary text-white underline">More Detail</div>
-                  </div>
-                </div>
-              ) : (
-                <div className="w-30 h-full border-black border-b-2  border-l-2 bg-white " onMouseMove={handleMouseEnter5} onMouseLeave={handleMouseLeave5} onClick={turnPt5}>
-                  <div className="w-full h-full  flex flex-column flex-wrap">
-                    <img src="/pt5/ft1.png" className="w-full h-full object-cover"></img>
-                  </div>
-                </div>
-              )}
-              <div className="w-70 h-full border-black border-b-2 border-r-2 border-l-2 flex flex-row flex-wrap bg-white p-6">
+            <div className="w-full h-30 flex flex-row justify-between flex-wrap  transition-all duration-500 -translate-x-0 ">
+              <div className="w-70 h-full border-black border-b-2 border-r-2 border-l-2 flex flex-row flex-wrap bg-black p-6">
                 <div className="relative w-full h-full">
-                  <div className="absolute border-t-2 border-l-2 border-black border-solid w-30 h-50 left-0 top-0"></div>
-                  <div className="absolute border-r-2 border-b-2 border-black border-solid w-30 h-50 right-0 bottom-0"></div>
+                  <div className="absolute border-t-2 border-l-2 border-white border-solid w-30 h-50 left-0 top-0"></div>
+                  <div className="absolute border-r-2 border-b-2 border-white border-solid w-30 h-50 right-0 bottom-0"></div>
                   <div className="absolute inset-0 flex flex-column items-center justify-start h-full w-full text-4xl p-6">
-                    <div className="w-full font-secondary text-black text-6xl p-6  bg-white text-center">
-                      Cartal
+                    <div className="w-full font-secondary text-white text-6xl p-6   text-center">
+                      Easy Features
                       <div className="text-2xl font-secondary">
-                        a Car Rental Web Application for the customer side to do transaction, built by using React JS. (Bootcamp Final Project)
+                        a Dedicated website built with React JS and designed to assist developers working with React.js. With its extensive collection of JSX templates and CSS code snippets,
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
+              {hover1 ? (
+                <div className="w-30 h-full border-black border-b-2  border-l-2 bg-white " onMouseMove={handleMouseEnter1} onMouseLeave={handleMouseLeave1} onClick={turnPt1} >
+                  <div className="relative w-full h-full  flex flex-row flex-wrap justify-center items-center cursor-pointer">
+                    <img src="/ef1.png" className="w-full h-full object-cover blur-sm"></img>
+                    <div className="absolute text-4xl font-secondary text-white underline">More Detail</div>
+                  </div>
+                </div>
+              ) : (
+                <div className="w-30 h-full border-black border-b-2  border-l-2 bg-white " onMouseMove={handleMouseEnter1} onMouseLeave={handleMouseLeave1} onClick={turnPt1}>
+                  <div className="w-full h-full  flex flex-column flex-wrap">
+                    <img src="/ef1.png" className="w-full h-full object-cover"></img>
+                  </div>
+                </div>
+              )}
+
             </div >
           )}
-
           <div className="w-full h-60 flex flex-col flex-wrap ">
             <div className="w-full h-20  border-black border-b-2 flex flex-row justify-between">
               <div className="w-70 h-full  border-black border-l-2 border-r-2">
