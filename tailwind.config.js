@@ -59,6 +59,7 @@ module.exports = {
       fontFamily: {
         primary: ["Lato", "sans-serif"],
         secondary: ["Playfair Display", "serif"],
+        third: ["Shrikhand", "serif"],
       },
     },
   },
