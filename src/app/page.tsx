@@ -1,5 +1,5 @@
 "use client"
-import { GmailIcon, GitIcon, LinkedInIcon, Xicon, DotsIcon, MenuIcon, ArrowDownRight, ArrowDownLeft, FileIconBlack, FileIconWhite, JavaScript, Python, HtmlIcon, CssIcon, ReactIcon, VueJS, TypeScriptIcon, NextJs, TailWind, FigmaIcon, } from "./media/svg"
+import { GmailIcon, GitIcon, LinkedInIcon, Xicon, DotsIcon, MenuIcon, ArrowDownRight, ArrowDownLeft, FileIconBlack, FileIconWhite, JavaScript, HtmlIcon, CssIcon, ReactIcon, VueJS, TypeScriptIcon, NextJs, TailWind, FigmaIcon, JavaScriptColor, TypeScriptColor, NodeIcon, NodeColor, FigmaColor, HtmlColor, CssColor, ReactColor, VueColor, TailwindColor, } from "./media/svg"
 import { useState } from 'react';
 import Slider from 'react-slick';
 import { baseUrl1, baseUrl2, baseUrl3, baseUrl4, baseUrl5 } from './config.js'
@@ -7,6 +7,7 @@ import { baseUrl1, baseUrl2, baseUrl3, baseUrl4, baseUrl5 } from './config.js'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Html } from "next/document";
+import Link from 'next/link'
 
 
 const SliderSettings = {
@@ -27,52 +28,30 @@ export default function Home() {
   const [hover4, setHover4] = useState(false);
   const [turn4, setTurn4] = useState(false);
   const [hoverPage, setHoverPage] = useState(false);
-  const handleMouseEnter1 = () => {
-    setHover1(true);
-  };
-
-  const handleMouseLeave1 = () => {
-    setHover1(false);
-  };
-  const turnPt1 = () => {
-    setTurn1(!turn1)
+  const [box0, setBox0] = useState(false);
+  const [box1, setBox1] = useState(false);
+  const [box2, setBox2] = useState(false);
+  const [box3, setBox3] = useState(false);
+  const [box4, setBox4] = useState(false);
+  const [box5, setBox5] = useState(false);
+  const [box6, setBox6] = useState(false);
+  const [box7, setBox7] = useState(false);
+  const [box8, setBox8] = useState(false);
+  const [box9, setBox9] = useState(false);
+  const [box10, setBox10] = useState(false);
+  const [contact1, setContact1] = useState(false);
+  const [contact2, setContact2] = useState(false);
+  const [contact3, setContact3] = useState(false);
+  const [contact4, setContact4] = useState(false);
+  const turnPt = (setTurn: any, turn: any) => {
+    setTurn(!turn)
   }
-  const handleMouseEnter2 = () => {
-    setHover2(true);
+  const handleMouseEnter = (setBox: any) => () => {
+    setBox(true);
   };
 
-  const handleMouseLeave2 = () => {
-    setHover2(false);
-  };
-  const turnPt2 = () => {
-    setTurn2(!turn2)
-  }
-  const handleMouseEnter3 = () => {
-    setHover3(true);
-  };
-
-  const handleMouseLeave3 = () => {
-    setHover3(false);
-  };
-  const turnPt3 = () => {
-    setTurn3(!turn3)
-  }
-  const handleMouseEnter4 = () => {
-    setHover4(true);
-  };
-
-  const handleMouseLeave4 = () => {
-    setHover4(false);
-  };
-  const turnPt4 = () => {
-    setTurn4(!turn4)
-  }
-  const handleMouseEnterPage = () => {
-    setHoverPage(true);
-  };
-
-  const handleMouseLeavePage = () => {
-    setHoverPage(false);
+  const handleMouseLeave = (setBox: any) => () => {
+    setBox(false);
   };
 
   const handleDownload = () => {
@@ -82,7 +61,7 @@ export default function Home() {
     link.click();
   }
   return (
-    <div className="w-full h-screen ">
+    <div className="w-full h-screen">
       <div className="flex flex-col flex-wrap  w-full h-full pt-5 pl-5 pr-5">
         {hoverPage ? (
           <div className="w-full h-full border-2 border-black p-0 m-0 ">
@@ -105,7 +84,7 @@ export default function Home() {
                 <div className="p-4 w-full h-full flex  flex-col justify-end transition-all ease-linear duration-1000 text-white font-primary font-semibold bg-black">
                   <div className="font-primary text-xl font-bold ">Bie Fung</div>
                   <div className="font-primary text-sm font-bold text-gray-500">Profile</div>
-                  <img src="/bfung.png" className="w-80 h-30 object-cover" />
+                  <img src="/bfungColor.png" className="w-80 h-30 object-cover" />
                   <div className="font-primary text-sm font-semibold mt-2 leading-6">
                     <div>Hello, i'm Bie Fung.</div>
                     you can call me Abe or Bei.
@@ -114,7 +93,7 @@ export default function Home() {
                     I'm a self taught Software Engineer with passion and dreams</div>
                 </div>
               </div>
-              <div className="w-87 h-full pl-8 pr-8 flex flex-col justify-center items-center" onMouseMove={handleMouseEnterPage} onMouseLeave={handleMouseLeavePage}>
+              <div className="w-87 h-full pl-8 pr-8 flex flex-col justify-center items-center" onMouseMove={handleMouseEnter(setHoverPage)} onMouseLeave={handleMouseLeave(setHoverPage)}>
               </div>
             </div>
             <div className="w-full h-12 border-t-2 border-black  flex flex-row justify-between">
@@ -155,7 +134,7 @@ export default function Home() {
                     I'm a self taught Software Engineer with passion and dreams</div>
                 </div>
               </div>
-              <div className="w-87 h-full pl-8 pr-8 flex flex-col justify-center items-center " onMouseMove={handleMouseEnterPage} onMouseLeave={handleMouseLeavePage}>
+              <div className="w-87 h-full pl-8 pr-8 flex flex-col justify-center items-center " onMouseMove={handleMouseEnter(setHoverPage)} onMouseLeave={handleMouseLeave(setHoverPage)}>
               </div>
             </div>
             <div className="w-full h-12 border-t-2 border-black  flex flex-row justify-between">
@@ -174,7 +153,7 @@ export default function Home() {
       <div className="w-full h-full flex flex-col flex-wrap pl-5 pr-5 ">
         <div className="w-full h-full">
           {turn1 ? (
-            <div className="w-full h-full flex flex-row justify-between flex-wrap  transition-all duration-1000 ease-in-out border-black border-l-2 border-r-2 border-b-2 ">
+            <div className="w-full h-full flex flex-row justify-between flex-wrap  transition-all duration-1000 linear border-black border-l-2 border-r-2 border-b-2 ">
               <div className="w-20 h-full flex flex-column flex-wrap p-6">
                 <div className="w-full h-60 flex flex-column flex-wrap">
                   <div className="h-[15%] w-full text-4xl font-primary font-bold text-black ">Binar Car Rental</div>
@@ -190,11 +169,15 @@ export default function Home() {
                     </div>
                     <div className="w-full text-xl font-primary font-bold text-black">
                       Publication Link
-                      <div className="text-base text-gray-500">cartal.netlify.app</div>
+                      <a href="https://cartal.netlify.app" target="_blank" className="cursor-pointer">
+                        <div className="text-base text-gray-500">cartal.netlify.app</div>
+                      </a>
                     </div>
                     <div className="w-full text-xl font-primary font-bold text-black">
                       Repository
-                      <div className="text-base text-gray-500">github.com/Bfungcode/BinarCarRents</div>
+                      <a href="https://github.com/Bfungcode/BinarCarRents_Main" target="_blank" className="cursor-pointer">
+                        <div className="text-base text-gray-500">github.com/Bfungcode/BinarCarRents_Main</div>
+                      </a>
                     </div>
                     <div className="w-full text-xl font-primary font-bold text-black">
                       Stacks
@@ -203,7 +186,7 @@ export default function Home() {
                       <div className="text-base text-gray-500">React Redux</div>
                       <div className="text-base text-gray-500">CSS</div>
                     </div>
-                    <div className="flex flex-row flex-wrap justify-end gap-2 items-center cursor-pointer mt-4" onClick={turnPt1}>
+                    <div className="flex flex-row flex-wrap justify-end gap-2 items-center cursor-pointer mt-4" onClick={() => turnPt(setTurn1, turn1)}>
                       <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel"><path d="M19 12H6M12 5l-7 7 7 7" /></svg>
                     </div>
                   </div>
@@ -263,10 +246,10 @@ export default function Home() {
               </div>
             </div>
           ) : (
-            <div className="w-full h-30 flex flex-row justify-between flex-wrap  ">
+            <div className="w-full h-30 flex flex-row justify-between flex-wrap ease-in-out duration-1000 ">
               {hover1 ? (
                 <>
-                  <div className="w-full h-full border-black border-b-2 border-r-2 border-l-2 flex flex-row flex-wrap bg-white p-6 cursor-pointer transition-all duration-1000 ease-in-out " onMouseMove={handleMouseEnter1} onMouseLeave={handleMouseLeave1} onClick={turnPt1}>
+                  <div className="w-full h-full border-black border-b-2 border-r-2 border-l-2 flex flex-row flex-wrap bg-white p-6 cursor-pointer transition-all duration-1000 ease-in-out " onMouseMove={handleMouseEnter(setHover1)} onMouseLeave={handleMouseLeave(setHover1)} onClick={() => turnPt(setTurn1, turn1)}>
                     <div className="relative w-full h-full">
                       <div className="absolute border-t-2 border-l-2 border-black border-solid w-30 h-50 left-0 top-0"></div>
                       <div className="absolute border-r-2 border-b-2 border-black border-solid w-30 h-50 right-0 bottom-0"></div>
@@ -288,7 +271,7 @@ export default function Home() {
                       <img src="/pt5/ft1.png" className="w-full h-full object-cover"></img>
                     </div>
                   </div>
-                  <div className="w-70 h-full border-black border-b-2 border-r-2 border-l-2 flex flex-row flex-wrap bg-white p-6 cursor-pointer transition-all duration-1000 ease-in-out" onMouseMove={handleMouseEnter1} onMouseLeave={handleMouseLeave1} onClick={turnPt1}>
+                  <div className="w-70 h-full border-black border-b-2 border-r-2 border-l-2 flex flex-row flex-wrap bg-white p-6 cursor-pointer transition-all duration-1000 ease-in-out" onMouseMove={handleMouseEnter(setHover1)} onMouseLeave={handleMouseLeave(setHover1)} onClick={() => turnPt(setTurn1, turn1)}>
                     <div className="relative w-full h-full">
                       <div className="absolute border-t-2 border-l-2 border-black border-solid w-30 h-50 left-0 top-0"></div>
                       <div className="absolute border-r-2 border-b-2 border-black border-solid w-30 h-50 right-0 bottom-0"></div>
@@ -322,12 +305,18 @@ export default function Home() {
                     </div>
                     <div className="w-full text-xl font-primary font-bold ">
                       Publication Link
-                      <div className="text-base text-gray-300 mb-1">https://cryptohex.netlify.app</div>
-                      <div className="text-xs text-gray-300">figma.com/file/W2rEOrg7oMiEmjiK9gMrsS/CryptoHex?type=design&node-id=0%3A1&t=nLIRzq0rHhINvH3k-1</div>
+                      <a href="https://cryptohex.netlify.app" target="_blank">
+                        <div className="text-base text-gray-300 mb-1">cryptohex.netlify.app</div>
+                      </a>
+                      <a href="https://figma.com/file/W2rEOrg7oMiEmjiK9gMrsS/CryptoHex?type=design&node-id=0%3A1&t=nLIRzq0rHhINvH3k-1" target="_blank">
+                        <div className="text-xs text-gray-300">figma.com/file/W2rEOrg7oMiEmjiK9gMrsS/CryptoHex?type=design&node-id=0%3A1&t=nLIRzq0rHhINvH3k-1</div>
+                      </a>
                     </div>
                     <div className="w-full text-xl font-primary font-bold ">
                       Repository
-                      <div className="text-base text-gray-300">github.com/Bfungcode/CryptoHex</div>
+                      <a href="https://github.com/Bfungcode/CryptoHex" target="_blank">
+                        <div className="text-base text-gray-300">github.com/Bfungcode/CryptoHex</div>
+                      </a>
                     </div>
                     <div className="w-full text-xl font-primary font-bold ">
                       Stacks
@@ -335,7 +324,7 @@ export default function Home() {
                       <div className="text-base text-gray-300">Vue JS</div>
                       <div className="text-base text-gray-300">CSS</div>
                     </div>
-                    <div className="flex flex-row flex-wrap justify-end gap-2 items-center cursor-pointer mt-4" onClick={turnPt2}>
+                    <div className="flex flex-row flex-wrap justify-end gap-2 items-center cursor-pointer mt-4" onClick={() => turnPt(setTurn2, turn2)}>
                       <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel"><path d="M19 12H6M12 5l-7 7 7 7" /></svg>
                     </div>
                   </div>
@@ -386,7 +375,7 @@ export default function Home() {
             <div className="w-full h-30 flex flex-row justify-between flex-wrap  transition-all duration-1000 ease-in-out">
               {hover2 ? (
                 <>
-                  <div className="w-full h-full border-black border-b-2 border-r-2 border-l-2 flex flex-row flex-wrap bg-black p-6 cursor-pointer transition-all duration-1000 ease-in-out" onMouseMove={handleMouseEnter2} onMouseLeave={handleMouseLeave2} onClick={turnPt2}>
+                  <div className="w-full h-full border-black border-b-2 border-r-2 border-l-2 flex flex-row flex-wrap bg-black p-6 cursor-pointer transition-all duration-1000 ease-in-out" onMouseMove={handleMouseEnter(setHover2)} onMouseLeave={handleMouseLeave(setHover2)} onClick={() => turnPt(setTurn2, turn2)}>
                     <div className="relative w-full h-full">
                       <div className="absolute border-t-2 border-l-2 border-white border-solid w-30 h-50 left-0 top-0"></div>
                       <div className="absolute border-r-2 border-b-2 border-white border-solid w-30 h-50 right-0 bottom-0"></div>
@@ -403,7 +392,7 @@ export default function Home() {
                 </>
               ) : (
                 <>
-                  <div className="w-70 h-full border-black border-b-2 border-r-2 border-l-2 flex flex-row flex-wrap cursor-pointer bg-black p-6 transition-all duration-1000 ease-in-out" onMouseMove={handleMouseEnter2} onMouseLeave={handleMouseLeave2} onClick={turnPt2}>
+                  <div className="w-70 h-full border-black border-b-2 border-r-2 border-l-2 flex flex-row flex-wrap cursor-pointer bg-black p-6 transition-all duration-1000 ease-in-out" onMouseMove={handleMouseEnter(setHover2)} onMouseLeave={handleMouseLeave(setHover2)} onClick={() => { turnPt(setTurn2, turn2) }}>
                     <div className="relative w-full h-full">
                       <div className="absolute border-t-2 border-l-2 border-white border-solid w-30 h-50 left-0 top-0"></div>
                       <div className="absolute border-r-2 border-b-2 border-white border-solid w-30 h-50 right-0 bottom-0"></div>
@@ -442,11 +431,15 @@ export default function Home() {
                     </div>
                     <div className="w-full text-xl font-primary font-bold text-black">
                       Publication Link
-                      <div className="text-base text-gray-500">cashier-webapp.vercel.app</div>
+                      <a href="https://cashier-webapp.vercel.app" target="_blank">
+                        <div className="text-base text-gray-500">cashier-webapp.vercel.app</div>
+                      </a>
                     </div>
                     <div className="w-full text-xl font-primary font-bold text-black">
                       Repository
-                      <div className="text-base text-gray-500">github.com/Bfungcode/Cashier_WebApp</div>
+                      <a href="https://github.com/Bfungcode/Cashier_WebApp" target="_blank">
+                        <div className="text-base text-gray-500">github.com/Bfungcode/Cashier_WebApp</div>
+                      </a>
                     </div>
                     <div className="w-full text-xl font-primary font-bold text-black">
                       Stacks
@@ -454,7 +447,7 @@ export default function Home() {
                       <div className="text-base text-gray-500">React JS</div>
                       <div className="text-base text-gray-500">Tailwind CSS</div>
                     </div>
-                    <div className="flex flex-row flex-wrap justify-end gap-2 items-center cursor-pointer mt-4" onClick={turnPt3}>
+                    <div className="flex flex-row flex-wrap justify-end gap-2 items-center cursor-pointer mt-4" onClick={() => turnPt(setTurn3, turn3)}>
                       <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel"><path d="M19 12H6M12 5l-7 7 7 7" /></svg>
                     </div>
                   </div>
@@ -517,7 +510,7 @@ export default function Home() {
             <div className="w-full h-30 flex flex-row justify-between flex-wrap transition-all duration-1000 ease-in-out">
               {hover3 ? (
                 <>
-                  <div className="w-full h-full border-black border-b-2 border-r-2 border-l-2 flex flex-row flex-wrap cursor-pointer bg-white p-6 transition-all duration-1000 ease-in-out" onMouseMove={handleMouseEnter3} onMouseLeave={handleMouseLeave3} onClick={turnPt3}>
+                  <div className="w-full h-full border-black border-b-2 border-r-2 border-l-2 flex flex-row flex-wrap cursor-pointer bg-white p-6 transition-all duration-1000 ease-in-out" onMouseMove={handleMouseEnter(setHover3)} onMouseLeave={handleMouseLeave(setHover3)} onClick={() => turnPt(setTurn3, turn3)}>
                     <div className="relative w-full h-full">
                       <div className="absolute border-t-2 border-l-2 border-black border-solid w-30 h-50 left-0 top-0"></div>
                       <div className="absolute border-r-2 border-b-2 border-black border-solid w-30 h-50 right-0 bottom-0"></div>
@@ -539,7 +532,7 @@ export default function Home() {
                       <img src="/pt3/ft1.png" className="w-full h-full object-cover"></img>
                     </div>
                   </div>
-                  <div className="w-70 h-full border-black border-b-2 border-r-2 border-l-2 flex flex-row flex-wrap bg-white p-6 cursor-pointer" onMouseMove={handleMouseEnter3} onMouseLeave={handleMouseLeave3} onClick={turnPt3}>
+                  <div className="w-70 h-full border-black border-b-2 border-r-2 border-l-2 flex flex-row flex-wrap bg-white p-6 cursor-pointer" onMouseMove={handleMouseEnter(setHover3)} onMouseLeave={handleMouseLeave(setHover3)} onClick={() => turnPt(setTurn3, turn3)}>
                     <div className="relative w-full h-full">
                       <div className="absolute border-t-2 border-l-2 border-black border-solid w-30 h-50 left-0 top-0"></div>
                       <div className="absolute border-r-2 border-b-2 border-black border-solid w-30 h-50 right-0 bottom-0"></div>
@@ -573,11 +566,15 @@ export default function Home() {
                     </div>
                     <div className="w-full text-xl font-primary font-bold">
                       Publication Link
-                      <div className="text-base text-gray-300">easyfeatures.netlify.app</div>
+                      <a href="https://easyfeatures.netlify.app" target="_blank">
+                        <div className="text-base text-gray-300">easyfeatures.netlify.app</div>
+                      </a>
                     </div>
                     <div className="w-full text-xl font-primary font-bold ">
                       Repository
-                      <div className="text-base text-gray-300">github.com/Bfungcode/EasyFeatures</div>
+                      <a href="https://github.com/Bfungcode/EasyFeatures" target="_blank">
+                        <div className="text-base text-gray-300">github.com/Bfungcode/EasyFeatures</div>
+                      </a>
                     </div>
                     <div className="w-full text-xl font-primary font-bold ">
                       Stacks
@@ -585,7 +582,7 @@ export default function Home() {
                       <div className="text-base text-gray-300">React JS</div>
                       <div className="text-base text-gray-300">CSS</div>
                     </div>
-                    <div className="flex flex-row flex-wrap justify-end gap-2 items-center cursor-pointer mt-4" onClick={turnPt4}>
+                    <div className="flex flex-row flex-wrap justify-end gap-2 items-center cursor-pointer mt-4" onClick={() => turnPt(setTurn4, turn4)}>
                       <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel"><path d="M19 12H6M12 5l-7 7 7 7" /></svg>
                     </div>
                   </div>
@@ -632,7 +629,7 @@ export default function Home() {
             <div className="w-full h-30 flex flex-row justify-between flex-wrap  transition-all duration-1000 ease-in-out">
               {hover4 ? (
                 <>
-                  <div className="w-full h-full border-black border-b-2 border-r-2 border-l-2 flex flex-row flex-wrap bg-black p-6 transition-all duration-1000 ease-in-out cursor-pointer" onMouseMove={handleMouseEnter4} onMouseLeave={handleMouseLeave4} onClick={turnPt4}>
+                  <div className="w-full h-full border-black border-b-2 border-r-2 border-l-2 flex flex-row flex-wrap bg-black p-6 transition-all duration-1000 ease-in-out cursor-pointer" onMouseMove={handleMouseEnter(setHover4)} onMouseLeave={handleMouseLeave(setHover4)} onClick={() => turnPt(setTurn4, turn4)}>
                     <div className="relative w-full h-full">
                       <div className="absolute border-t-2 border-l-2 border-white border-solid w-30 h-50 left-0 top-0"></div>
                       <div className="absolute border-r-2 border-b-2 border-white border-solid w-30 h-50 right-0 bottom-0"></div>
@@ -649,7 +646,7 @@ export default function Home() {
                 </>
               ) : (
                 <>
-                  <div className="w-70 h-full border-black border-b-2 border-r-2 border-l-2 flex flex-row flex-wrap bg-black p-6 cursor-pointer " onMouseMove={handleMouseEnter4} onMouseLeave={handleMouseLeave4} onClick={turnPt4}>
+                  <div className="w-70 h-full border-black border-b-2 border-r-2 border-l-2 flex flex-row flex-wrap bg-black p-6 cursor-pointer " onMouseMove={handleMouseEnter(setHover4)} onMouseLeave={handleMouseLeave(setHover4)} onClick={() => turnPt(setTurn4, turn4)}>
                     <div className="relative w-full h-full">
                       <div className="absolute border-t-2 border-l-2 border-white border-solid w-30 h-50 left-0 top-0"></div>
                       <div className="absolute border-r-2 border-b-2 border-white border-solid w-30 h-50 right-0 bottom-0"></div>
@@ -663,7 +660,7 @@ export default function Home() {
                       </div>
                     </div>
                   </div>
-                  <div className="w-30 h-full border-black border-b-2  border-l-2 bg-white" >
+                  <div className="w-30 h-full border-black border-b-2  border-l-2 border-r-2 bg-white" >
                     <div className="w-full h-full  flex flex-column flex-wrap">
                       <img src="/ef1.png" className="w-full h-full object-cover"></img>
                     </div>
@@ -672,210 +669,464 @@ export default function Home() {
               )}
             </div >
           )}
-          <div className="w-full h-90 border-black border-b-2">
+          <div className="w-full h-90 border-black border-b-2 border-l-2">
             <div className="w-full h-full flex flex-row flex-wrap">
-              <div className="w-[15%] h-full bg-black border-white relative p-14">
-                <div className="absolute border-t-2 border-l-2 border-white border-solid w-30 h-50 left-20 top-10"></div>
-                <div className="w-full h-full flex flex-column flex-wrap justify-center text-center">
-                  <div className="w-full h-10 text-white font-secondary text-7xl">S</div>
-                  <div className="w-full h-10 text-white font-secondary   text-7xl">K</div>
-                  <div className="w-full h-10 text-white font-secondary   text-7xl">L</div>
-                  <div className="w-full h-10 text-white font-secondary   text-7xl">L</div>
-                  <div className="w-full h-10 text-white font-secondary  text-7xl">L</div>
-                  <div className="w-full h-5 text-white font-secondary  text-7xl"></div>
-                  <div className="w-full h-10 text-white font-secondary  text-7xl">S</div>
-                  <div className="w-full h-10 text-white font-secondary  text-7xl">E</div>
-                  <div className="w-full h-10 text-white font-secondary  text-7xl">T</div>
-                  <div className="absolute border-r-2 border-b-2 border-white border-solid w-30 h-50 right-20 bottom-10"></div>
+              {box0 ? (
+                <div className="w-[15%] h-full" onMouseEnter={handleMouseEnter(setBox0)} onMouseLeave={handleMouseLeave(setBox0)}>
+                  <div className="w-full h-full bg-white border-white relative p-14">
+                    <div className="absolute border-t-2 border-l-2 border-amber-300 border-solid w-30 h-80 left-20 top-10"></div>
+                    <div className="w-full h-full flex flex-column flex-wrap justify-center text-center">
+                      <div className="w-full h-10 text-blue-500 font-secondary text-7xl">S</div>
+                      <div className="w-full h-10 text-green-500 font-secondary   text-7xl">K</div>
+                      <div className="w-full h-10 text-red-500 font-secondary   text-7xl">I</div>
+                      <div className="w-full h-10 text-orange-500 font-secondary   text-7xl">L</div>
+                      <div className="w-full h-10 text-blue-900 font-secondary  text-7xl">L</div>
+                      <div className="w-full h-5 text-sky-400 font-secondary  text-7xl"></div>
+                      <div className="w-full h-10 text-green-500 font-secondary  text-7xl">S</div>
+                      <div className="w-full h-10 text-black font-secondary  text-7xl">E</div>
+                      <div className="w-full h-10 text-cyan-400 font-secondary  text-7xl">T</div>
+                      <div className="absolute border-r-2 border-b-2 border-amber-300 border-solid w-30 h-80 right-20 bottom-10"></div>
+                    </div>
+                  </div>
                 </div>
-              </div>
+              ) : (
+                <div className="w-[15%] h-full bg-white border-white relative p-14" onMouseEnter={handleMouseEnter(setBox0)} onMouseLeave={handleMouseLeave(setBox0)}>
+                  <div className="absolute border-t-2 border-l-2 border-black border-solid w-30 h-80 left-20 top-10"></div>
+                  <div className="w-full h-full flex flex-column flex-wrap justify-center text-center">
+                    <div className="w-full h-10 text-black font-secondary text-7xl">S</div>
+                    <div className="w-full h-10 text-black font-secondary   text-7xl">K</div>
+                    <div className="w-full h-10 text-black font-secondary   text-7xl">I</div>
+                    <div className="w-full h-10 text-black font-secondary   text-7xl">L</div>
+                    <div className="w-full h-10 text-black font-secondary  text-7xl">L</div>
+                    <div className="w-full h-5 text-black font-secondary  text-7xl"></div>
+                    <div className="w-full h-10 text-black font-secondary  text-7xl">S</div>
+                    <div className="w-full h-10 text-black font-secondary  text-7xl">E</div>
+                    <div className="w-full h-10 text-black font-secondary  text-7xl">T</div>
+                    <div className="absolute border-r-2 border-b-2 border-black border-solid w-30 h-80 right-20 bottom-10"></div>
+                  </div>
+                </div>
+              )}
 
               <div className="w-[85%] h-full flex flex-row flex-wrap">
-                <div className="relative w-10 h-full border-r-2 border-black border-l-2 flex justify-center items-center">
-                  <div className="relative w-full h-80 flex flex-column justify-center items-start">
-                    <div className="absolute border-t-2 border-l-2 border-black border-solid w-30 h-50 right-20 top-[-5%]"></div>
-                    <div className="w-50 h-full flex flex-column flex-wrap justify-center text-center">
-                      <div className="w-full h-[90%] flex flex-column flex-wrap justify-center text-center">
-                        <div className="w-full h-10 text-black font-secondary text-5xl">J</div>
-                        <div className="w-full h-10 text-black font-secondary   text-5xl">A</div>
-                        <div className="w-full h-10 text-black font-secondary   text-5xl">V</div>
-                        <div className="w-full h-10 text-black font-secondary   text-5xl">A</div>
-                        <div className="w-full h-10 text-black font-secondary  text-5xl">S</div>
-                        <div className="w-full h-10 text-black font-secondary  text-5xl">C</div>
-                        <div className="w-full h-10 text-black font-secondary  text-5xl">R</div>
-                        <div className="w-full h-10 text-black font-secondary  text-5xl">I</div>
-                        <div className="w-full h-10 text-black font-secondary  text-5xl">P</div>
-                        <div className="w-full h-10 text-black font-secondary  text-5xl">T</div>
+                {box1 ? (
+                  <div className="w-10 h-full bg-gradient-to-b from-amber-300 to-yellow-200" onMouseEnter={handleMouseEnter(setBox1)} onMouseLeave={handleMouseLeave(setBox1)}>
+                    <div className="relative w-full h-full border-r-2 border-black border-l-2 flex justify-center items-center" >
+                      <div className="relative w-full h-80 flex flex-column justify-center items-start">
+                        <div className="absolute border-t-2 border-l-2 border-black border-solid w-30 h-50 right-20 top-[-5%]"></div>
+                        <div className="w-50 h-full flex flex-column flex-wrap justify-center text-center">
+                          <div className="w-full h-[90%] flex flex-column flex-wrap justify-center text-center">
+                            <div className="w-full h-10 text-white font-secondary text-5xl">J</div>
+                            <div className="w-full h-10 text-white font-secondary   text-5xl">A</div>
+                            <div className="w-full h-10 text-white font-secondary   text-5xl">V</div>
+                            <div className="w-full h-10 text-white font-secondary   text-5xl">A</div>
+                            <div className="w-full h-10 text-white font-secondary  text-5xl">S</div>
+                            <div className="w-full h-10 text-white font-secondary  text-5xl">C</div>
+                            <div className="w-full h-10 text-white font-secondary  text-5xl">R</div>
+                            <div className="w-full h-10 text-white font-secondary  text-5xl">I</div>
+                            <div className="w-full h-10 text-white font-secondary  text-5xl">P</div>
+                            <div className="w-full h-10 text-white font-secondary  text-5xl">T</div>
+                          </div>
+                          <div className="w-full h-[10%] flex justify-center items-end mt-2 "><JavaScriptColor /></div>
+                        </div>
+                        <div className="absolute border-r-2 border-b-2 border-black border-solid w-30 h-50 left-20 bottom-[-5%]"></div>
                       </div>
-                      <div className="w-full h-[10%] flex justify-center items-end"><JavaScript /></div>
                     </div>
-                    <div className="absolute border-r-2 border-b-2 border-black border-solid w-30 h-50 left-20 bottom-[-5%]"></div>
                   </div>
-                </div>
-                <div className="relative w-10 h-full border-r-2 border-black flex justify-center items-center">
-                  <div className="relative w-full h-80 flex flex-column justify-center items-start">
-                    <div className="absolute border-t-2 border-l-2 border-black border-solid w-30 h-50 right-20 top-[-5%]"></div>
-                    <div className="w-50 h-full flex flex-column flex-wrap justify-center text-center">
-                      <div className="w-full h-[90%] flex flex-column flex-wrap justify-center text-center">
-                        <div className="w-full h-10 text-black font-secondary text-5xl">T</div>
-                        <div className="w-full h-10 text-black font-secondary text-5xl">Y</div>
-                        <div className="w-full h-10 text-black font-secondary text-5xl">P</div>
-                        <div className="w-full h-10 text-black font-secondary text-5xl">E</div>
-                        <div className="w-full h-10 text-black font-secondary text-5xl">S</div>
-                        <div className="w-full h-10 text-black font-secondary text-5xl">C</div>
-                        <div className="w-full h-10 text-black font-secondary text-5xl">R</div>
-                        <div className="w-full h-10 text-black font-secondary text-5xl">I</div>
-                        <div className="w-full h-10 text-black font-secondary text-5xl">P</div>
-                        <div className="w-full h-10 text-black font-secondary text-5xl">T</div>
+
+                ) : (
+                  <div className="relative w-10 h-full border-r-2 border-black border-l-2 flex justify-center items-center" onMouseEnter={handleMouseEnter(setBox1)} onMouseLeave={handleMouseLeave(setBox1)}>
+                    <div className="relative w-full h-80 flex flex-column justify-center items-start">
+                      <div className="absolute border-t-2 border-l-2 border-black border-solid w-30 h-50 right-20 top-[-5%]"></div>
+                      <div className="w-50 h-full flex flex-column flex-wrap justify-center text-center">
+                        <div className="w-full h-[90%] flex flex-column flex-wrap justify-center text-center">
+                          <div className="w-full h-10 text-black font-secondary text-5xl">J</div>
+                          <div className="w-full h-10 text-black font-secondary   text-5xl">A</div>
+                          <div className="w-full h-10 text-black font-secondary   text-5xl">V</div>
+                          <div className="w-full h-10 text-black font-secondary   text-5xl">A</div>
+                          <div className="w-full h-10 text-black font-secondary  text-5xl">S</div>
+                          <div className="w-full h-10 text-black font-secondary  text-5xl">C</div>
+                          <div className="w-full h-10 text-black font-secondary  text-5xl">R</div>
+                          <div className="w-full h-10 text-black font-secondary  text-5xl">I</div>
+                          <div className="w-full h-10 text-black font-secondary  text-5xl">P</div>
+                          <div className="w-full h-10 text-black font-secondary  text-5xl">T</div>
+                        </div>
+                        <div className="w-full h-[10%] flex justify-center items-end"><JavaScript /></div>
+                      </div>
+                      <div className="absolute border-r-2 border-b-2 border-black border-solid w-30 h-50 left-20 bottom-[-5%]"></div>
+                    </div>
+                  </div>
+                )}
+                {box2 ? (
+                  <div className="w-10 h-full bg-gradient-to-b from-blue-500 to-blue-300" onMouseEnter={handleMouseEnter(setBox2)} onMouseLeave={handleMouseLeave(setBox2)}>
+                    <div className="relative w-full h-full border-r-2 border-black flex justify-center items-center">
+                      <div className="relative w-full h-80 flex flex-column justify-center items-start">
+                        <div className="absolute border-t-2 border-l-2 border-black border-solid w-30 h-50 right-20 top-[-5%]"></div>
+                        <div className="w-50 h-full flex flex-column flex-wrap justify-center text-center">
+                          <div className="w-full h-[90%] flex flex-column flex-wrap justify-center text-center">
+                            <div className="w-full h-10 text-white font-secondary text-5xl">T</div>
+                            <div className="w-full h-10 text-white font-secondary text-5xl">Y</div>
+                            <div className="w-full h-10 text-white font-secondary text-5xl">P</div>
+                            <div className="w-full h-10 text-white font-secondary text-5xl">E</div>
+                            <div className="w-full h-10 text-white font-secondary text-5xl">S</div>
+                            <div className="w-full h-10 text-white font-secondary text-5xl">C</div>
+                            <div className="w-full h-10 text-white font-secondary text-5xl">R</div>
+                            <div className="w-full h-10 text-white font-secondary text-5xl">I</div>
+                            <div className="w-full h-10 text-white font-secondary text-5xl">P</div>
+                            <div className="w-full h-10 text-white font-secondary text-5xl">T</div>
 
 
+                          </div>
+                          <div className="w-full h-[10%] flex justify-center items-end mt-2"><TypeScriptColor /></div>
+                        </div>
+                        <div className="absolute border-r-2 border-b-2 border-black border-solid w-30 h-50 left-20 bottom-[-5%]"></div>
                       </div>
-                      <div className="w-full h-[10%] flex justify-center items-end"><TypeScriptIcon /></div>
                     </div>
-                    <div className="absolute border-r-2 border-b-2 border-black border-solid w-30 h-50 left-20 bottom-[-5%]"></div>
                   </div>
-                </div>
-                <div className="relative w-10 h-full border-r-2 border-black flex justify-center items-center">
-                  <div className="relative w-full h-80 flex flex-column justify-center items-start">
-                    <div className="absolute border-t-2 border-l-2 border-black border-solid w-30 h-50 right-20 top-[-5%]"></div>
-                    <div className="w-50 h-full flex flex-column flex-wrap justify-center text-center">
-                      <div className="w-full h-[60%] flex flex-column flex-wrap justify-center text-center">
-                        <div className="w-full h-10 text-black font-secondary text-5xl">P</div>
-                        <div className="w-full h-10 text-black font-secondary text-5xl">Y</div>
-                        <div className="w-full h-10 text-black font-secondary text-5xl">T</div>
-                        <div className="w-full h-10 text-black font-secondary text-5xl">H</div>
-                        <div className="w-full h-10 text-black font-secondary text-5xl">O</div>
-                        <div className="w-full h-10 text-black font-secondary text-5xl">N</div>
+                ) : (
+                  <div className="relative w-10 h-full border-r-2 border-black flex justify-center items-center" onMouseEnter={handleMouseEnter(setBox2)} onMouseLeave={handleMouseLeave(setBox2)}>
+                    <div className="relative w-full h-80 flex flex-column justify-center items-start">
+                      <div className="absolute border-t-2 border-l-2 border-black border-solid w-30 h-50 right-20 top-[-5%]"></div>
+                      <div className="w-50 h-full flex flex-column flex-wrap justify-center text-center">
+                        <div className="w-full h-[90%] flex flex-column flex-wrap justify-center text-center">
+                          <div className="w-full h-10 text-black font-secondary text-5xl">T</div>
+                          <div className="w-full h-10 text-black font-secondary text-5xl">Y</div>
+                          <div className="w-full h-10 text-black font-secondary text-5xl">P</div>
+                          <div className="w-full h-10 text-black font-secondary text-5xl">E</div>
+                          <div className="w-full h-10 text-black font-secondary text-5xl">S</div>
+                          <div className="w-full h-10 text-black font-secondary text-5xl">C</div>
+                          <div className="w-full h-10 text-black font-secondary text-5xl">R</div>
+                          <div className="w-full h-10 text-black font-secondary text-5xl">I</div>
+                          <div className="w-full h-10 text-black font-secondary text-5xl">P</div>
+                          <div className="w-full h-10 text-black font-secondary text-5xl">T</div>
 
-                      </div>
-                      <div className="w-full h-[40%] flex justify-center items-end"><Python /></div>
-                    </div>
-                    <div className="absolute border-r-2 border-b-2 border-black border-solid w-30 h-50 left-20 bottom-[-5%]"></div>
-                  </div>
-                </div>
-                <div className="relative w-10 h-full border-r-2 border-black flex justify-center items-center">
-                  <div className="relative w-full h-80 flex flex-column justify-center items-start">
-                    <div className="absolute border-t-2 border-l-2 border-black border-solid w-30 h-50 right-20 top-[-5%]"></div>
-                    <div className="w-50 h-full flex flex-column flex-wrap justify-center text-center">
-                      <div className="w-full h-[60%] flex flex-column flex-wrap justify-center text-center">
-                        <div className="w-full h-10 text-black font-secondary text-5xl">F</div>
-                        <div className="w-full h-10 text-black font-secondary text-5xl">I</div>
-                        <div className="w-full h-10 text-black font-secondary text-5xl">G</div>
-                        <div className="w-full h-10 text-black font-secondary text-5xl">M</div>
-                        <div className="w-full h-10 text-black font-secondary text-5xl">A</div>
-                      </div>
-                      <div className="w-full h-[40%] flex justify-center items-end mt-1"><FigmaIcon /></div>
-                    </div>
-                    <div className="absolute border-r-2 border-b-2 border-black border-solid w-30 h-50 left-20 bottom-[-5%]"></div>
-                  </div>
-                </div>
-                <div className="relative w-10 h-full border-r-2 border-black flex justify-center items-center">
-                  <div className="relative w-full h-80 flex flex-column justify-center items-start">
-                    <div className="absolute border-t-2 border-l-2 border-black border-solid w-30 h-50 right-20 top-[-5%]"></div>
-                    <div className="w-50 h-full flex flex-column flex-wrap justify-center text-center">
-                      <div className="w-full h-[60%] flex flex-column flex-wrap justify-center text-center">
-                        <div className="w-full h-10 text-black font-secondary text-5xl">H</div>
-                        <div className="w-full h-10 text-black font-secondary text-5xl">T</div>
-                        <div className="w-full h-10 text-black font-secondary text-5xl">M</div>
-                        <div className="w-full h-10 text-black font-secondary text-5xl">L</div>
 
+                        </div>
+                        <div className="w-full h-[10%] flex justify-center items-end"><TypeScriptIcon /></div>
                       </div>
-                      <div className="w-full h-[40%] flex justify-center items-end"><HtmlIcon /></div>
+                      <div className="absolute border-r-2 border-b-2 border-black border-solid w-30 h-50 left-20 bottom-[-5%]"></div>
                     </div>
-                    <div className="absolute border-r-2 border-b-2 border-black border-solid w-30 h-50 left-20 bottom-[-5%]"></div>
                   </div>
-                </div>
-                <div className="relative w-10 h-full border-r-2 border-black flex justify-center items-center">
-                  <div className="relative w-full h-80 flex flex-column justify-center items-start">
-                    <div className="absolute border-t-2 border-l-2 border-black border-solid w-30 h-50 right-20 top-[-5%]"></div>
-                    <div className="w-50 h-full flex flex-column flex-wrap justify-center text-center">
-                      <div className="w-full h-[50%] flex flex-column flex-wrap justify-center text-center">
-                        <div className="w-full h-10 text-black font-secondary text-5xl">C</div>
-                        <div className="w-full h-10 text-black font-secondary text-5xl">S</div>
-                        <div className="w-full h-10 text-black font-secondary text-5xl">S</div>
+                )}
+                {box3 ? (
+                  <div className="w-10 h-full bg-gradient-to-b from-green-500 to-green-200">
+                    <div className="relative w-full h-full border-r-2 border-black flex justify-center items-center" onMouseEnter={handleMouseEnter(setBox3)} onMouseLeave={(handleMouseLeave(setBox3))}>
+                      <div className="relative w-full h-80 flex flex-column justify-center items-start">
+                        <div className="absolute border-t-2 border-l-2 border-black border-solid w-30 h-50 right-20 top-[-5%]"></div>
+                        <div className="w-50 h-full flex flex-column flex-wrap justify-center text-center">
+                          <div className="w-full h-[60%] flex flex-column flex-wrap justify-center text-center">
+                            <div className="w-full h-10 text-white font-secondary text-5xl">N</div>
+                            <div className="w-full h-10 text-white font-secondary text-5xl">O</div>
+                            <div className="w-full h-10 text-white font-secondary text-5xl">D</div>
+                            <div className="w-full h-10 text-white font-secondary text-5xl">E</div>
+                            <div className="w-full h-10 text-white font-secondary text-5xl items-center flex justify-center text-center pb-6">.</div>
+                            <div className="w-full h-10 text-white font-secondary text-5xl">J</div>
+                            <div className="w-full h-10 text-white font-secondary text-5xl">S</div>
+                          </div>
+                          <div className="w-full h-[40%] flex justify-center items-end"><NodeColor /></div>
+                        </div>
+                        <div className="absolute border-r-2 border-b-2 border-black border-solid w-30 h-50 left-20 bottom-[-5%]"></div>
+                      </div>
+                    </div>
+                  </div>
+                ) : (
+                  <div className="relative w-10 h-full border-r-2 border-black flex justify-center items-center" onMouseEnter={handleMouseEnter(setBox3)} onMouseLeave={(handleMouseLeave(setBox3))}>
+                    <div className="relative w-full h-80 flex flex-column justify-center items-start">
+                      <div className="absolute border-t-2 border-l-2 border-black border-solid w-30 h-50 right-20 top-[-5%]"></div>
+                      <div className="w-50 h-full flex flex-column flex-wrap justify-center text-center">
+                        <div className="w-full h-[60%] flex flex-column flex-wrap justify-center text-center">
+                          <div className="w-full h-10 text-black font-secondary text-5xl">N</div>
+                          <div className="w-full h-10 text-black font-secondary text-5xl">O</div>
+                          <div className="w-full h-10 text-black font-secondary text-5xl">D</div>
+                          <div className="w-full h-10 text-black font-secondary text-5xl">E</div>
+                          <div className="w-full h-10 text-black font-secondary text-5xl items-center flex justify-center text-center pb-6">.</div>
+                          <div className="w-full h-10 text-black font-secondary text-5xl">J</div>
+                          <div className="w-full h-10 text-black font-secondary text-5xl">S</div>
+                        </div>
+                        <div className="w-full h-[40%] flex justify-center items-end"><NodeIcon /></div>
+                      </div>
+                      <div className="absolute border-r-2 border-b-2 border-black border-solid w-30 h-50 left-20 bottom-[-5%]"></div>
+                    </div>
+                  </div>
+                )}
+                {box4 ? (
+                  <div className="w-10 h-full bg-gradient-to-b from-red-500 to-orange-400" onMouseEnter={handleMouseEnter(setBox4)} onMouseLeave={(handleMouseLeave(setBox4))}>
+                    <div className="relative w-full h-full border-r-2 border-black flex justify-center items-center">
+                      <div className="relative w-full h-80 flex flex-column justify-center items-start">
+                        <div className="absolute border-t-2 border-l-2 border-black border-solid w-30 h-50 right-20 top-[-5%]"></div>
+                        <div className="w-50 h-full flex flex-column flex-wrap justify-center text-center">
+                          <div className="w-full h-[60%] flex flex-column flex-wrap justify-center text-center">
+                            <div className="w-full h-10 text-white font-secondary text-5xl">F</div>
+                            <div className="w-full h-10 text-white font-secondary text-5xl">I</div>
+                            <div className="w-full h-10 text-white font-secondary text-5xl">G</div>
+                            <div className="w-full h-10 text-white font-secondary text-5xl">M</div>
+                            <div className="w-full h-10 text-white font-secondary text-5xl">A</div>
+                          </div>
+                          <div className="w-full h-[40%] flex justify-center items-end mt-1"><FigmaColor /></div>
+                        </div>
+                        <div className="absolute border-r-2 border-b-2 border-black border-solid w-30 h-50 left-20 bottom-[-5%]"></div>
+                      </div>
+                    </div>
+                  </div>
+                ) : (
+                  <div className="relative w-10 h-full border-r-2 border-black flex justify-center items-center" onMouseEnter={handleMouseEnter(setBox4)} onMouseLeave={(handleMouseLeave(setBox4))}>
+                    <div className="relative w-full h-80 flex flex-column justify-center items-start">
+                      <div className="absolute border-t-2 border-l-2 border-black border-solid w-30 h-50 right-20 top-[-5%]"></div>
+                      <div className="w-50 h-full flex flex-column flex-wrap justify-center text-center">
+                        <div className="w-full h-[60%] flex flex-column flex-wrap justify-center text-center">
+                          <div className="w-full h-10 text-black font-secondary text-5xl">F</div>
+                          <div className="w-full h-10 text-black font-secondary text-5xl">I</div>
+                          <div className="w-full h-10 text-black font-secondary text-5xl">G</div>
+                          <div className="w-full h-10 text-black font-secondary text-5xl">M</div>
+                          <div className="w-full h-10 text-black font-secondary text-5xl">A</div>
+                        </div>
+                        <div className="w-full h-[40%] flex justify-center items-end mt-1"><FigmaIcon /></div>
+                      </div>
+                      <div className="absolute border-r-2 border-b-2 border-black border-solid w-30 h-50 left-20 bottom-[-5%]"></div>
+                    </div>
+                  </div>
+                )}
+                {box5 ? (
+                  <div className="w-10 h-full bg-gradient-to-b from-orange-500 to-orange-200" onMouseEnter={handleMouseEnter(setBox5)} onMouseLeave={(handleMouseLeave(setBox5))}>
+                    <div className="relative w-full h-full border-r-2 border-black flex justify-center items-center">
+                      <div className="relative w-full h-80 flex flex-column justify-center items-start">
+                        <div className="absolute border-t-2 border-l-2 border-black border-solid w-30 h-50 right-20 top-[-5%]"></div>
+                        <div className="w-50 h-full flex flex-column flex-wrap justify-center text-center">
+                          <div className="w-full h-[60%] flex flex-column flex-wrap justify-center text-center">
+                            <div className="w-full h-10 text-white font-secondary text-5xl">H</div>
+                            <div className="w-full h-10 text-white font-secondary text-5xl">T</div>
+                            <div className="w-full h-10 text-white font-secondary text-5xl">M</div>
+                            <div className="w-full h-10 text-white font-secondary text-5xl">L</div>
 
+                          </div>
+                          <div className="w-full h-[40%] flex justify-center items-end mt-1"><HtmlColor /></div>
+                        </div>
+                        <div className="absolute border-r-2 border-b-2 border-black border-solid w-30 h-50 left-20 bottom-[-5%]"></div>
                       </div>
-                      <div className="w-full h-[50%] flex justify-center items-end mt-2"><CssIcon /></div>
                     </div>
-                    <div className="absolute border-r-2 border-b-2 border-black border-solid w-30 h-50 left-20 bottom-[-5%]"></div>
                   </div>
-                </div>
-                <div className="relative w-10 h-full border-r-2 border-black flex justify-center items-center">
-                  <div className="relative w-full h-80 flex flex-column justify-center items-start">
-                    <div className="absolute border-t-2 border-l-2 border-black border-solid w-30 h-50 right-20 top-[-5%]"></div>
-                    <div className="w-50 h-full flex flex-column flex-wrap justify-center text-center">
-                      <div className="w-full h-[80%] flex flex-column flex-wrap justify-center text-center">
-                        <div className="w-full h-10 text-black font-secondary text-5xl">R</div>
-                        <div className="w-full h-10 text-black font-secondary text-5xl">E</div>
-                        <div className="w-full h-10 text-black font-secondary text-5xl">A</div>
-                        <div className="w-full h-10 text-black font-secondary text-5xl">C</div>
-                        <div className="w-full h-10 text-black font-secondary text-5xl">T</div>
-                        <div className="w-full h-10 text-black font-secondary text-5xl items-center flex justify-center text-center pb-6">.</div>
-                        <div className="w-full h-10 text-black font-secondary text-5xl">J</div>
-                        <div className="w-full h-10 text-black font-secondary text-5xl">S</div>
+                ) : (
+                  <div className="relative w-10 h-full border-r-2 border-black flex justify-center items-center" onMouseEnter={handleMouseEnter(setBox5)} onMouseLeave={(handleMouseLeave(setBox5))}>
+                    <div className="relative w-full h-80 flex flex-column justify-center items-start">
+                      <div className="absolute border-t-2 border-l-2 border-black border-solid w-30 h-50 right-20 top-[-5%]"></div>
+                      <div className="w-50 h-full flex flex-column flex-wrap justify-center text-center">
+                        <div className="w-full h-[60%] flex flex-column flex-wrap justify-center text-center">
+                          <div className="w-full h-10 text-black font-secondary text-5xl">H</div>
+                          <div className="w-full h-10 text-black font-secondary text-5xl">T</div>
+                          <div className="w-full h-10 text-black font-secondary text-5xl">M</div>
+                          <div className="w-full h-10 text-black font-secondary text-5xl">L</div>
 
+                        </div>
+                        <div className="w-full h-[40%] flex justify-center items-end"><HtmlIcon /></div>
                       </div>
-                      <div className="w-full h-[20%] flex justify-center items-end"><ReactIcon /></div>
+                      <div className="absolute border-r-2 border-b-2 border-black border-solid w-30 h-50 left-20 bottom-[-5%]"></div>
                     </div>
-                    <div className="absolute border-r-2 border-b-2 border-black border-solid w-30 h-50 left-20 bottom-[-5%]"></div>
                   </div>
-                </div>
-                <div className="relative w-10 h-full border-r-2 border-black flex justify-center items-center">
-                  <div className="relative w-full h-80 flex flex-column justify-center items-start">
-                    <div className="absolute border-t-2 border-l-2 border-black border-solid w-30 h-50 right-20 top-[-5%]"></div>
-                    <div className="w-50 h-full flex flex-column flex-wrap justify-center text-center">
-                      <div className="w-full h-[70%] flex flex-column flex-wrap justify-center text-center">
-                        <div className="w-full h-10 text-black font-secondary text-5xl">V</div>
-                        <div className="w-full h-10 text-black font-secondary text-5xl">U</div>
-                        <div className="w-full h-10 text-black font-secondary text-5xl">E</div>
-                        <div className="w-full h-10 text-black font-secondary text-5xl items-center flex justify-center text-center pb-6">.</div>
-                        <div className="w-full h-10 text-black font-secondary text-5xl">J</div>
-                        <div className="w-full h-10 text-black font-secondary text-5xl">S</div>
+                )}
+                {box6 ? (
+                  <div className="w-10 h-full bg-gradient-to-b from-blue-900 to-blue-500" onMouseEnter={handleMouseEnter(setBox6)} onMouseLeave={(handleMouseLeave(setBox6))}>
+                    <div className="relative w-full h-full border-r-2 border-black flex justify-center items-center">
+                      <div className="relative w-full h-80 flex flex-column justify-center items-start">
+                        <div className="absolute border-t-2 border-l-2 border-black border-solid w-30 h-50 right-20 top-[-5%]"></div>
+                        <div className="w-50 h-full flex flex-column flex-wrap justify-center text-center">
+                          <div className="w-full h-[50%] flex flex-column flex-wrap justify-center text-center">
+                            <div className="w-full h-10 text-white font-secondary text-5xl">C</div>
+                            <div className="w-full h-10 text-white font-secondary text-5xl">S</div>
+                            <div className="w-full h-10 text-white font-secondary text-5xl">S</div>
 
+                          </div>
+                          <div className="w-full h-[50%] flex justify-center items-end mt-2"><CssColor /></div>
+                        </div>
+                        <div className="absolute border-r-2 border-b-2 border-black border-solid w-30 h-50 left-20 bottom-[-5%]"></div>
                       </div>
-                      <div className="w-full h-[30%] flex justify-center items-end"><VueJS /></div>
                     </div>
-                    <div className="absolute border-r-2 border-b-2 border-black border-solid w-30 h-50 left-20 bottom-[-5%]"></div>
                   </div>
-                </div>
-                <div className="relative w-10 h-full border-r-2 border-black flex justify-center items-center">
-                  <div className="relative w-full h-80 flex flex-column justify-center items-start">
-                    <div className="absolute border-t-2 border-l-2 border-black border-solid w-30 h-50 right-20 top-[-5%]"></div>
-                    <div className="w-50 h-full flex flex-column flex-wrap justify-center text-center">
-                      <div className="w-full h-[80%] flex flex-column flex-wrap justify-center text-center">
-                        <div className="w-full h-10 text-black font-secondary text-5xl">N</div>
-                        <div className="w-full h-10 text-black font-secondary text-5xl">E</div>
-                        <div className="w-full h-10 text-black font-secondary text-5xl">X</div>
-                        <div className="w-full h-10 text-black font-secondary text-5xl">T</div>
-                        <div className="w-full h-10 text-black font-secondary text-5xl items-center flex justify-center text-center pb-6">.</div>
-                        <div className="w-full h-10 text-black font-secondary text-5xl">J</div>
-                        <div className="w-full h-10 text-black font-secondary text-5xl">S</div>
-                      </div>
-                      <div className="w-full h-[20%] flex justify-center items-end"><NextJs /></div>
-                    </div>
-                    <div className="absolute border-r-2 border-b-2 border-black border-solid w-30 h-50 left-20 bottom-[-5%]"></div>
-                  </div>
-                </div>
-                <div className="relative w-10 h-full border-r-2 border-black flex justify-center items-center">
-                  <div className="relative w-full h-80 flex flex-column justify-center items-start">
-                    <div className="absolute border-t-2 border-l-2 border-black border-solid w-30 h-50 right-20 top-[-5%]"></div>
-                    <div className="w-50 h-full flex flex-column flex-wrap justify-center text-center">
-                      <div className="w-full h-[80%] flex flex-column flex-wrap justify-center text-center">
-                        <div className="w-full h-10 text-black font-secondary text-5xl">T</div>
-                        <div className="w-full h-10 text-black font-secondary text-5xl">A</div>
-                        <div className="w-full h-10 text-black font-secondary text-5xl">I</div>
-                        <div className="w-full h-10 text-black font-secondary text-5xl">L</div>
-                        <div className="w-full h-10 text-black font-secondary text-5xl">W</div>
-                        <div className="w-full h-10 text-black font-secondary text-5xl">I</div>
-                        <div className="w-full h-10 text-black font-secondary text-5xl">N</div>
-                        <div className="w-full h-10 text-black font-secondary text-5xl">D</div>
-                      </div>
-                      <div className="w-full h-[20%] flex justify-center items-end mt-1"><TailWind /></div>
-                    </div>
-                    <div className="absolute border-r-2 border-b-2 border-black border-solid w-30 h-50 left-20 bottom-[-5%]"></div>
-                  </div>
-                </div>
+                ) : (
+                  <div className="relative w-10 h-full border-r-2 border-black flex justify-center items-center" onMouseEnter={handleMouseEnter(setBox6)} onMouseLeave={(handleMouseLeave(setBox6))}>
+                    <div className="relative w-full h-80 flex flex-column justify-center items-start">
+                      <div className="absolute border-t-2 border-l-2 border-black border-solid w-30 h-50 right-20 top-[-5%]"></div>
+                      <div className="w-50 h-full flex flex-column flex-wrap justify-center text-center">
+                        <div className="w-full h-[50%] flex flex-column flex-wrap justify-center text-center">
+                          <div className="w-full h-10 text-black font-secondary text-5xl">C</div>
+                          <div className="w-full h-10 text-black font-secondary text-5xl">S</div>
+                          <div className="w-full h-10 text-black font-secondary text-5xl">S</div>
 
+                        </div>
+                        <div className="w-full h-[50%] flex justify-center items-end mt-2"><CssIcon /></div>
+                      </div>
+                      <div className="absolute border-r-2 border-b-2 border-black border-solid w-30 h-50 left-20 bottom-[-5%]"></div>
+                    </div>
+                  </div>
+                )}
+                {box7 ? (
+                  <div className="w-10 h-full bg-gradient-to-b from-sky-400 to-slate-200" onMouseEnter={handleMouseEnter(setBox7)} onMouseLeave={(handleMouseLeave(setBox7))}>
+                    <div className="relative w-full h-full border-r-2 border-black flex justify-center items-center">
+                      <div className="relative w-full h-80 flex flex-column justify-center items-start">
+                        <div className="absolute border-t-2 border-l-2 border-black border-solid w-30 h-50 right-20 top-[-5%]"></div>
+                        <div className="w-50 h-full flex flex-column flex-wrap justify-center text-center">
+                          <div className="w-full h-[80%] flex flex-column flex-wrap justify-center text-center">
+                            <div className="w-full h-10 text-white font-secondary text-5xl">R</div>
+                            <div className="w-full h-10 text-white font-secondary text-5xl">E</div>
+                            <div className="w-full h-10 text-white font-secondary text-5xl">A</div>
+                            <div className="w-full h-10 text-white font-secondary text-5xl">C</div>
+                            <div className="w-full h-10 text-white font-secondary text-5xl">T</div>
+                            <div className="w-full h-10 text-white font-secondary text-5xl items-center flex justify-center text-center pb-6">.</div>
+                            <div className="w-full h-10 text-white font-secondary text-5xl">J</div>
+                            <div className="w-full h-10 text-white font-secondary text-5xl">S</div>
+
+                          </div>
+                          <div className="w-full h-[20%] flex justify-center items-end "><ReactColor /></div>
+                        </div>
+                        <div className="absolute border-r-2 border-b-2 border-black border-solid w-30 h-50 left-20 bottom-[-5%]"></div>
+                      </div>
+                    </div>
+                  </div>
+                ) : (
+                  <div className="relative w-10 h-full border-r-2 border-black flex justify-center items-center" onMouseEnter={handleMouseEnter(setBox7)} onMouseLeave={(handleMouseLeave(setBox7))}>
+                    <div className="relative w-full h-80 flex flex-column justify-center items-start">
+                      <div className="absolute border-t-2 border-l-2 border-black border-solid w-30 h-50 right-20 top-[-5%]"></div>
+                      <div className="w-50 h-full flex flex-column flex-wrap justify-center text-center">
+                        <div className="w-full h-[80%] flex flex-column flex-wrap justify-center text-center">
+                          <div className="w-full h-10 text-black font-secondary text-5xl">R</div>
+                          <div className="w-full h-10 text-black font-secondary text-5xl">E</div>
+                          <div className="w-full h-10 text-black font-secondary text-5xl">A</div>
+                          <div className="w-full h-10 text-black font-secondary text-5xl">C</div>
+                          <div className="w-full h-10 text-black font-secondary text-5xl">T</div>
+                          <div className="w-full h-10 text-black font-secondary text-5xl items-center flex justify-center text-center pb-6">.</div>
+                          <div className="w-full h-10 text-black font-secondary text-5xl">J</div>
+                          <div className="w-full h-10 text-black font-secondary text-5xl">S</div>
+
+                        </div>
+                        <div className="w-full h-[20%] flex justify-center items-end"><ReactIcon /></div>
+                      </div>
+                      <div className="absolute border-r-2 border-b-2 border-black border-solid w-30 h-50 left-20 bottom-[-5%]"></div>
+                    </div>
+                  </div>
+                )}
+                {box8 ? (
+                  <div className="w-10 h-full bg-gradient-to-b from-green-500 to-gray-600" onMouseEnter={handleMouseEnter(setBox8)} onMouseLeave={(handleMouseLeave(setBox8))} >
+                    <div className="relative w-full h-full border-r-2 border-black flex justify-center items-center">
+                      <div className="relative w-full h-80 flex flex-column justify-center items-start">
+                        <div className="absolute border-t-2 border-l-2 border-black border-solid w-30 h-50 right-20 top-[-5%]"></div>
+                        <div className="w-50 h-full flex flex-column flex-wrap justify-center text-center">
+                          <div className="w-full h-[70%] flex flex-column flex-wrap justify-center text-center">
+                            <div className="w-full h-10 text-white font-secondary text-5xl">V</div>
+                            <div className="w-full h-10 text-white font-secondary text-5xl">U</div>
+                            <div className="w-full h-10 text-white font-secondary text-5xl">E</div>
+                            <div className="w-full h-10 text-white font-secondary text-5xl items-center flex justify-center text-center pb-6">.</div>
+                            <div className="w-full h-10 text-white font-secondary text-5xl">J</div>
+                            <div className="w-full h-10 text-white font-secondary text-5xl">S</div>
+
+                          </div>
+                          <div className="w-full h-[30%] flex justify-center items-end"><VueColor /></div>
+                        </div>
+                        <div className="absolute border-r-2 border-b-2 border-black border-solid w-30 h-50 left-20 bottom-[-5%]"></div>
+                      </div>
+                    </div>
+                  </div>
+                ) : (
+                  <div className="relative w-10 h-full border-r-2 border-black flex justify-center items-center" onMouseEnter={handleMouseEnter(setBox8)} onMouseLeave={(handleMouseLeave(setBox8))}>
+                    <div className="relative w-full h-80 flex flex-column justify-center items-start">
+                      <div className="absolute border-t-2 border-l-2 border-black border-solid w-30 h-50 right-20 top-[-5%]"></div>
+                      <div className="w-50 h-full flex flex-column flex-wrap justify-center text-center">
+                        <div className="w-full h-[70%] flex flex-column flex-wrap justify-center text-center">
+                          <div className="w-full h-10 text-black font-secondary text-5xl">V</div>
+                          <div className="w-full h-10 text-black font-secondary text-5xl">U</div>
+                          <div className="w-full h-10 text-black font-secondary text-5xl">E</div>
+                          <div className="w-full h-10 text-black font-secondary text-5xl items-center flex justify-center text-center pb-6">.</div>
+                          <div className="w-full h-10 text-black font-secondary text-5xl">J</div>
+                          <div className="w-full h-10 text-black font-secondary text-5xl">S</div>
+
+                        </div>
+                        <div className="w-full h-[30%] flex justify-center items-end"><VueJS /></div>
+                      </div>
+                      <div className="absolute border-r-2 border-b-2 border-black border-solid w-30 h-50 left-20 bottom-[-5%]"></div>
+                    </div>
+                  </div>
+                )}
+                {box9 ? (
+                  <div className="w-10 h-full bg-gradient-to-b from-black to-slate-300" onMouseEnter={handleMouseEnter(setBox9)} onMouseLeave={(handleMouseLeave(setBox9))}>
+                    <div className="relative w-full h-full border-r-2 border-black flex justify-center items-center">
+                      <div className="relative w-full h-80 flex flex-column justify-center items-start">
+                        <div className="absolute border-t-2 border-l-2 border-black border-solid w-30 h-50 right-20 top-[-5%]"></div>
+                        <div className="w-50 h-full flex flex-column flex-wrap justify-center text-center">
+                          <div className="w-full h-[80%] flex flex-column flex-wrap justify-center text-center">
+                            <div className="w-full h-10 text-white font-secondary text-5xl">N</div>
+                            <div className="w-full h-10 text-white font-secondary text-5xl">E</div>
+                            <div className="w-full h-10 text-white font-secondary text-5xl">X</div>
+                            <div className="w-full h-10 text-white font-secondary text-5xl">T</div>
+                            <div className="w-full h-10 text-white font-secondary text-5xl items-center flex justify-center text-center pb-6">.</div>
+                            <div className="w-full h-10 text-white font-secondary text-5xl">J</div>
+                            <div className="w-full h-10 text-white font-secondary text-5xl">S</div>
+                          </div>
+                          <div className="w-full h-[20%] flex justify-center items-end"><NextJs /></div>
+                        </div>
+                        <div className="absolute border-r-2 border-b-2 border-black border-solid w-30 h-50 left-20 bottom-[-5%]"></div>
+                      </div>
+                    </div>
+                  </div>
+                ) : (
+                  <div className="relative w-10 h-full border-r-2 border-black flex justify-center items-center" onMouseEnter={handleMouseEnter(setBox9)} onMouseLeave={(handleMouseLeave(setBox9))}>
+                    <div className="relative w-full h-80 flex flex-column justify-center items-start">
+                      <div className="absolute border-t-2 border-l-2 border-black border-solid w-30 h-50 right-20 top-[-5%]"></div>
+                      <div className="w-50 h-full flex flex-column flex-wrap justify-center text-center">
+                        <div className="w-full h-[80%] flex flex-column flex-wrap justify-center text-center">
+                          <div className="w-full h-10 text-black font-secondary text-5xl">N</div>
+                          <div className="w-full h-10 text-black font-secondary text-5xl">E</div>
+                          <div className="w-full h-10 text-black font-secondary text-5xl">X</div>
+                          <div className="w-full h-10 text-black font-secondary text-5xl">T</div>
+                          <div className="w-full h-10 text-black font-secondary text-5xl items-center flex justify-center text-center pb-6">.</div>
+                          <div className="w-full h-10 text-black font-secondary text-5xl">J</div>
+                          <div className="w-full h-10 text-black font-secondary text-5xl">S</div>
+                        </div>
+                        <div className="w-full h-[20%] flex justify-center items-end"><NextJs /></div>
+                      </div>
+                      <div className="absolute border-r-2 border-b-2 border-black border-solid w-30 h-50 left-20 bottom-[-5%]"></div>
+                    </div>
+                  </div>
+                )}
+                {box10 ? (
+                  <div className="w-10 h-full bg-gradient-to-b from-cyan-400 to-cyan-200" onMouseEnter={handleMouseEnter(setBox10)} onMouseLeave={(handleMouseLeave(setBox10))}>
+                    <div className="relative w-full h-full border-r-2 border-black flex justify-center items-center">
+                      <div className="relative w-full h-80 flex flex-column justify-center items-start">
+                        <div className="absolute border-t-2 border-l-2 border-black border-solid w-30 h-50 right-20 top-[-5%]"></div>
+                        <div className="w-50 h-full flex flex-column flex-wrap justify-center text-center">
+                          <div className="w-full h-[80%] flex flex-column flex-wrap justify-center text-center">
+                            <div className="w-full h-10 text-white font-secondary text-5xl">T</div>
+                            <div className="w-full h-10 text-white font-secondary text-5xl">A</div>
+                            <div className="w-full h-10 text-white font-secondary text-5xl">I</div>
+                            <div className="w-full h-10 text-white font-secondary text-5xl">L</div>
+                            <div className="w-full h-10 text-white font-secondary text-5xl">W</div>
+                            <div className="w-full h-10 text-white font-secondary text-5xl">I</div>
+                            <div className="w-full h-10 text-white font-secondary text-5xl">N</div>
+                            <div className="w-full h-10 text-white font-secondary text-5xl">D</div>
+                          </div>
+                          <div className="w-full h-[20%] flex justify-center items-end mt-1"><TailwindColor /></div>
+                        </div>
+                        <div className="absolute border-r-2 border-b-2 border-black border-solid w-30 h-50 left-20 bottom-[-5%]"></div>
+                      </div>
+                    </div>
+                  </div>
+                ) : (
+                  <div className="relative w-10 h-full border-r-2 border-black flex justify-center items-center" onMouseEnter={handleMouseEnter(setBox10)} onMouseLeave={(handleMouseLeave(setBox10))}>
+                    <div className="relative w-full h-80 flex flex-column justify-center items-start">
+                      <div className="absolute border-t-2 border-l-2 border-black border-solid w-30 h-50 right-20 top-[-5%]"></div>
+                      <div className="w-50 h-full flex flex-column flex-wrap justify-center text-center">
+                        <div className="w-full h-[80%] flex flex-column flex-wrap justify-center text-center">
+                          <div className="w-full h-10 text-black font-secondary text-5xl">T</div>
+                          <div className="w-full h-10 text-black font-secondary text-5xl">A</div>
+                          <div className="w-full h-10 text-black font-secondary text-5xl">I</div>
+                          <div className="w-full h-10 text-black font-secondary text-5xl">L</div>
+                          <div className="w-full h-10 text-black font-secondary text-5xl">W</div>
+                          <div className="w-full h-10 text-black font-secondary text-5xl">I</div>
+                          <div className="w-full h-10 text-black font-secondary text-5xl">N</div>
+                          <div className="w-full h-10 text-black font-secondary text-5xl">D</div>
+                        </div>
+                        <div className="w-full h-[20%] flex justify-center items-end mt-1"><TailWind /></div>
+                      </div>
+                      <div className="absolute border-r-2 border-b-2 border-black border-solid w-30 h-50 left-20 bottom-[-5%]"></div>
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
           </div>
@@ -890,37 +1141,129 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="w-full h-20 border-black border- border-l-2 border-r-2 border-b-2 flex flex-row">
-              <div className="w-70 h-full   text-white text-5xl font-secondary bg-black flex justify-center items-center flex-col gap-2">
-                bfung0011@gmail.com
-              </div>
-              <div className="w-30 h-full text-black font-secondary text-5xl flex flex-row justify-center items-center border-black border-l-2">
-                Gmail
-              </div>
+            <div className="w-full h-20 border-black border- border-l-2 border-r-2 border-b-2 flex flex-row" onMouseEnter={handleMouseEnter(setContact1)} onMouseLeave={handleMouseLeave(setContact1)}>
+              {contact1 ? (
+                <>
+                  <div className="w-full h-fulltext-white text-5xl font-secondary bg-white flex justify-center items-center text-center flex-row gap-2 transition-all ease-in-out duration-1000">
+                    <div className="w-60 flex flex-row flex-wrap justify-end gap-4">
+                      <div className="text-6xl font-secondary text-black">Mail me </div>
+                      <div className="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel"><path d="M5 12h13M12 5l7 7-7 7" /></svg>
+                      </div>
+                    </div>
+                    <div className="w-40 flex flex-column flex-wrap justify-center items-center transition-all ease-in-out duration-1000">
+                      <a href="mailto:bfung0011@gmail.com" target="_blank" className="text-black p-2" >
+                        bfung0011@gmail.com
+                      </a>
+                      <div className="border-2 border-black w-80"></div>
+                    </div>
+                  </div>
+                </>
+              ) : (
+                <>
+                  <div className="w-70 h-full   text-white text-5xl font-secondary bg-black flex justify-center items-center flex-col gap-2 transition-all ease-in-out duration-1000">
+                    <a href="mailto:bfung0011@gmail.com" target="_blank">
+                      bfung0011@gmail.com
+                    </a>
+                  </div>
+                  <div className="w-30 h-full text-black font-secondary text-5xl flex flex-row justify-center items-center border-black border-l-2 transition-all ease-in-out duration-1000">
+                    Gmail
+                  </div>
+                </>
+              )}
             </div>
-            <div className="w-full h-20 border-black border- border-l-2 border-r-2 border-b-2 flex flex-row">
-              <div className="w-30 h-full  border-black border-r-2 text-black text-5xl font-secondary  flex justify-center items-center">
-                LinkedIn
-              </div>
-              <div className="w-70 h-full text-white font-secondary text-5xl flex flex-col justify-center items-center   bg-black gap-2">
-                linkedin.com/in/biefung/
-              </div>
+            <div className="w-full h-20 border-black border- border-l-2 border-r-2 border-b-2 flex flex-row" onMouseEnter={handleMouseEnter(setContact2)} onMouseLeave={handleMouseLeave(setContact2)}>
+              {contact2 ? (
+                <>
+                  <div className="w-full h-fulltext-white text-5xl font-secondary bg-white flex justify-center items-center text-center flex-row gap-2 transition-all ease-in-out duration-1000">
+                    <div className="w-40 flex flex-column flex-wrap justify-center items-center transition-all ease-in-out duration-1000">
+                      <a href="https://linkedin.com/in/biefung/" target="_blank" className="text-black p-2" >
+                        linkedin.com/in/biefung/
+                      </a>
+                      <div className="border-2 border-black w-80"></div>
+                    </div>
+                    <div className="w-60 flex flex-row flex-wrap justify-start gap-4">
+                      <div className="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel"><path d="M19 12H6M12 5l-7 7 7 7" /></svg>
+                      </div>
+                      <div className="text-6xl font-secondary text-black">See my profile </div>
+                    </div>
+                  </div>
+                </>
+              ) : (
+                <>
+                  <div className="w-30 h-full  border-black border-r-2 text-black text-5xl font-secondary  flex justify-center items-center transition-all ease-in-out duration-1000">
+                    LinkedIn
+                  </div>
+                  <div className="w-70 h-full text-white font-secondary text-5xl flex flex-col justify-center items-center   bg-black gap-2 transition-all ease-in-out duration-1000">
+                    <a href="https://linkedin.com/in/biefung" target="_blank">
+                      linkedin.com/in/biefung
+                    </a>
+                  </div>
+                </>
+              )}
             </div>
-            <div className="w-full h-20 border-black border- border-l-2 border-r-2 border-b-2 flex flex-row">
-              <div className="w-70 h-full  text-white text-5xl font-secondary bg-black flex justify-center items-center flex-col gap-2">
-                github.com/Bfungcode
-              </div>
-              <div className="w-30 h-full text-black font-secondary text-5xl flex flex-row justify-center items-center border-black border-l-2">
-                Github
-              </div>
+            <div className="w-full h-20 border-black border- border-l-2 border-r-2 border-b-2 flex flex-row" onMouseEnter={handleMouseEnter(setContact3)} onMouseLeave={handleMouseLeave(setContact3)}>
+              {contact3 ? (
+                <>
+                  <div className="w-full h-fulltext-white text-5xl font-secondary bg-white flex justify-center items-center text-center flex-row gap-2 transition-all ease-in-out duration-1000">
+                    <div className="w-60 flex flex-row flex-wrap justify-end gap-4">
+                      <div className="text-6xl font-secondary text-black">See my code </div>
+                      <div className="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel"><path d="M5 12h13M12 5l7 7-7 7" /></svg>
+                      </div>
+                    </div>
+                    <div className="w-40 flex flex-column flex-wrap justify-center items-center transition-all ease-in-out duration-1000">
+                      <a href="https://github.com/Bfungcode" target="_blank" className="text-black p-2" >
+                        github.com/Bfungcode
+                      </a>
+                      <div className="border-2 border-black w-80"></div>
+                    </div>
+                  </div>
+                </>
+              ) : (
+                <>
+                  <div className="w-70 h-full  text-white text-5xl font-secondary bg-black flex justify-center items-center flex-col gap-2 transition-all ease-in-out duration-1000">
+                    <a href="https://github.com/Bfungcode" target="_blank">
+                      github.com/Bfungcode
+                    </a>
+                  </div>
+                  <div className="w-30 h-full text-black font-secondary text-5xl flex flex-row justify-center items-center border-black border-l-2 transition-all ease-in-out duration-1000">
+                    Github
+                  </div>
+                </>
+              )}
             </div>
-            <div className="w-full h-20 border-black border- border-l-2 border-r-2 border-b-2 flex flex-row">
-              <div className="w-30 h-full  border-black border-r-2 text-black text-5xl font-secondary  flex justify-center items-center">
-                X / Twitter
-              </div>
-              <div className="w-70 h-full text-white font-secondary text-5xl flex flex-col justify-center items-center bg-black gap-2">
-                twitter.com/bei_fg
-              </div>
+            <div className="w-full h-20 border-black border- border-l-2 border-r-2 border-b-2 flex flex-row" onMouseEnter={handleMouseEnter(setContact4)} onMouseLeave={handleMouseLeave(setContact4)}>
+              {contact4 ? (
+                <>
+                  <div className="w-full h-fulltext-white text-5xl font-secondary bg-white flex justify-center items-center text-center flex-row gap-2 transition-all ease-in-out duration-1000">
+                    <div className="w-40 flex flex-column flex-wrap justify-center items-center transition-all ease-in-out duration-1000">
+                      <a href="https://twitter.com/bei_fg" target="_blank" className="text-black p-2" >
+                        twitter.com/bei_fg
+                      </a>
+                      <div className="border-2 border-black w-80"></div>
+                    </div>
+                    <div className="w-60 flex flex-row flex-wrap justify-start gap-4">
+                      <div className="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel"><path d="M19 12H6M12 5l-7 7 7 7" /></svg>
+                      </div>
+                      <div className="text-6xl font-secondary text-black">See my tweets </div>
+                    </div>
+                  </div>
+                </>
+              ) : (
+                <>
+                  <div className="w-30 h-full  border-black border-r-2 text-black text-5xl font-secondary  flex justify-center items-center transition-all ease-in-out duration-1000">
+                    X / Twitter
+                  </div>
+                  <div className="w-70 h-full text-white font-secondary text-5xl flex flex-col justify-center items-center bg-black gap-2 transition-all ease-in-out duration-1000">
+                    <a href="https://twitter.com/bei_fg" target="_blank">
+                      twitter.com/bei_fg
+                    </a>
+                  </div>
+                </>
+              )}
             </div>
 
           </div>
