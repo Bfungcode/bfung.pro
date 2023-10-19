@@ -92,10 +92,10 @@ export default function Home() {
               <div className="w-full h-80 flex flex-row">
                 <div className="w-full h-full  border-black flex flex-col">
                   <div className="p-4 w-full h-full flex  flex-col text-black font-primary font-semibold justify-center items-center">
-                    <div className="font-primary max-sm:text-xl font-bold max-lg:text-5xl">Bie Fung</div>
-                    <div className="font-primary max-sm:text-sm font-bold text-gray-500 max-lg:text-2xl">Profile</div>
-                    <img src="/bfung.png" className="w-80 max-sm:h-50 object-cover flex max-lg:h-60" />
-                    <div className="font-primary max-sm:text-sm font-semibold mt-2 leading-6 text-start p-3 max-lg:text-xl">
+                    <div className="font-primary max-sm:text-xl font-bold max-lg:text-4xl">Bie Fung</div>
+                    <div className="font-primary max-sm:text-sm font-bold text-gray-500 max-lg:text-xlxl">Profile</div>
+                    <img src="/bfung.png" className="max-sm:w-80 max-lg:w-40 max-sm:h-50 object-cover flex max-lg:h-60" />
+                    <div className="font-primary max-sm:text-sm font-semibold mt-2 leading-6 text-start p-3 max-lg:text-lg">
                       <div>Hello, i'm Bie Fung.</div>
                       you can call me Abe or Bei.
                       I’m a Front End Developer
@@ -116,43 +116,45 @@ export default function Home() {
           <div className="w-full h-full flex flex-col flex-wrap pl-5 pr-5 ">
             <div className="w-full h-full">
               {turn1 ? (
-                <div className="w-full h-full flex flex-col justify-between flex-wrap  transition-all duration-1000 linear border-black border-b-2 border-l-2 border-r-2  ">
-                  <div className="w-full max-sm:h-full max-lg:h- flex flex-column flex-wrap p-6">
-                    <div className="w-full max-sm:h-70 max-lg:h-[45%] flex flex-col flex-wrap">
-                      <div className="h-[10%] w-full text-4xl font-primary font-bold text-black text-center flex justify-center items-center">Binar Car Rental</div>
-                      <div className="max-sm:h-[90%] max=lg:h-60 w-full flex flex-col flex-wrap">
-                        <div className="w-full h-15 text-xl font-primary font-bold text-black">
+                <div className="w-full h-full flex flex-col justify-between flex-wrap  transition-all duration-1000 ease-in-out border-black border-l-2 border-r-2 border-b-2  text-black">
+                  <div className="w-full h-full max-sm:h-full max-lg:h-80 flex flex-column flex-wrap p-6">
+                    <div className="w-full h-70 max-sm:h-[65%] max-lg:h-[80%] flex flex-column flex-wrap">
+                      <div className="h-[10%] w-full text-4xl font-primary font-bold text-center flex justify-center items-center">Binar Car Rental</div>
+                      <div className="max-sm:h-[90%] max-lg:h-60 w-full flex flex-col flex-wrap">
+                        <div className="w-full text-xl font-primary font-bold text-black">
                           Year Accomplished
                           <div className="text-base text-gray-500">2022</div>
                         </div>
-                        <div className="w-full text-xl h-15 font-primary font-bold text-black mb-3">
+                        <div className="w-full text-xl font-primary font-bold text-black">
                           Role/Position
                           <div className="text-base text-gray-500">Project Leader</div>
                           <div className="text-base text-gray-500">Front End Engineer</div>
                         </div>
-                        <div className="w-full text-xl h-15 font-primary font-bold text-black ">
+                        <div className="w-full text-xl font-primary font-bold text-black">
                           Publication Link
                           <a href="https://cartal.netlify.app" target="_blank" className="cursor-pointer">
                             <div className="text-base text-gray-500">cartal.netlify.app</div>
                           </a>
                         </div>
-                        <div className="w-full text-xl h-15 font-primary font-bold text-black break-words mb-3">
+                        <div className="w-full text-xl font-primary font-bold text-black">
                           Repository
-                          <a href="https://github.com/Bfungcode/BinarCarRents_Main" target="_blank" className="cursor-pointer">
-                            <div className="text-sm text-gray-500 w-90">github.com/Bfungcode/BinarCarRents_Main</div>
+                          <a href="https://github.com/Bfungcode/BinarCarRents_Main" target="_blank" className="cursor-pointer break-words">
+                            <div className="text-base text-gray-500">github.com/Bfungcode/BinarCarRents_Main</div>
                           </a>
                         </div>
-                        <div className="w-full text-xl h-15 font-primary font-bold text-black mb-3">
+
+                        <div className="w-full text-xl font-primary font-bold ">
                           Stacks
                           <div className="text-base text-gray-500">JavaScript</div>
                           <div className="text-base text-gray-500">React JS</div>
                           <div className="text-base text-gray-500">React Redux</div>
                           <div className="text-base text-gray-500">CSS</div>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="1" onClick={() => turnPt(setTurn1, turn1)} stroke-linecap="square" stroke-linejoin="bevel"><path d="M19 12H6M12 5l-7 7 7 7" /></svg>
                         </div>
                       </div>
                     </div>
-                    <div className="w-full h-[30%]">
-                      <div className="w-full h-full">
+                    <div className="w-full max-sm:h-[25%] max-lg:h-[20%] flex flex-col justify-center items-center">
+                      <div className="w-90 h-full ml-3">
                         <Slider {...SliderSettings}>
                           <div>
                             <img src="/pt5/ft1.png" />
@@ -171,9 +173,6 @@ export default function Home() {
                           </div>
                         </Slider>
                       </div>
-                      <div className="h-[5%] w-full flex flex-row flex-wrap justify-start items-center cursor-pointer" onClick={() => turnPt(setTurn1, turn1)}>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel"><path d="M19 12H6M12 5l-7 7 7 7" /></svg>
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -186,7 +185,7 @@ export default function Home() {
                       <div className="absolute inset-0 flex flex-column items-center justify-start h-full w-full p-2">
                         <div className="w-full  font-secondary text-black text-2xl bg-white text-center">
                           <div className="text-base font-secondary max-sm:text-xl max-lg:text-3xl ">Cartal</div>
-                          <div className="max-sm:text-xs font-secondary max-lg:text-3xl">
+                          <div className="max-sm:text-xs font-secondary max-lg:text-xl">
                             a Car Rental Web Application for the customer side to do transaction, built by using React JS. (Bootcamp Final Project)
                           </div>
                         </div>
@@ -196,11 +195,11 @@ export default function Home() {
                 </div >
               )}
               {turn2 ? (
-                <div className="w-full h-full flex flex-row justify-between flex-wrap  transition-all duration-1000 ease-in-out border-black border-l-2 border-r-2 border-b-2 bg-black text-white">
-                  <div className="w-full h-full flex flex-column flex-wrap p-6">
-                    <div className="w-full h-70 flex flex-column flex-wrap">
+                <div className="w-full h-full flex flex-col justify-between flex-wrap  transition-all duration-1000 ease-in-out border-black border-l-2 border-r-2 border-b-2 bg-black text-white">
+                  <div className="w-full h-full max-sm:h-full max-lg:h-80 flex flex-col flex-wrap p-6">
+                    <div className="w-full  max-sm:h-70 max-lg:h-[80%] flex flex-column flex-wrap">
                       <div className="h-[10%] w-full text-4xl font-primary font-bold text-center flex justify-center items-center">CryptoHex</div>
-                      <div className="h-90 w-full flex flex-col flex-wrap">
+                      <div className="max-sm:h-[95%] max-lg:h-60 w-full flex flex-col flex-wrap">
                         <div className="w-full text-xl font-primary font-bold">
                           Year Accomplished
                           <div className="text-base text-gray-300">2023</div>
@@ -213,10 +212,10 @@ export default function Home() {
                         <div className="w-full text-xl font-primary font-bold ">
                           Publication Link
                           <a href="https://cryptohex.netlify.app" target="_blank">
-                            <div className="text-base text-gray-300 mb-1">cryptohex.netlify.app</div>
+                            <div className="text-base text-gray-300 mb-1 break-words">cryptohex.netlify.app</div>
                           </a>
                           <a href="https://figma.com/file/W2rEOrg7oMiEmjiK9gMrsS/CryptoHex?type=design&node-id=0%3A1&t=nLIRzq0rHhINvH3k-1" target="_blank">
-                            <div className="text-xs text-gray-300">figma.com/file/W2rEOrg7oMiEmjiK9gMrsS/CryptoHex?type=design&node-id=0%3A1&t=nLIRzq0rHhINvH3k-1</div>
+                            <div className="text-xs break-words text-gray-300">figma.com/file/W2rEOrg7oMiEmjiK9gMrsS/CryptoHex?type=design&node-id=0%3A1&t=nLIRzq0rHhINvH3k-1</div>
                           </a>
                         </div>
                         <div className="w-full text-xl font-primary font-bold ">
@@ -230,11 +229,12 @@ export default function Home() {
                           <div className="text-base text-gray-300">JavaScript</div>
                           <div className="text-base text-gray-300">Vue JS</div>
                           <div className="text-base text-gray-300">CSS</div>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1" onClick={() => turnPt(setTurn2, turn2)} stroke-linecap="square" stroke-linejoin="bevel"><path d="M19 12H6M12 5l-7 7 7 7" /></svg>
                         </div>
 
                       </div>
                     </div>
-                    <div className="w-full h-[25%] justify-center">
+                    <div className="w-full max-sm:h-[25%] max-lg:h-[20%] flex flex-col justify-center items-center">
                       <div className="w-90 h-full ml-3">
                         <Slider {...SliderSettings}>
                           <div>
@@ -251,22 +251,19 @@ export default function Home() {
                           </div>
                         </Slider>
                       </div>
-                      <div className="h-[5%] w-full flex flex-row flex-wrap justify-start items-center cursor-pointer" onClick={() => turnPt(setTurn2, turn2)}>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel"><path d="M19 12H6M12 5l-7 7 7 7" /></svg>
-                      </div>
                     </div>
                   </div>
                 </div>
               ) : (
                 <div className="w-full h-20 flex flex-row justify-between flex-wrap  transition-all duration-1000 ease-in-out">
-                  <div className="w-full h-full border-black border-b-2 border-r-2 border-l-2 flex flex-row flex-wrap cursor-pointer bg-black p-2 transition-all duration-1000 ease-in-out" onMouseMove={handleMouseEnter(setHover2)} onMouseLeave={handleMouseLeave(setHover2)} onClick={() => { turnPt(setTurn2, turn2) }}>
+                  <div className="w-full h-full border-black border-b-2 border-r-2 border-l-2 flex flex-row flex-wrap cursor-pointer bg-black p-6 transition-all duration-1000 ease-in-out" onMouseMove={handleMouseEnter(setHover2)} onMouseLeave={handleMouseLeave(setHover2)} onClick={() => { turnPt(setTurn2, turn2) }}>
                     <div className="relative w-full h-full">
                       <div className="absolute border-t-2 border-l-2 border-white border-solid w-30 h-50 left-0 top-0"></div>
                       <div className="absolute border-r-2 border-b-2 border-white border-solid w-30 h-50 right-0 bottom-0"></div>
                       <div className="absolute inset-0 flex flex-column items-center justify-start h-full w-full text-4xl p-2">
-                        <div className="w-full font-secondary text-white text-2xl  bg-black text-center">
+                        <div className="w-full font-secondary text-white max-sm:text-xl max-lg:text-3xl   bg-black text-center">
                           CryptoHex
-                          <div className="text-xs font-secondary">
+                          <div className=" max-sm:text-xs max-lg:text-xl font-secondary">
                             a Cryptocurrency wallet service web application built with Vue JS
                           </div>
                         </div>
@@ -276,41 +273,42 @@ export default function Home() {
                 </div >
               )}
               {turn3 ? (
-                <div className="w-full h-full flex flex-row justify-between flex-wrap  transition-all duration-1000 ease-in-out border-black border-l-2 border-r-2 border-b-2">
-                  <div className="w-full h-full flex flex-column flex-wrap p-6">
-                    <div className="w-full h-70 flex flex-column flex-wrap">
-                      <div className="h-[10%] w-full text-4xl font-primary font-bold text-black text-center flex justify-center items-center">Cashier</div>
-                      <div className="h-[90%] w-full flex flex-col flex-wrap">
-                        <div className="w-full h-15 text-xl font-primary font-bold text-black">
+                <div className="w-full h-full flex flex-col justify-between flex-wrap  transition-all duration-1000 ease-in-out border-black border-l-2 border-r-2 border-b-2  text-black">
+                  <div className="w-full h-full max-sm:h-full max-lg:h-80 flex flex-column flex-wrap p-6">
+                    <div className="w-full h-70 max-sm:h-55 max-lg:h-[60%] flex flex-column flex-wrap">
+                      <div className="h-[10%] w-full text-4xl font-primary font-bold text-center flex justify-center items-center">Cashier</div>
+                      <div className="max-sm:h-[90%] max=lg:h-60 w-full flex flex-col flex-wrap">
+                        <div className="w-full text-xl font-primary font-bold text-black">
                           Year Accomplished
-                          <div className="text-base  text-gray-500">2023</div>
+                          <div className="text-base text-gray-500">2023</div>
                         </div>
-                        <div className="w-full h-15 text-xl font-primary font-bold text-black">
+                        <div className="w-full text-xl font-primary font-bold text-black">
                           Role/Position
                           <div className="text-base text-gray-500">Front End Developer</div>
                         </div>
-                        <div className="w-full h-15 text-xl font-primary font-bold text-black">
+                        <div className="w-full text-xl font-primary font-bold text-black">
                           Publication Link
                           <a href="https://cashier-webapp.vercel.app" target="_blank">
                             <div className="text-base text-gray-500">cashier-webapp.vercel.app</div>
                           </a>
                         </div>
-                        <div className="w-full h-15 text-xl font-primary font-bold text-black">
+                        <div className="w-full text-xl font-primary font-bold text-black">
                           Repository
                           <a href="https://github.com/Bfungcode/Cashier_WebApp" target="_blank">
-                            <div className="text-base text-gray-500">github.com/Bfungcode/Cashier_WebApp</div>
+                            <div className="text-base text-gray-500 break-words">github.com/Bfungcode/Cashier_WebApp</div>
                           </a>
                         </div>
-                        <div className="w-full h-15 text-xl font-primary font-bold text-black">
+                        <div className="w-full text-xl font-primary font-bold ">
                           Stacks
                           <div className="text-base text-gray-500">JavaScript</div>
                           <div className="text-base text-gray-500">React JS</div>
                           <div className="text-base text-gray-500">Tailwind CSS</div>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="1" onClick={() => turnPt(setTurn3, turn3)} stroke-linecap="square" stroke-linejoin="bevel"><path d="M19 12H6M12 5l-7 7 7 7" /></svg>
                         </div>
                       </div>
                     </div>
-                    <div className="w-full h-[25%]">
-                      <div className="w-full h-full">
+                    <div className="w-full max-sm:h-[25%] max-lg:h-[20%] flex flex-col justify-center items-center">
+                      <div className="w-90 h-full ml-3">
                         <Slider {...SliderSettings}>
                           <div>
                             <img src="/pt3/ft1.png" />
@@ -321,25 +319,21 @@ export default function Home() {
                           <div>
                             <img src="/pt3/ft3.png" />
                           </div>
-
                         </Slider>
-                      </div>
-                      <div className="h-[5%] w-full flex flex-row flex-wrap justify-start items-center cursor-pointer" onClick={() => turnPt(setTurn3, turn3)}>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel"><path d="M19 12H6M12 5l-7 7 7 7" /></svg>
                       </div>
                     </div>
                   </div>
                 </div>
               ) : (
                 <div className="w-full h-20 flex flex-row justify-between flex-wrap transition-all duration-1000 ease-in-out">
-                  <div className="w-full h-full border-black border-b-2 border-r-2 border-l-2 flex flex-row flex-wrap bg-white p-2 cursor-pointer" onMouseMove={handleMouseEnter(setHover3)} onMouseLeave={handleMouseLeave(setHover3)} onClick={() => turnPt(setTurn3, turn3)}>
+                  <div className="w-full h-full border-black border-b-2 border-r-2 border-l-2 flex flex-row flex-wrap bg-white p-6 cursor-pointer" onMouseMove={handleMouseEnter(setHover3)} onMouseLeave={handleMouseLeave(setHover3)} onClick={() => turnPt(setTurn3, turn3)}>
                     <div className="relative w-full h-full">
                       <div className="absolute border-t-2 border-l-2 border-black border-solid w-30 h-50 left-0 top-0"></div>
                       <div className="absolute border-r-2 border-b-2 border-black border-solid w-30 h-50 right-0 bottom-0"></div>
                       <div className="absolute inset-0 flex flex-column items-center justify-start h-full w-full text-4xl p-2">
-                        <div className="w-full font-secondary text-black text-2xl bg-white text-center">
+                        <div className="w-full font-secondary text-black max-sm:text-xl max-lg:text-3xl bg-white text-center">
                           Cashier
-                          <div className="text-xs font-secondary">
+                          <div className="max-sm:text-xs max-lg:text-xl font-secondary">
                             a User-friendly portfolio project with an interactive food menu webpage that allows you to assemble your order on the right side while keeping track of your total payment.
                           </div>
                         </div>
@@ -349,12 +343,12 @@ export default function Home() {
                 </div >
               )}
               {turn4 ? (
-                <div className="w-full h-full flex flex-row justify-between flex-wrap  transition-all duration-1000 ease-in-out border-black border-l-2 border-r-2 border-b-2 bg-black text-white">
-                  <div className="w-full h-full flex flex-column flex-wrap p-6">
-                    <div className="w-full h-70 flex flex-col flex-wrap">
-                      <div className="h-[10%] w-full text-4xl font-primary font-bold items-center text-center flex justify-center ">Easy Features</div>
-                      <div className="h-90 w-full flex flex-column flex-wrap">
-                        <div className="w-full  text-xl font-primary font-bold ">
+                <div className="w-full h-full flex flex-col justify-between flex-wrap  transition-all duration-1000 ease-in-out border-black border-l-2 border-r-2 border-b-2 bg-black text-white">
+                  <div className="w-full h-full max-sm:h-full max-lg:h-80 flex flex-column flex-wrap p-6">
+                    <div className="w-full h-70 max-sm:h-60 max-lg:h-[60%] flex flex-column flex-wrap">
+                      <div className="h-[10%] w-full text-4xl font-primary font-bold text-center flex justify-center items-center">Easy Features</div>
+                      <div className="max-sm:h-[90%] max=lg:h-60 w-full flex flex-col flex-wrap">
+                        <div className="w-full text-xl font-primary font-bold ">
                           Year Accomplished
                           <div className="text-base text-gray-300">2022</div>
                         </div>
@@ -368,21 +362,23 @@ export default function Home() {
                             <div className="text-base text-gray-300">easyfeatures.netlify.app</div>
                           </a>
                         </div>
-                        <div className="w-full text-xl  font-primary font-bold ">
+                        <div className="w-full text-xl font-primary font-bold ">
                           Repository
                           <a href="https://github.com/Bfungcode/EasyFeatures" target="_blank">
                             <div className="text-base text-gray-300">github.com/Bfungcode/EasyFeatures</div>
                           </a>
                         </div>
-                        <div className="w-full text-xl  font-primary font-bold ">
+                        <div className="w-full text-xl font-primary font-bold ">
                           Stacks
                           <div className="text-base text-gray-300">JavaScript</div>
                           <div className="text-base text-gray-300">React JS</div>
                           <div className="text-base text-gray-300">CSS</div>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1" onClick={() => turnPt(setTurn4, turn4)} stroke-linecap="square" stroke-linejoin="bevel"><path d="M19 12H6M12 5l-7 7 7 7" /></svg>
                         </div>
+
                       </div>
                     </div>
-                    <div className="w-full h-[25%]">
+                    <div className="w-full max-sm:h-[25%] max-lg:h-[20%] flex flex-col justify-center items-center">
                       <div className="w-90 h-full ml-3">
                         <Slider {...SliderSettings}>
                           <div>
@@ -397,25 +393,21 @@ export default function Home() {
                           <div>
                             <img src="/pt1/ft4.png" />
                           </div>
-
                         </Slider>
-                      </div>
-                      <div className="h-[10%] w-full flex flex-row flex-wrap justify-start items-center cursor-pointer" onClick={() => turnPt(setTurn4, turn4)}>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel"><path d="M19 12H6M12 5l-7 7 7 7" /></svg>
                       </div>
                     </div>
                   </div>
                 </div>
               ) : (
                 <div className="w-full h-20 flex flex-row justify-between flex-wrap  transition-all duration-1000 ease-in-out">
-                  <div className="w-full h-full border-black border-b-2 border-r-2 border-l-2 flex flex-row flex-wrap bg-black p-2 cursor-pointer " onMouseMove={handleMouseEnter(setHover4)} onMouseLeave={handleMouseLeave(setHover4)} onClick={() => turnPt(setTurn4, turn4)}>
+                  <div className="w-full h-full border-black border-b-2 border-r-2 border-l-2 flex flex-row flex-wrap bg-black p-6 cursor-pointer " onMouseMove={handleMouseEnter(setHover4)} onMouseLeave={handleMouseLeave(setHover4)} onClick={() => turnPt(setTurn4, turn4)}>
                     <div className="relative w-full h-full">
                       <div className="absolute border-t-2 border-l-2 border-white border-solid w-30 h-50 left-0 top-0"></div>
                       <div className="absolute border-r-2 border-b-2 border-white border-solid w-30 h-50 right-0 bottom-0"></div>
-                      <div className="absolute inset-0 flex flex-column items-center justify-start h-full w-full text-4xl p-6">
-                        <div className="w-full font-secondary text-white text-2xl   text-center">
+                      <div className="absolute inset-0 flex flex-column items-center justify-start h-full w-full text-4xl p-2">
+                        <div className="w-full font-secondary text-white max-sm:text-xl max-lg:text-3xl   text-center">
                           Easy Features
-                          <div className="text-xs font-secondary">
+                          <div className="max-sm:text-xs max-lg:text-xl  font-secondary">
                             a Dedicated website built with React JS and designed to assist developers working with React.js. With its extensive collection of JSX templates and CSS code snippets,
                           </div>
                         </div>
@@ -435,9 +427,9 @@ export default function Home() {
                 <div className="w-full h-20 border-black border- border-l-2 border-r-2 border-b-2 flex flex-row" >
                   <div className="w-full h-full text-white text-5xl font-secondary bg-white flex justify-center items-center text-center flex-row gap-2 transition-all ease-in-out duration-1000">
                     <div className="w-40 flex flex-row flex-wrap justify-start">
-                      <div className="w-full text-base font-secondary flex justify-center items-center text-center text-black">Mail me                         <svg xmlns="http://www.w3.org/2000/svg" width="35" className="ml-2" height="35" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel"><path d="M5 12h13M12 5l7 7-7 7" /></svg></div>
+                      <div className="w-full max-sm:text-base max-lg:text-3xl font-secondary flex justify-center items-center text-center text-black">Mail me                         <svg xmlns="http://www.w3.org/2000/svg" width="35" className="ml-2" height="35" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel"><path d="M5 12h13M12 5l7 7-7 7" /></svg></div>
                     </div>
-                    <div className="w-60 flex flex-column flex-wrap justify-center items-center transition-all ease-in-out duration-1000 text-3xl max-sm:text-lg break-words">
+                    <div className="w-60 flex flex-column flex-wrap justify-center items-center transition-all ease-in-out duration-1000 max-lg:text-3xl max-sm:text-lg break-words">
                       <a href="mailto:bfung0011@gmail.com" target="_blank" className="text-black p-2" >
                         bfung0011@gmail.com
                       </a>
@@ -446,13 +438,13 @@ export default function Home() {
                 </div>
                 <div className="w-full h-20 border-black border- border-l-2 border-r-2 border-b-2 flex flex-row" >
                   <div className="w-full h-fulltext-white text-5xl font-secondary bg-white flex justify-center items-center text-center flex-row gap-2 transition-all ease-in-out duration-1000">
-                    <div className="w-60 flex flex-column flex-wrap justify-center items-center transition-all ease-in-out duration-1000 text-3xl max-sm:text-lg break-words">
+                    <div className="w-60 flex flex-column flex-wrap justify-center items-center transition-all ease-in-out duration-1000 max-lg:text-3xl max-sm:text-lg break-words">
                       <a href="https://linkedin.com/in/biefung/" target="_blank" className="text-black p-2" >
                         linkedin.com/in/biefung
                       </a>
                     </div>
                     <div className="w-40 flex flex-row flex-wrap justify-evenly items-center">
-                      <div className="w-full text-2xl font-secondary mr-2 text-black max-sm:text-lg text-center flex justify-start items-center ">
+                      <div className="w-full max-sm:text-base max-lg:text-3xl font-secondary mr-2 text-black  text-center flex justify-start items-center ">
                         <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel"><path d="M19 12H6M12 5l-7 7 7 7" /></svg>See my profile
                       </div>
                     </div>
@@ -461,11 +453,11 @@ export default function Home() {
                 <div className="w-full h-20 border-black border- border-l-2 border-r-2 border-b-2 flex flex-row" >
                   <div className="w-full h-fulltext-white text-5xl font-secondary bg-white flex justify-center items-center text-center flex-row gap-2 transition-all ease-in-out duration-1000">
                     <div className="w-40 flex flex-row flex-wrap justify-end ">
-                      <div className="text-6xl font-secondary text-black flex items-center text-center justify-center max-lg:text-2xl max-sm:text-lg ">See my code
+                      <div className=" font-secondary text-black flex items-center text-center justify-center max-sm:text-base max-lg:text-3xl">See my code
                         <svg xmlns="http://www.w3.org/2000/svg" className="ml-2" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel"><path d="M5 12h13M12 5l7 7-7 7" /></svg>
                       </div>
                     </div>
-                    <div className="w-60 flex flex-column flex-wrap justify-center items-center transition-all ease-in-out duration-1000  text-3xl max-sm:text-lg break-words">
+                    <div className="w-60 flex flex-column flex-wrap justify-center items-center transition-all ease-in-out duration-1000  max-lg:text-3xl max-sm:text-lg break-words">
                       <a href="https://github.com/Bfungcode" target="_blank" className="text-black p-2" >
                         github.com/Bfungcode
                       </a>
@@ -474,18 +466,16 @@ export default function Home() {
                 </div>
                 <div className="w-full h-20 border-black border- border-l-2 border-r-2 border-b-2 flex flex-row">
                   <div className="w-full h-fulltext-white text-5xl font-secondary bg-white flex justify-center items-center text-center flex-row gap-2 transition-all ease-in-out duration-1000">
-                    <div className="w-60 flex flex-column flex-wrap justify-center items-center transition-all ease-in-out duration-1000 text-3xl max-sm:text-lg break-word">
+                    <div className="w-60 flex flex-column flex-wrap justify-center items-center transition-all ease-in-out duration-1000 max-lg:text-3xl max-sm:text-lg break-word">
                       <a href="https://twitter.com/bei_fg" target="_blank" className="text-black p-2" >
                         twitter.com/bei_fg
                       </a>
                     </div>
                     <div className="w-40 flex flex-row flex-wrap justify-start gap-4">
-                      <div className="text-6xl font-secondary text-black  max-lg:text-2xl max-sm:text-lg flex justify-center text-center items-center mr-2">                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel"><path d="M19 12H6M12 5l-7 7 7 7" /></svg>
+                      <div className=" font-secondary text-black  max-sm:text-base max-lg:text-3xl flex justify-center text-center items-center mr-2">                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel"><path d="M19 12H6M12 5l-7 7 7 7" /></svg>
                         See my tweets </div>
                     </div>
                   </div>
-
-
                 </div>
               </div>
               <div className="w-full h-4"></div>
