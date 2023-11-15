@@ -18,8 +18,7 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css?family=Font1|Font2"
         />
       </head>
-      <body className='h-full w-full m-0 p-0 border-black bg-white'>
-
+      <body className='h-full w-full m-0 p-0 border-black bg-[rgb(241,239,233)]'>
         {children}
       </body>
     </html >
