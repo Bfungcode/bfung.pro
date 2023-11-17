@@ -833,12 +833,10 @@ export default function Home() {
               <div className="w-full h-full border-2 border-black p-0 m-0 ">
                 <div className="w-full h-12 border-b-2 border-black flex flex-row justify-between items-center p-0 m-0">
                   <div className="w-[13%] h-full border-black border-r-2 p-0 m-0">
-                    <Image
+                    <img
                       src="/Rectangle4.png"
                       className="h-full w-full relative right object-none"
-                      alt="profile"
-                      width={165}
-                      height={195}
+                      loading="lazy"
                     />
                   </div>
                   <div className="font-secondary text-7xl flex text-center items-center flex-row justify-around w-[82%] h-full font-medium bg-black text-white  transition-all ease-linear duration-1000 pb-3">
