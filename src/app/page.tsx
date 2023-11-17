@@ -78,14 +78,14 @@ export default function Home() {
   const [contact3, setContact3] = useState(false);
   const [contact4, setContact4] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-  const turnPt = (setTurn: any, turn: any) => {
+  const turnPt = (setTurn, turn) => {
     setTurn(!turn);
   };
-  const handleMouseEnter = (setBox: any) => () => {
+  const handleMouseEnter = (setBox) => () => {
     setBox(true);
   };
 
-  const handleMouseLeave = (setBox: any) => () => {
+  const handleMouseLeave = (setBox) => () => {
     setBox(false);
   };
 
@@ -651,7 +651,7 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-                <div className="w-full max-sm:h-[75%] max-lg:h-[80%] border-black border-r-2 border-l-2">
+                <div className="w-full max-sm:h-[75%] max-lg:h-[80%] border-black border-r-2 border-l-2 p-2">
                   <Swiper
                     slidesPerView={1}
                     spaceBetween={20}
@@ -1882,7 +1882,7 @@ export default function Home() {
                       </div>
                     </div>
                   </div>
-                  <div className="w-full h-80 ">
+                  <div className="w-full h-80 p-2">
                     <Swiper
                       slidesPerView={2}
                       spaceBetween={20}
