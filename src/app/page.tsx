@@ -78,14 +78,14 @@ export default function Home() {
   const [contact3, setContact3] = useState(false);
   const [contact4, setContact4] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-  const turnPt = (setTurn, turn) => {
+  const turnPt = (setTurn: any, turn: any) => {
     setTurn(!turn);
   };
-  const handleMouseEnter = (setBox) => () => {
+  const handleMouseEnter = (setBox: any) => () => {
     setBox(true);
   };
 
-  const handleMouseLeave = (setBox) => () => {
+  const handleMouseLeave = (setBox: any) => () => {
     setBox(false);
   };
 
