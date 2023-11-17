@@ -50,7 +50,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
-import { FreeMode, Pagination, Mousewheel } from "swiper/modules";
+import { FreeMode, Pagination } from "swiper/modules";
+import Image from "next/image";
 
 export default function Home() {
   const [hover1, setHover1] = useState(false);
@@ -138,6 +139,7 @@ export default function Home() {
                     </div>
                     <img
                       src="/bfung.png"
+                      loading="lazy"
                       className="max-sm:w-80 max-lg:w-40 max-sm:h-50 object-cover flex max-lg:h-60"
                     />
                     <div className="font-primary max-sm:text-sm font-semibold mt-2 leading-6 text-start p-3 max-lg:text-lg">
@@ -239,19 +241,19 @@ export default function Home() {
                       <div className="w-90 h-full ml-3">
                         <Slider {...SliderSettings}>
                           <div>
-                            <img src="/pt5/ft1.png" />
+                            <img src="/pt5/ft1.png" loading="lazy" />
                           </div>
                           <div>
-                            <img src="/pt5/ft2.png" />
+                            <img src="/pt5/ft2.png" loading="lazy" />
                           </div>
                           <div>
-                            <img src="/pt5/ft3.png" />
+                            <img src="/pt5/ft3.png" loading="lazy" />
                           </div>
                           <div>
-                            <img src="/pt5/ft4.png" />
+                            <img src="/pt5/ft4.png" loading="lazy" />
                           </div>
                           <div>
-                            <img src="/pt5/ft5.png" />
+                            <img src="/pt5/ft5.png" loading="lazy" />
                           </div>
                         </Slider>
                       </div>
@@ -364,16 +366,16 @@ export default function Home() {
                       <div className="w-90 h-full ml-3">
                         <Slider {...SliderSettings}>
                           <div>
-                            <img src="/pt2/ft1.png" />
+                            <img src="/pt2/ft1.png" loading="lazy" />
                           </div>
                           <div>
-                            <img src="/pt2/ft2.png" />
+                            <img src="/pt2/ft2.png" loading="lazy" />
                           </div>
                           <div>
-                            <img src="/pt2/ft3.png" />
+                            <img src="/pt2/ft3.png" loading="lazy" />
                           </div>
                           <div>
-                            <img src="/pt2/ft4.png" />
+                            <img src="/pt2/ft4.png" loading="lazy" />
                           </div>
                         </Slider>
                       </div>
@@ -478,13 +480,13 @@ export default function Home() {
                       <div className="w-90 h-full ml-3">
                         <Slider {...SliderSettings}>
                           <div>
-                            <img src="/pt3/ft1.png" />
+                            <img src="/pt3/ft1.png" loading="lazy" />
                           </div>
                           <div>
-                            <img src="/pt3/ft2.png" />
+                            <img src="/pt3/ft2.png" loading="lazy" />
                           </div>
                           <div>
-                            <img src="/pt3/ft3.png" />
+                            <img src="/pt3/ft3.png" loading="lazy" />
                           </div>
                         </Slider>
                       </div>
@@ -587,16 +589,16 @@ export default function Home() {
                       <div className="w-90 h-full ml-3">
                         <Slider {...SliderSettings}>
                           <div>
-                            <img src="/pt1/ft1.png" />
+                            <img src="/pt1/ft1.png" loading="lazy" />
                           </div>
                           <div>
-                            <img src="/pt1/ft2.png" />
+                            <img src="/pt1/ft2.png" loading="lazy" />
                           </div>
                           <div>
-                            <img src="/pt1/ft3.png" />
+                            <img src="/pt1/ft3.png" loading="lazy" />
                           </div>
                           <div>
-                            <img src="/pt1/ft4.png" />
+                            <img src="/pt1/ft4.png" loading="lazy" />
                           </div>
                         </Slider>
                       </div>
@@ -636,6 +638,7 @@ export default function Home() {
                       <img
                         src="/Rectangle10.png"
                         className="w-full h-full object-cover"
+                        loading="lazy"
                       />
                     </div>
                     <div className="w-50 h-full   p-0 flex  ">
@@ -647,6 +650,7 @@ export default function Home() {
                       <img
                         src="/Rectangle10.png"
                         className="w-full h-full object-cover"
+                        loading="lazy"
                       />
                     </div>
                   </div>
@@ -663,22 +667,22 @@ export default function Home() {
                     className="w-full h-full"
                   >
                     <SwiperSlide>
-                      <img src="/dp/dp1.png" />
+                      <img src="/dp/dp1.png" loading="lazy" />
                     </SwiperSlide>
                     <SwiperSlide>
-                      <img src="/dp/dp2.png" />
+                      <img src="/dp/dp2.png" loading="lazy" />
                     </SwiperSlide>
                     <SwiperSlide>
-                      <img src="/dp/dp3.png" />
+                      <img src="/dp/dp3.png" loading="lazy" />
                     </SwiperSlide>
                     <SwiperSlide>
-                      <img src="/dp/dp4.png" />
+                      <img src="/dp/dp4.png" loading="lazy" />
                     </SwiperSlide>
                     <SwiperSlide>
-                      <img src="/dp/dp5.png" />
+                      <img src="/dp/dp5.png" loading="lazy" />
                     </SwiperSlide>
                     <SwiperSlide>
-                      <img src="/dp/dp6.png" />
+                      <img src="/dp/dp6.png" loading="lazy" />
                     </SwiperSlide>
                   </Swiper>
                 </div>
@@ -829,10 +833,13 @@ export default function Home() {
               <div className="w-full h-full border-2 border-black p-0 m-0 ">
                 <div className="w-full h-12 border-b-2 border-black flex flex-row justify-between items-center p-0 m-0">
                   <div className="w-[13%] h-full border-black border-r-2 p-0 m-0">
-                    <img
+                    <Image
                       src="/Rectangle4.png"
                       className="h-full w-full relative right object-none"
-                    ></img>
+                      alt="profile"
+                      width={165}
+                      height={195}
+                    />
                   </div>
                   <div className="font-secondary text-7xl flex text-center items-center flex-row justify-around w-[82%] h-full font-medium bg-black text-white  transition-all ease-linear duration-1000 pb-3">
                     <div>Bie Fung</div>
@@ -860,6 +867,7 @@ export default function Home() {
                       <img
                         src="/bfungColor.png"
                         className="w-80 h-30 object-cover"
+                        loading="lazy"
                       />
                       <div className="font-primary text-sm font-semibold mt-2 leading-6">
                         <div>Hello, i'm Bie Fung.</div>
@@ -891,6 +899,7 @@ export default function Home() {
                     <img
                       src="/Rectangle4.png"
                       className="h-full w-full relative right object-none"
+                      loading="lazy"
                     ></img>
                   </div>
                   <div className="font-secondary text-7xl flex text-center items-center flex-row justify-around w-[82%] h-full font-medium bg-[rgb(241,239,233)] transition-all ease-linear duration-1000 pb-3 ">
@@ -922,6 +931,7 @@ export default function Home() {
                       <img
                         src="/bfung.png"
                         className="w-80 h-30 object-cover"
+                        loading="lazy"
                       />
                       <div className="font-primary text-sm font-semibold mt-2 leading-6">
                         <div>Hello, i'm Bie Fung.</div>
@@ -945,7 +955,7 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="w-70 h-full object-fill border-black border-l-2">
-                    <img src="/Rectangle10.png" className="w-full h-full" />
+                    <img src="/Rectangle10.png" className="w-full h-full" loading="lazy" />
                   </div>
                 </div>
               </div>
@@ -1089,6 +1099,7 @@ export default function Home() {
                             <img
                               src="/ct1.png"
                               className="w-full h-full object-contain"
+                              loading="lazy"
                             />
                           </div>
                         </div>
@@ -1101,6 +1112,7 @@ export default function Home() {
                               <img
                                 src="/ct2.png"
                                 className="w-full h-full object-fill"
+                                loading="lazy"
                               />
                             </div>
                             <div className="w-full h-[45%] flex flex-column flex-wrap justify-center">
@@ -1110,6 +1122,7 @@ export default function Home() {
                               <img
                                 src="/ct4.png"
                                 className="w-full h-full object-fill"
+                                loading="lazy"
                               />
                             </div>
                           </div>
@@ -1123,6 +1136,7 @@ export default function Home() {
                               <img
                                 src="/ct3.png"
                                 className="w-full h-full object-fill"
+                                loading="lazy"
                               />
                             </div>
                             <div className="w-full h-[45%] flex flex-column flex-wrap justify-center">
@@ -1132,6 +1146,7 @@ export default function Home() {
                               <img
                                 src="/ct5.png"
                                 className="w-full h-full object-fill"
+                                loading="lazy"
                               />
                             </div>
                           </div>
@@ -1173,6 +1188,7 @@ export default function Home() {
                           <img
                             src="/pt5/ft1.png"
                             className="w-full h-full object-cover"
+                            loading="lazy"
                           ></img>
                         </div>
                       </div>
@@ -1325,6 +1341,7 @@ export default function Home() {
                           <img
                             src="/ch1.png"
                             className="w-full object-contain h-[95%]"
+                            loading="lazy"
                           />
                         </div>
                         <div className="w-[25%] h-full p-2 text-center">
@@ -1334,6 +1351,7 @@ export default function Home() {
                           <img
                             src="/ch2.png"
                             className="w-full object-contain h-[95%]"
+                            loading="lazy"
                           />
                         </div>
                         <div className="w-[35%] h-80 p-2 flex flex-column flex-wrap">
@@ -1344,6 +1362,7 @@ export default function Home() {
                             <img
                               src="/ch3.png"
                               className="w-full h-[95%] object-contain"
+                              loading="lazy"
                             />
                           </div>
                           <div className="w-full h-45 flex flex-column flex-wrap justify-center">
@@ -1353,6 +1372,7 @@ export default function Home() {
                             <img
                               src="/ch4.png"
                               className="w-full h-[95%] object-contain"
+                              loading="lazy"
                             />
                           </div>
                         </div>
@@ -1414,6 +1434,7 @@ export default function Home() {
                           <img
                             src="/pt2/ft1.png"
                             className="w-full h-full object-cover"
+                            loading="lazy"
                           ></img>
                         </div>
                       </div>
@@ -1566,24 +1587,28 @@ export default function Home() {
                             <img
                               src="/cs1.png"
                               className="w-full h-70 object-fill "
+                              loading="lazy"
                             />
                           </div>
                           <div className="w-[15%] h-full">
                             <img
                               src="/cs2.png"
                               className="w-full h-full object-cover"
+                              loading="lazy"
                             />
                           </div>
                           <div className="w-[15%] h-full">
                             <img
                               src="/cs3.png"
                               className="w-full h-full object-cover"
+                              loading="lazy"
                             />
                           </div>
                           <div className="w-[15%] h-full">
                             <img
                               src="/cs4.png"
                               className="w-full h-full object-cover"
+                              loading="lazy"
                             />
                           </div>
                         </div>
@@ -1625,6 +1650,7 @@ export default function Home() {
                           <img
                             src="/pt3/ft1.png"
                             className="w-full h-full object-cover"
+                            loading="lazy"
                           ></img>
                         </div>
                       </div>
@@ -1762,12 +1788,14 @@ export default function Home() {
                             <img
                               src="/ef1.png"
                               className="w-full h-full object-cover"
+                              loading="lazy"
                             />
                           </div>
                           <div className="w-full h-60 ">
                             <img
                               src="/ef2.png"
                               className="w-full h-full object-cover"
+                              loading="lazy"
                             />
                           </div>
                         </div>
@@ -1776,12 +1804,14 @@ export default function Home() {
                             <img
                               src="/ef3.png"
                               className="w-full h-full object-cover"
+                              loading="lazy"
                             />
                           </div>
                           <div className="w-full h-40 bg-gray-400">
                             <img
                               src="/ef4.png"
                               className="w-full h-full object-cover"
+                              loading="lazy"
                             />
                           </div>
                         </div>
@@ -1789,6 +1819,7 @@ export default function Home() {
                           <img
                             src="/ef5.png"
                             className="w-full h-full object-cover"
+                            loading="lazy"
                           />
                         </div>
                         <div></div>
@@ -1852,6 +1883,7 @@ export default function Home() {
                           <img
                             src="/ef1.png"
                             className="w-full h-full object-cover"
+                            loading="lazy"
                           ></img>
                         </div>
                       </div>
@@ -1867,6 +1899,7 @@ export default function Home() {
                         <img
                           src="/Rectangle10.png"
                           className="w-full h-full object-cover"
+                          loading="lazy"
                         />
                       </div>
                       <div className="w-50 h-full   p-0 flex  ">
@@ -1878,6 +1911,7 @@ export default function Home() {
                         <img
                           src="/Rectangle10.png"
                           className="w-full h-full object-cover"
+                          loading="lazy"
                         />
                       </div>
                     </div>
@@ -1894,22 +1928,22 @@ export default function Home() {
                       className="w-full h-full"
                     >
                       <SwiperSlide>
-                        <img src="/dp/dp1.png" />
+                        <img src="/dp/dp1.png" loading="lazy" />
                       </SwiperSlide>
                       <SwiperSlide>
-                        <img src="/dp/dp2.png" />
+                        <img src="/dp/dp2.png" loading="lazy" />
                       </SwiperSlide>
                       <SwiperSlide>
-                        <img src="/dp/dp3.png" />
+                        <img src="/dp/dp3.png" loading="lazy" />
                       </SwiperSlide>
                       <SwiperSlide>
-                        <img src="/dp/dp4.png" />
+                        <img src="/dp/dp4.png" loading="lazy" />
                       </SwiperSlide>
                       <SwiperSlide>
-                        <img src="/dp/dp5.png" />
+                        <img src="/dp/dp5.png" loading="lazy" />
                       </SwiperSlide>
                       <SwiperSlide>
-                        <img src="/dp/dp6.png" />
+                        <img src="/dp/dp6.png" loading="lazy" />
                       </SwiperSlide>
                     </Swiper>
                   </div>
@@ -2801,6 +2835,7 @@ export default function Home() {
                     <img
                       src="/Rectangle10.png"
                       className="w-full h-full object-cover"
+                      loading="lazy"
                     />
                   </div>
                   <div className="w-30 h-full border-black border-r-2  p-0 flex  ">
