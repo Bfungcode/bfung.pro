@@ -857,7 +857,7 @@ export default function Home() {
                 </div>
                 <div className="w-full h-76 flex flex-row">
                   <div className="w-13 h-full border-r-2 border-black flex flex-col">
-                    <div className="p-4 w-full h-full flex  flex-col justify-end transition-all ease-linear duration-1000 text-white font-primary font-semibold bg-black">
+                    <div className="p-4 w-full h-full flex  flex-col justify-end transition-all ease-linear duration-1000 text-black font-primary font-semibold bg-white">
                       <div className="font-primary text-xl font-bold ">
                         Bie Fung
                       </div>
@@ -1543,8 +1543,8 @@ export default function Home() {
                               <div className="w-full h-10">
                                 <div className="text-lg text-gray-500 font-medium">
                                   <div className="text-black inline-block font-semibold">
-                                    Order Summary:{" "}
-                                  </div>{" "}
+                                    Order Summary:
+                                  </div>
                                   "Cashier" keeps a running tally of the
                                   selected items, quantities, and their
                                   individual prices. This makes it a breeze to
@@ -1555,8 +1555,8 @@ export default function Home() {
                               <div className="w-full h-10">
                                 <div className="text-lg text-gray-500 font-medium">
                                   <div className="text-black inline-block font-semibold">
-                                    Payment Proccessing:{" "}
-                                  </div>{" "}
+                                    Payment Proccessing:
+                                  </div>
                                   When it's time to settle the bill, our system
                                   calculates the total cost based on the items
                                   in the order. There's a convenient input field
@@ -1957,7 +1957,18 @@ export default function Home() {
                       onMouseEnter={handleMouseEnter(setBox0)}
                       onMouseLeave={handleMouseLeave(setBox0)}
                     >
-                      <div className="w-full h-full bg-white border-white relative p-14">
+                      <div className="w-full h-full bg-white border-white relative p-14" onClick={() => {
+                        setBox1(true);
+                        setBox2(true);
+                        setBox3(true);
+                        setBox4(true);
+                        setBox5(true);
+                        setBox6(true);
+                        setBox7(true);
+                        setBox8(true);
+                        setBox9(true);
+                        setBox10(true);
+                      }}>
                         <div className="absolute border-t-2 border-l-2 border-amber-300 border-solid w-30 h-80 left-20 top-10"></div>
                         <div className="w-full h-full flex flex-column flex-wrap justify-center text-center">
                           <div className="w-full h-10 text-blue-500 font-secondary text-7xl">
